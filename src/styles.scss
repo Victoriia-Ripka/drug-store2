@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;500;600;700&family=Urbanist:wght@200;400;500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Merriweather:ital,wght@1,300&family=Montserrat:wght@400;500;600;700;900&family=Plus+Jakarta+Sans:wght@700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&family=Urbanist:wght@600&display=swap');
 :root {
     --ui-primary-dark-color: #0F2650;
     --ui-primary-blue-color: #005ADE;
@@ -20,7 +19,7 @@
 
     @media screen and (min-width: 678px) {}
 
-    @media screen and (min-width: 1447px) {}
+    @media screen and (min-width: 1440px) {}
 }
 
 html {
@@ -54,11 +53,18 @@ dd {
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', 'Urbanist';
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Urbanist', sans-serif;
+    font-family: 'Merriweather', serif;
+
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-    background-color: #F2F5F9;
+    background-color: --ui-secondary-light-color;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
