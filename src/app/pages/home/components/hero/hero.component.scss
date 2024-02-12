@@ -205,6 +205,7 @@ button {
     display: flex;
     flex-direction: column;
     margin: 0 auto 7px;
+    gap: 7px;
 
     @media screen and (min-width: 480px) {
         width: 460px;
@@ -295,11 +296,69 @@ button {
     width: 100%;
     display: flex;
     gap: 10px;
+}
 
-    div{
-        width: 100%;
-        
+
+.hero__small-info-cont{
+    padding: 10px;
+    width: 100%;
+    border-radius: 11.218px;
+    background-color: #DBEFFA;
+
+    display: flex;
+    gap: 7px;
+
+}
+
+.hero__back-blue-cont{
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    border-radius: 5px;
+    border: 0.321px solid #FFF;
+    background: rgba(120, 174, 255, 0.20);
+}
+
+.hero__back-white-cont{
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    svg{
+        width: 13px;
+        height: 13px;;
     }
+}
+
+.hero__small-percent{
+    color: #2D496B;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.hero__small-offer{
+    color: #0F2650;
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 99.5%;
+    max-width: 110px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.hero__small-price{
+    color: #0F2650;
+    font-family: Poppins;
+    font-size: 9px;
+    text-transform: uppercase;
 }
 
 .hero__big-cont {
