@@ -311,9 +311,11 @@ button {
 }
 
 .hero__back-blue-cont{
-    width: 30px;
+    width: 30px !important;
     height: 30px;
-    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 5px;
     border: 0.321px solid #FFF;
     background: rgba(120, 174, 255, 0.20);
@@ -335,6 +337,14 @@ button {
     }
 }
 
+.hero__small-text-cont{
+    width: 88px;
+
+    @media screen and (min-width: 375px) {
+        min-width: 110px;
+    }
+}
+
 .hero__small-percent{
     color: #2D496B;
     font-family: Poppins;
@@ -349,7 +359,6 @@ button {
     font-size: 13px;
     font-weight: 600;
     line-height: 99.5%;
-    max-width: 110px;
     text-transform: uppercase;
     margin-bottom: 3px;
 }
