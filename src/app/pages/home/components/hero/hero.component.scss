@@ -4,6 +4,10 @@ section {
     @media screen and (min-width: 480px) {
         padding: 10px 0 50px;
     }
+
+    @media screen and (min-width: 1600px) {
+        padding: 10px 0 100px;
+    }
 }
 
 .hero__spec-cont{
@@ -25,6 +29,12 @@ section {
         width: 460px;
         margin: 0 auto 7px;
     }
+
+    @media screen and (min-width: 1600px) {
+        width: 1600px;
+        height: 446.72px;
+        margin: 0 auto 20px;
+    }
 }
 
 h1{
@@ -34,6 +44,15 @@ h1{
     line-height: 34px;
     text-align: center;
     font-weight: 400;
+    display: block;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 88.67px;
+        width: 624.96px;
+        margin-left: 877px;
+        text-align: left;
+        display: inline-block;
+    }
 }
 
 .large {
@@ -47,6 +66,11 @@ h1{
     @media screen and (min-width: 375px) {
         font-size: 47px;
     }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 55.67px;
+        // display: inline-block;
+    }
 }
 
 .middle {
@@ -57,6 +81,11 @@ h1{
     display: block;
     font-weight: 400;
     margin-bottom: 15px;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 55.67px;
+        display: inline-block;
+    }
 }
 
 .hero__price{
@@ -71,6 +100,11 @@ h1{
     span{
         font-size: 40px;
         font-weight: 600;
+    }
+
+    @media screen and (min-width: 1600px) {
+        text-align: left;
+        margin-left: 877px;
     }
 }
 
@@ -87,6 +121,8 @@ button {
     font-weight: 700;
     text-transform: uppercase;
 
+    @media screen and (min-width: 1600px) {}
+
 }
 
 .hero__dec-cont{
@@ -94,17 +130,23 @@ button {
     position: relative;
     height: 300px;
     width: 260px;
+
+    @media screen and (min-width: 1600px) {}
 }
 
 .dot{
     border-radius: 50%;
     position: absolute;
+
+    @media screen and (min-width: 1600px) {}
 }
 
 .dark {
     background-color: #0F2650;
     width: 6px;
     height: 6px;
+
+    @media screen and (min-width: 1600px) {}
 }
 
 .blue{
@@ -113,15 +155,22 @@ button {
     background-color: rgba(255, 255, 255, 0.60);
     top: -15px;
     right: -35px;
+
+    @media screen and (min-width: 1600px) {}
 }
 
 .first {
     top: 200px;
+
+    @media screen and (min-width: 1600px) {}
 }
 
 .second{
     top: 100px;
     right: 20px;
+
+
+    @media screen and (min-width: 1600px) {}
 }
 
 .large-circle{
@@ -134,6 +183,8 @@ button {
     padding: 17px;
 
     left: -30%;
+
+    @media screen and (min-width: 1600px) {}
 }
 
 .filled-circle{
@@ -141,6 +192,8 @@ button {
     height: 100%;
     border-radius: 50%;
     background: #ABE1FF;
+
+    @media screen and (min-width: 1600px) {}
 }
 
 .medic{
@@ -152,6 +205,8 @@ button {
     position: absolute;
     bottom: 0;
     left: 10%;
+
+    @media screen and (min-width: 1600px) {}
 }
 
 .img1-cont{
@@ -167,6 +222,8 @@ button {
     img{
         transform: rotate(30deg);
     }
+
+    @media screen and (min-width: 1600px) {}
 }
 
 .img2-cont{
@@ -198,6 +255,8 @@ button {
             transform: rotate(-30deg);
         }
     }
+
+    @media screen and (min-width: 1600px) {}
 }
 
 // SECOND PART
