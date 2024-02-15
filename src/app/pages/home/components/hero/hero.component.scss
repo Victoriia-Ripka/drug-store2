@@ -33,7 +33,9 @@ section {
     @media screen and (min-width: 1600px) {
         width: 1600px;
         height: 446.72px;
+        padding: 70px 100px 0 870px;
         margin: 0 auto 20px;
+        position: relative;
     }
 }
 
@@ -47,9 +49,8 @@ h1{
     display: block;
 
     @media screen and (min-width: 1600px) {
-        font-size: 88.67px;
-        width: 624.96px;
-        margin-left: 877px;
+        font-size: 88px;
+        width: 625px;
         text-align: left;
         display: inline-block;
     }
@@ -104,11 +105,10 @@ h1{
 
     @media screen and (min-width: 1600px) {
         text-align: left;
-        margin-left: 877px;
     }
 }
 
-button {
+.button {
     border-radius: 20px;
     border-color: transparent;
     padding: 25px 80px;
@@ -120,9 +120,6 @@ button {
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
-
-    @media screen and (min-width: 1600px) {}
-
 }
 
 .hero__dec-cont{
@@ -131,14 +128,17 @@ button {
     height: 300px;
     width: 260px;
 
-    @media screen and (min-width: 1600px) {}
+    @media screen and (min-width: 1600px) {
+        position: static;
+        margin-top: 0;
+        height: 0;
+        width: 0;
+    }
 }
 
 .dot{
     border-radius: 50%;
     position: absolute;
-
-    @media screen and (min-width: 1600px) {}
 }
 
 .dark {
@@ -146,7 +146,10 @@ button {
     width: 6px;
     height: 6px;
 
-    @media screen and (min-width: 1600px) {}
+    @media screen and (min-width: 1600px) {
+        width: 11px;
+        height: 11px;
+    }
 }
 
 .blue{
@@ -156,21 +159,54 @@ button {
     top: -15px;
     right: -35px;
 
-    @media screen and (min-width: 1600px) {}
+    @media screen and (min-width: 1600px) {
+        width: 26px;
+        height: 26px;
+        top: 50px;
+        left: 250px;
+    }
 }
 
 .first {
     top: 200px;
 
-    @media screen and (min-width: 1600px) {}
+    @media screen and (min-width: 1600px) {
+        top: 203px;
+        left: 560px;
+    }
 }
 
 .second{
     top: 100px;
     right: 20px;
 
+    @media screen and (min-width: 1600px) {
+        display: none;
+    }
+}
 
-    @media screen and (min-width: 1600px) {}
+.third {
+    display: none;
+    width: 16px;
+    height: 16px;
+    top: 383px;
+    left: 63px;
+
+    @media screen and (min-width: 1600px) {
+        display: block;
+    }
+}
+
+.forth {
+    display: none;
+    width: 16px;
+    height: 16px;
+    top: 115px;
+    left: 700px;
+
+    @media screen and (min-width: 1600px) {
+        display: block;
+    }
 }
 
 .large-circle{
@@ -181,10 +217,31 @@ button {
     position: absolute;
     border: 1.215px solid #EEFBFA;
     padding: 17px;
-
     left: -30%;
 
-    @media screen and (min-width: 1600px) {}
+    @media screen and (min-width: 1600px) {
+        width: 697.453px;
+        height: 697.453px;
+        top: 64px;
+        left: 83px;
+        padding: 30px;
+    }
+}
+
+.small-circle{
+    display: none;
+    background-color: transparent;
+    width: 242.682px;
+    height: 242.682px;
+    border-radius: 50%;
+    border: 1.215px solid #EEFBFA;
+    position: absolute;
+    top: 292px;
+    right: -36px;
+
+    @media screen and (min-width: 1600px) {
+        display: block;
+    }
 }
 
 .filled-circle{
@@ -192,8 +249,6 @@ button {
     height: 100%;
     border-radius: 50%;
     background: #ABE1FF;
-
-    @media screen and (min-width: 1600px) {}
 }
 
 .medic{
@@ -206,7 +261,13 @@ button {
     bottom: 0;
     left: 10%;
 
-    @media screen and (min-width: 1600px) {}
+    @media screen and (min-width: 1600px) {
+        background-image: url('/assets/img/tablet/hero-min.png');
+        width: 457.265px;
+        height: 500.99px;
+        top: 0;
+        left: 245px;
+    }
 }
 
 .img1-cont{
@@ -223,7 +284,21 @@ button {
         transform: rotate(30deg);
     }
 
-    @media screen and (min-width: 1600px) {}
+    @media screen and (min-width: 1600px) {
+        width: 86.921px;
+        height: 86.921px;
+        border-radius: 19.316px;
+        top: 115px;
+        left: 152px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            width: 90px;
+            height: 90px;
+        }
+    }
 }
 
 .img2-cont{
@@ -256,7 +331,25 @@ button {
         }
     }
 
-    @media screen and (min-width: 1600px) {}
+    @media screen and (min-width: 1600px) {
+        width: 110.729px;
+        height: 110.729px;
+        border-radius: 18.455px;
+        top: 230px;
+        left: 655px;
+        z-index: 1;
+
+        div{
+            width: 83.046px;
+            height: 83.046px;
+            border-radius: 18.455px;
+            img{
+                width: 46.137px;
+                height: 46.137px;
+            }
+        }
+
+    }
 }
 
 // SECOND PART
@@ -269,6 +362,13 @@ button {
     @media screen and (min-width: 480px) {
         width: 460px;
     }
+
+    @media screen and (min-width: 1600px) {
+        flex-direction: row-reverse;
+        gap: 20px;
+        width: 1600px;
+        margin: 0 auto;
+    }
 }
 
 .hero__bonus-cont{
@@ -278,6 +378,15 @@ button {
     border-radius: 20px;
     background: #AEE2FF;
     position: relative;
+
+    @media screen and (min-width: 1600px) {
+        width: 790px;
+        height: 360.221px;
+        padding: 40px 0 30px 75px;
+        background-color: transparent;
+        background-image: url("/assets/img/tablet/bckgr.png");
+    }
+    
 }
 
 .hero__bonus-back{
@@ -294,6 +403,11 @@ button {
     @media screen and (min-width: 375px) {
         font-size: 99.053px;
     }
+
+    @media screen and (min-width: 1600px) {
+        top: 120px;
+        font-size: 211.625px;
+    }
 }
 
 .hero__bonus-title{
@@ -303,6 +417,10 @@ button {
     font-size: 50px;
     font-weight: 600;
     text-transform: uppercase;
+
+    @media screen and (min-width: 1600px) {
+        text-align: left;
+    }
 }
 
 .hero__bonus-details{
@@ -311,6 +429,11 @@ button {
     font-family: Poppins;
     font-size: 20px;
     text-transform: uppercase;
+
+    @media screen and (min-width: 1600px) {
+        text-align: left;
+        font-size: 30px;
+    }
 }
 
 .hero__bonus-img-cont{
@@ -322,6 +445,13 @@ button {
     left: 50%;
     transform: translateX(-50%);
 
+    @media screen and (min-width: 1600px) {
+        width: 408.32px;
+        height: 225.197px;
+        transform: translateX(0);
+        left: 328px;
+        top: 104px;
+    }
 }
 
 .hero__bonus-img{
@@ -331,6 +461,13 @@ button {
     transform: translateX(-50%);
     position: absolute;
     height: auto;
+
+    @media screen and (min-width: 1600px) {
+        top: 67PX;
+        left: 405px;
+        transform: translateX(0);
+        width: 250px;
+    }
 }
 
 .hero__bonus-after-text{
@@ -341,6 +478,35 @@ button {
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 110px;
+
+    @media screen and (min-width: 1600px) {
+        text-align: left;
+        font-size: 27.421px;
+        margin-top: 132px;
+    }
+}
+
+.hero__bonus-link{
+    display: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+
+    @media screen and (min-width: 1600px) {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 118.855px;
+        height: 103.129px;
+    }
+}
+
+.arrow{
+    position: absolute;
+    top: 40px;
+    right: 46px;
 }
 
 .hero__details-cont{
@@ -349,14 +515,23 @@ button {
     width: 100%;
     gap: 7px;
     flex-wrap: wrap;
+
+    @media screen and (min-width: 1600px) {
+        width: 790px;
+        gap: 20px;
+    }
 }
 
 .hero__small-cont{
     width: 100%;
     display: flex;
     gap: 10px;
-}
 
+    @media screen and (min-width: 1600px) {
+        width: 790px;
+        gap: 20px;
+    }
+}
 
 .hero__small-info-cont{
     padding: 10px;
@@ -367,10 +542,18 @@ button {
     display: flex;
     gap: 7px;
 
+    @media screen and (min-width: 1600px) {
+        width: 385px;
+        height: 214.358px;
+        gap: 20px;
+        border-radius: 25px;
+        padding: 38px 30px 27px 23px;
+        gap: 15px;
+    }
 }
 
 .hero__back-blue-cont{
-    width: 30px !important;
+    width: 30px;
     height: 30px;
     display: flex;
     align-items: center;
@@ -378,6 +561,12 @@ button {
     border-radius: 5px;
     border: 0.321px solid #FFF;
     background: rgba(120, 174, 255, 0.20);
+
+    @media screen and (min-width: 1600px) {
+        width: 68.761px;
+        height: 68.761px;
+        border-radius: 11.46px;
+    }
 }
 
 .hero__back-white-cont{
@@ -394,6 +583,17 @@ button {
         width: 13px;
         height: 13px;;
     }
+
+    @media screen and (min-width: 1600px) {
+        width: 51.571px;
+        height: 51.571px;
+        border-radius: 11.46px;
+
+        svg{
+            width: 29.031px;
+            height: 30.28px;
+        }
+    }
 }
 
 .hero__small-text-cont{
@@ -401,6 +601,13 @@ button {
 
     @media screen and (min-width: 375px) {
         min-width: 110px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 243.788px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
 
@@ -410,6 +617,10 @@ button {
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 50px;
+    }
 }
 
 .hero__small-offer{
@@ -420,6 +631,10 @@ button {
     line-height: 99.5%;
     text-transform: uppercase;
     margin-bottom: 3px;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 25px;
+    }
 }
 
 .hero__small-price{
@@ -427,6 +642,10 @@ button {
     font-family: Poppins;
     font-size: 9px;
     text-transform: uppercase;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+    }
 }
 
 .hero__big-cont {
@@ -459,5 +678,29 @@ button {
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
+    }
+
+    @media screen and (min-width: 1600px) {
+        border-radius: 25px;
+        height: 126.616px;
+        padding: 15px 55px 15px 25px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        p{
+            font-size: 20px;
+            text-align: left;
+
+            span{
+                font-size: 30px;
+            }
+        }
+
+        ul{
+            margin: 0;
+            
+        }
     }
 }
