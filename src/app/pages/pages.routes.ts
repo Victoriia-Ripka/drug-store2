@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 
-import { PagesComponent } from './pages.component';
-import { AboutUsPageComponent, HomePageComponent } from './index';
+import { AboutUsPageComponent, HomePageComponent, PoliciesPageComponent } from './index';
 
 export const routes: Routes = [
     {
@@ -12,6 +11,11 @@ export const routes: Routes = [
         path: 'about-us',
         title: 'About us - Canadian Drug Store',
         component: AboutUsPageComponent
+    },
+    {
+        path: 'policies',
+        title: 'Policies - Canadian Drug Store',
+        component: PoliciesPageComponent
     },
 ];
     // {
@@ -24,11 +28,7 @@ export const routes: Routes = [
     //     title: 'FAQ - Canadian Drug Store',
     //     component: FaqPageComponent
     // },
-    // {
-    //     path: 'policies',
-    //     title: 'Policies - Canadian Drug Store',
-    //     component: PoliciesPageComponent
-    // },
+    
     // {
     //     path: 'contact-us',
     //     title: 'Contact us - Canadian Drug Store',
