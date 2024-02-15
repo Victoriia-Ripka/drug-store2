@@ -4,7 +4,7 @@ import { HeroComponent, ProductsComponent, TestimonialsComponent } from './compo
 @Component({
     selector: 'home-page',
     standalone: true,
-    imports: [ HeroComponent, TestimonialsComponent, ProductsComponent],
+    imports: [HeroComponent, TestimonialsComponent, ProductsComponent],
     templateUrl: './homePage.component.html',
 })
 export class HomePageComponent { }

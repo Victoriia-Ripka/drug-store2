@@ -1,20 +1,19 @@
 import { Routes } from '@angular/router';
 
 import { PagesComponent } from './pages.component';
-import { HomePageComponent } from './index';
+import { AboutUsPageComponent, HomePageComponent } from './index';
 
 export const routes: Routes = [
     {
         path: '',
         component: HomePageComponent
     },
+    {
+        path: 'about-us',
+        title: 'About us - Canadian Drug Store',
+        component: AboutUsPageComponent
+    },
 ];
-
-// {
-    //     path: 'about-us',
-    //     title: 'About us - Canadian Drug Store',
-    //     component: AboutUsPageComponent
-    // },
     // {
     //     path: 'shipping',
     //     title: 'Shipping - Canadian Drug Store',
