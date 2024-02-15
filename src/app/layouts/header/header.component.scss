@@ -1,7 +1,8 @@
 header {
     position: fixed;
     z-index: 5;
-    width: 100%;
+    width: 100vw;
+    box-sizing: border-box;
     border-bottom: 1px solid var(--ui-primary-gray-color);
     background-color: var(--ui-secondary-light-color);
     padding: 16px 12px;
@@ -49,7 +50,7 @@ header {
         background: #0F2650;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1600px) {
         display: none;
     }
 }
@@ -90,8 +91,6 @@ header {
         height: 28px;
     }
 
-    @media screen and (min-width: 678px) {}
-
     @media screen and (min-width: 1600px) {
         width: 40px;
         height: 40px;
@@ -115,8 +114,6 @@ header {
         font-size: 24px;
     }
 
-    @media screen and (min-width: 678px) {}
-
     @media screen and (min-width: 1600px) {
         font-size: 30px;
     }
@@ -137,7 +134,7 @@ header {
 nav{
     display: none;
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1600px) {
         display: flex;
         align-items: center;
         gap: 33px;

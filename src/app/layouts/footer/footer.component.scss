@@ -225,14 +225,15 @@ footer {
         color: black;
     }
 
-    .footer__rights{
+    .footer__rights-1600{
+        display: none;
         font-family: Roboto;
         font-size: 14px;
         font-weight: 300;
     }
 
-    .footer__links-cont{
-        display: flex;
+    .footer__links-cont-1600{
+        display: none;
         flex-wrap: nowrap;
         justify-content: space-between;
         gap: 46.525px;
@@ -247,5 +248,13 @@ footer {
 
     @media screen and (min-width: 1600px) {
         display: flex;
+
+        .footer__rights-1600{
+            display: block;
+        }
+
+        .footer__links-cont-1600{
+            display: flex;
+        }
     }
 }
