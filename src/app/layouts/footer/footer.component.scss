@@ -42,6 +42,7 @@ footer {
         font-size: 18px;
         font-weight: 600;
         line-height: 150%;
+        cursor: pointer;
 
         margin-bottom: 14px;
     }
@@ -178,6 +179,7 @@ footer {
     border-radius: 10px;
     background-color: var(--ui-secondary-light-color);
     padding: 5px;
+    cursor: pointer;
 }
 
 .footer__extra-cont{
@@ -202,6 +204,7 @@ footer {
         color: var(--ui-secondary-light-color);
         font-family: Roboto;
         font-size: 11.773px;
+        cursor: pointer;
     }
 }
 
@@ -243,6 +246,7 @@ footer {
         a{
             font-size: 16px;
             width: auto;
+            cursor: pointer;
         }
     }
 

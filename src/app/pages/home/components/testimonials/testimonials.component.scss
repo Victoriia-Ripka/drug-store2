@@ -5,6 +5,13 @@ section {
         width: 460px;
         margin: 50px auto 50px;
     }
+
+    @media screen and (min-width: 1600px) {
+        width: 1600px;
+        margin: 100px auto;
+    }
+
+    position: relative;
 }
 
 .testimonials__title{
@@ -15,6 +22,11 @@ section {
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 60px;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 50px;
+        margin-bottom: 80px;
+    }
 }
 
 .testimonials__list{
@@ -22,6 +34,14 @@ section {
     flex-direction: column;
     gap: 60px;
     margin-bottom: 30px;
+
+    @media screen and (min-width: 1600px) {
+        flex-direction: row;
+        width: 1329.614px;
+        gap: 42.14px;
+        margin-bottom: 0;
+        margin: 0 auto;
+    }
 }
 
 .testimonials__item{
@@ -34,12 +54,26 @@ section {
     align-items: flex-start;
     gap: 30.176px;
     position: relative;
+
+    @media screen and (min-width: 1600px) {
+        width: 415px;
+        height: 330px;
+        border-radius: 17.743px;
+        gap: 35px;
+        padding: 22.179px 27.723px 38.813px 27.723px;
+    }
 }
 
 .testimonials__item-avatar{
     position: absolute;
     left: 23px;
     top: -35px;
+
+    @media screen and (min-width: 1600px) {
+        left: 27px;
+        width: 84px;
+        height: 84px;;
+    }
 }
 
 .testimonials__item-raiting{
@@ -47,12 +81,18 @@ section {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @media screen and (min-width: 1600px) {}
 }
 
 .testimonials__item-reviewe{
     color: #000;
     font-family: Poppins;
     font-size: 16px;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 18px;
+    }
 }
 
 .testimonials__item-extra-info-cont{
@@ -62,15 +102,15 @@ section {
     width: 100%;
 }
 
-.testimonials__item-extra-text-cont{
-
-}
-
 .testimonials__item-name{
     color: #000;
     font-family: Poppins;
     font-size: 13px;
     font-weight: 600;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 15px;
+    }
 }
 
 .testimonials__item-details{
@@ -78,10 +118,10 @@ section {
     font-family: Poppins;
     font-size: 10px;
     font-weight: 600;
-}
 
-.testimonials__item-svg{
-
+    @media screen and (min-width: 1600px) {
+        font-size: 11px;
+    }
 }
 
 .testimonials__buttons-cont{
@@ -91,11 +131,30 @@ section {
     gap: 20px;
     text-align: center;
     justify-content: center;
+
+    @media screen and (min-width: 1600px){
+        position: absolute;
+        top: 310px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1600px;
+        height: 100px;
+        
+        text-align: center;
+        justify-content: space-between;
+    }
 }
 
 .button{
     background-color: transparent;
-    border-color: transparent;
+    border: none;
     width: 60px;
     height: 60px;
+    padding: 0;
+    cursor: pointer;
+
+    @media screen and (min-width: 1600px) {
+        width: 100px;
+        height: 100px;
+    }
 }

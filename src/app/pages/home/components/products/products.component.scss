@@ -99,6 +99,7 @@ section {
     background: linear-gradient(90deg, #FF8C4B 0%, #FFE24B 100%);
     border: none;
     margin: 0 auto;
+    cursor: pointer;
 
     color: #131313;
     text-align: center;
@@ -171,6 +172,7 @@ section {
     font-family: Poppins;
     font-size: 18px;
     font-weight: 500;
+    cursor: pointer;
 
     @media screen and (min-width: 1600px) {
         font-size: 25px;
@@ -222,9 +224,15 @@ section {
     align-items: center;
     justify-content: center;
     padding: 18px;
+    overflow: hidden;
 
     @media screen and (min-width: 1600px) {
         height: 244px;
+
+        img{
+            max-width: 220px;
+            height: auto;
+        }
     }
 }
 
@@ -238,6 +246,13 @@ section {
     @media screen and (min-width: 375px) {
         gap: 25px;
     }
+
+    @media screen and (min-width: 1600px) {
+        gap: 53px;
+        justify-content: center;
+        margin-top: 22px;
+        padding: 0;
+    }
 }
 
 .products__item-title{
@@ -245,6 +260,10 @@ section {
     font-family: Poppins;
     font-size: 9px;
     font-weight: 700;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+    }
 }
 
 .products__item-price{
@@ -254,6 +273,10 @@ section {
     span{
         font-weight: 700;
     }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+    }
 }
 
 .products__item-medic{
@@ -262,6 +285,10 @@ section {
     font-size: 7.869px;
     font-weight: 400;
     line-height: 15px;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 18px;
+    }
 }
 
 .products__button{
@@ -280,6 +307,13 @@ section {
     font-size: 8px;
     font-weight: 700;
     text-transform: uppercase;
+
+    @media screen and (min-width: 1600px) {
+        width: 149.135px;
+        height: 56.961px;
+        border-radius: 15.535px;
+        font-size: 18px;
+    }
 }
 
 .products__link{
@@ -292,4 +326,8 @@ section {
     text-align: center;
     margin: 0 auto;
     display: block;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 25px;
+    }
 }
