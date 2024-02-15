@@ -6,6 +6,11 @@ section{
         padding: 0;
         margin: 50px auto;
     }
+
+    @media screen and (min-width: 1600px) {
+        width: 1400px;
+        margin: 100px auto;
+    }
 }
 
 .guarantee__title{
@@ -20,6 +25,11 @@ section{
     @media screen and (min-width: 375px) {
         font-size: 30px;
     }
+
+    @media screen and (min-width: 1600px) {
+        margin-bottom: 40px;
+        font-size: 50px;
+    }
 }
 
 .guarantee__list{
@@ -28,6 +38,12 @@ section{
     align-items: center;
     justify-items: center;
     gap: 30px;
+
+    @media screen and (min-width: 1600px) {
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 50px;
+    }
 }
 
 .guarantee__item{
@@ -41,6 +57,19 @@ section{
     border-radius: 16px;
     border: 0.529px solid rgba(0, 0, 0, 0.10);
     background: #ECF8FF;
+
+    @media screen and (min-width: 1600px) {
+        width: 674px;
+        height: 240px;
+        padding: 39px 27px;
+        gap: 40px;
+        border-radius: 30px;
+
+        svg{
+            width: 129px;
+            height: 160px;
+        }
+    }
 }
 
 .guarantee__text-cont{
@@ -48,6 +77,10 @@ section{
     
     @media screen and (min-width: 375px) {
         width: 238.607px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 451px;
     }
 }
 
@@ -57,6 +90,11 @@ section{
     font-size: 16px;
     font-weight: 700;
     line-height: 110%;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
 }
 
 .guarantee__text{
@@ -68,5 +106,9 @@ section{
 
     @media screen and (min-width: 375px) {
         font-size: 16px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 22px;
     }
 }
