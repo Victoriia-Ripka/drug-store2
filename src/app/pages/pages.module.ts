@@ -5,13 +5,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { routes } from './pages.routes';
 
 @NgModule({
-    declarations: [],
     imports: [
         CommonModule,
         HttpClientModule,
         RouterModule.forChild(routes)
     ],
-    providers: [],
     exports: [RouterModule],
 })
 export class PagesModule { }
