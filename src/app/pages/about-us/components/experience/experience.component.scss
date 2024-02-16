@@ -10,7 +10,7 @@ section{
 .exp__cont{
 
     @media screen and (min-width: 375px) {
-        width: 375px;
+        width: 355px;
         margin: 0 auto;
     }
 
@@ -75,6 +75,8 @@ section{
 }
 
 .exp__text-cont{
+    margin-bottom: 100px;
+
     @media screen and (min-width: 1600px) {
         display: flex;
         gap: 190px;
