@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-policies-page',
+  selector: 'policies-page',
   standalone: true,
   imports: [],
   templateUrl: './policiesPage.component.html',
