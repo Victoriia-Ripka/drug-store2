@@ -1,6 +1,18 @@
 <section>
     <h2>Products FAQ</h2>
     <ul>
-        <li></li>
+        <li *ngFor="let item of content" [ngClass]="{'selected-item': isItemSelected(item.id)}">
+            <div>
+                <h3>{{item.question}}</h3>
+                <p *ngIf="selectedQuestion == item.id">{{item.answer}}</p>
+            </div>
+    
+            <button *ngIf="selectedQuestion !== item.id" type="button" (click)="showAnswer(item.id)">
+            </button>
+    
+            <button *ngIf="selectedQuestion == item.id" type="button" (click)="hideAnswer()">
+            </button>
+    
+        </li>
     </ul>
 </section>

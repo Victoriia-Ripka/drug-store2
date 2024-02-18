@@ -38,5 +38,5 @@ export class HeaderComponent {
     this.selectedCurrency = currency;
   }
 
-  
+
 }
