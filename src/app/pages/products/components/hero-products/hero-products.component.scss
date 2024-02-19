@@ -1,0 +1,113 @@
+section{
+    border-radius: 20px;
+    background: #212844;
+    margin: 30px 10px 50px;
+    padding: 28px 40px;
+    position: relative;
+    overflow: hidden;
+
+    height: 554px;
+
+    @media screen and (min-width: 375px) {
+        width: 355px;
+        margin: 30px auto 50px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 1500px;
+        height: 400px;
+        margin: 90px auto 80px;
+        padding: 80px 113px;
+    }
+}
+
+.hero__text-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    @media screen and (min-width: 1600px) {
+        width: 722.615px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 25px;
+    }
+    
+}
+
+.hero__text{
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 25px;
+    line-height: 1.25;
+
+    @media screen and (min-width: 375px) {
+        font-size: 30px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 37.767px;
+    }
+}
+
+.hero__title{
+    text-align: center;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 1;
+
+    @media screen and (min-width: 375px) {
+        font-size: 41px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 80px;
+    }
+}
+
+.hero__back-circle{
+    width: 688px;
+    height: 688px;
+    padding: 24px;
+    border-radius: 50%;
+    border: 1.333px solid #3C466B;
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media screen and (min-width: 1600px) {
+        bottom: 200px;
+        left: 860px;
+        top: 0;
+    }
+}
+
+.hero__back-filled-circle{
+    width: 640px;
+    height: 640px;
+    background: #2C3454;
+    border-radius: 50%;
+
+    @media screen and (min-width: 1600px) {}
+}
+
+img{
+    width: 415.741px;
+    height: auto;
+    opacity: 0.99;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    // top: 220px;
+
+    @media screen and (min-width: 1600px) {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 850px;
+        transform: translateX(0);
+    }
+}
