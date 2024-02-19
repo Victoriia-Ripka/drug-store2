@@ -5,7 +5,8 @@ import {
     HomePageComponent,
     PoliciesPageComponent,
     ShippingPageComponent,
-    ContactUsPageComponent
+    ContactUsPageComponent,
+    ProductsPageComponent
 } from './index';
 
 export const routes: Routes = [
@@ -38,13 +39,12 @@ export const routes: Routes = [
         title: 'Contact us - Canadian Drug Store',
         component: ContactUsPageComponent
     },
+    {
+        path: 'products',
+        title: 'All Products - Canadian Drug Store',
+        component: ProductsPageComponent
+    },
 ];
-
-// {
-//     path: 'products',
-//     title: 'All Products - Canadian Drug Store',
-//     component: ProductsPageComponent
-// },
 
 // {
 //     path: 'product/:id',

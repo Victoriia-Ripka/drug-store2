@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FaqOrderingComponent, FaqProductsComponent, FaqShippingComponent } from './components';
 
 @Component({
-  selector: 'faq',
+  selector: 'faq-page',
   standalone: true,
   imports: [FaqOrderingComponent, FaqProductsComponent, FaqShippingComponent],
   templateUrl: './faqPage.component.html',
