@@ -1,1 +1,50 @@
-<p>products works!</p>
+<section>
+    <div class="products__extra-cont">
+        <div class="products__head-cont">
+            <h2 class="products__title">All Products</h2>
+
+            <div class="products__actions-cont">
+                <div class="products__search-cont">
+                    <input placeholder="Search pills" />
+                    <img class="search-img" src="assets\img\mobile\search-min.png" />
+                </div>
+                <button (click)="toggleCategoriesModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M27.8017 6.06733C27.8017 6.58884 27.379 7.01161 26.8574 7.0116L8.60151 7.0116C8.08 7.0116 7.65723 6.58884 7.65723 6.06732C7.65723 5.54581 8.08 5.12305 8.60151 5.12305L26.8574 5.12305C27.379 5.12305 27.8017 5.54582 27.8017 6.06733ZM27.8017 14.8804C27.8017 15.4019 27.379 15.8247 26.8574 15.8247L8.60151 15.8247C8.08 15.8247 7.65723 15.4019 7.65723 14.8804C7.65723 14.3589 8.08 13.9361 8.60151 13.9361L26.8574 13.9361C27.379 13.9361 27.8017 14.3589 27.8017 14.8804ZM26.8574 24.6382C27.379 24.6382 27.8017 24.2155 27.8017 23.694C27.8017 23.1724 27.379 22.7497 26.8574 22.7497L8.60151 22.7497C8.08 22.7497 7.65723 23.1724 7.65723 23.694C7.65723 24.2155 8.08 24.6382 8.60151 24.6382L26.8574 24.6382Z"
+                            fill="#F6F6FC" />
+                        <circle cx="3.88012" cy="6.38208" r="1.25903" fill="#F6F6FC" />
+                        <circle cx="3.88012" cy="15.1951" r="1.25903" fill="#F6F6FC" />
+                        <circle cx="3.88012" cy="24.009" r="1.25903" fill="#F6F6FC" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="products__main-cont">
+
+            <div class="products__categories-cont">
+
+            </div>
+
+            <!-- <mat-drawer-content> -->
+            <div class="products__list-cont">
+                <ul class="products-list">
+                    <!--  | paginate: { itemsPerPage: pageSize, currentPage: currentPage } -->
+                    <li *ngFor="let item of products">
+                        <product-card [title]="item.title" [substance]="item.substance" [price]="item.price"
+                            [id]="item.id">
+                        </product-card>
+                    </li>
+                </ul>
+
+                <div class="products__pagination">paggination</div>
+            </div>
+        </div>
+        <!-- <pagination-controls class="my-pagination" (pageChange)="currentPage = $event" previousLabel="" nextLabel="">
+        </pagination-controls> -->
+
+        <!-- </mat-drawer-content> -->
+    </div>
+
+</section>

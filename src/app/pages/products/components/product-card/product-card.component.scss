@@ -1,0 +1,135 @@
+.product__item {
+    display: flex;
+    width: 100%;
+    height: 164.36px;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #93C1FE;
+
+    @media screen and (min-width: 375px) {
+        width: 168px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        height: 376px;
+        width: 384px;
+        border-radius: 31px;
+    }
+}
+
+.product__img-cont {
+    border-bottom: 1px solid #93C1FE;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    overflow: hidden;
+
+    @media screen and (min-width: 1600px) {
+        height: 244px;
+
+        img {
+            max-width: 220px;
+            height: auto;
+        }
+    }
+}
+
+.product__text-cont {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px 13px;
+
+    @media screen and (min-width: 375px) {
+        gap: 25px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        gap: 53px;
+        justify-content: center;
+        margin-top: 22px;
+        padding: 0;
+    }
+}
+
+.product__item-title {
+    color: #122953;
+    font-family: Poppins;
+    font-size: 9px;
+    font-weight: 700;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+    }
+}
+
+.product__item-price {
+    color: #0D6EFD;
+    font-family: Poppins;
+    font-size: 9px;
+
+    span {
+        font-weight: 700;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+    }
+}
+
+.product__item-medic {
+    color: #0F2650;
+    font-family: Poppins;
+    font-size: 7.869px;
+    font-weight: 400;
+    line-height: 15px;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 18px;
+    }
+}
+
+.product__button {
+    display: flex;
+    width: 65px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    border: 1px solid #005ADE;
+    background-color: transparent;
+    cursor: pointer;
+
+    color: #142A53;
+    font-family: Inter;
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 1600px) {
+        width: 149.135px;
+        height: 56.961px;
+        border-radius: 15.535px;
+        font-size: 18px;
+    }
+}
+
+.product__link {
+    color: #0D6EFD;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration-line: underline;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 25px;
+    }
+}
