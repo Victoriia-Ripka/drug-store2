@@ -12,7 +12,6 @@ import { ContactUsPageModule } from './contact-us/contactUsPage.module';
         HttpClientModule, 
         RouterModule.forChild(routes),
         ContactUsPageModule,
-        
     ],
     // providers: [HttpClient],
     exports: [RouterModule],

@@ -1,1 +1,25 @@
-<p>product-hero works!</p>
+<section>
+    <div class="product__nav-cont">
+        <a class="product__nav-text" href="/">Home</a> 
+        <svg class="product__nav-arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+            <path d="M4.95955 2.24121L8.57624 5.8579L4.95955 9.47459" stroke="#A3A9C2" stroke-width="1.08501"
+                stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <a class="product__nav-text" href="/products">All Product</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+            <path d="M4.95955 2.24121L8.57624 5.8579L4.95955 9.47459" stroke="#A3A9C2" stroke-width="1.08501"
+                stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <a class="product__nav-text bold">{{product.title}}</a>
+    </div>
+    <div class="product__main-cont">
+        <div class="product__img-cont">
+            <img src="{{product.src}}">
+        </div>
+        <div class="product__main-text-cont">
+            <h1 class="product__title">{{product.title}}</h1>
+            <p class="product__main-desc">Clomid is a fertility drug used to help become pregnant.</p>
+
+        </div>
+    </div>
+</section>

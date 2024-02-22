@@ -25,4 +25,9 @@ export class ProductsService {
   //     map(products => products.filter(product => product.id == id))
   //   );
   // }
+
+  getProduct(id: number): any {
+    const product = this.products.find(product => product.id === id);
+    return product
+  }
 }

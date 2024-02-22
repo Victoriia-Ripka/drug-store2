@@ -8,6 +8,6 @@
             <p class="product__item-price">from <span>€{{price}}</span></p>
             <p class="product__item-medic">{{substance}}</p>
         </div>
-        <a class="product__button" href="product/:{{id}}">Buy now</a>
+        <button (click)="goToProductDetail(id)" class="product__button">Buy now</button>
     </div>
 </li>
