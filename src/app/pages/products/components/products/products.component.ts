@@ -20,10 +20,8 @@ export class ProductsComponent {
   pageSize: number = 9
   currentPage: number = 1
   products: any[] = []
-  producrsAmount: number = 0;
 
   constructor(private productsService: ProductsService, private route: ActivatedRoute, private router: Router) { }
-
 
   ngOnInit() {
     this.route.queryParams.subscribe((params) => {
@@ -66,8 +64,6 @@ export class ProductsComponent {
       }
 
       this.products = interData
-      this.producrsAmount = this.products.length
-
   }
 
 }

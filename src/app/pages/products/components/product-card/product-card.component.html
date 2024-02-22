@@ -1,13 +1,13 @@
 <li class="product__item">
     <div class="product__img-cont">
-        <img src="assets\img\mobile\provigil-min.png">
+        <img [src]="img">
     </div>
     <div class="product__text-cont">
         <div class="product__text-info-cont">
-            <p class="product__item-title">Provigil</p>
-            <p class="product__item-price">from <span>€0.91</span></p>
-            <p class="product__item-medic">Provigil</p>
+            <p class="product__item-title">{{title}}</p>
+            <p class="product__item-price">from <span>€{{price}}</span></p>
+            <p class="product__item-medic">{{substance}}</p>
         </div>
-        <button class="product__button">Buy now</button>
+        <a class="product__button" href="product/:{{id}}">Buy now</a>
     </div>
 </li>

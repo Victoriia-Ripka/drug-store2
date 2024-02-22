@@ -17,6 +17,8 @@ export class ProductCardComponent {
   price: number = 0
   @Input()
   id: number = 0
+  @Input()
+  img: string = 'a.png'
 
   constructor(private router: Router) { }
 

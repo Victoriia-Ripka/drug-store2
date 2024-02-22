@@ -34,70 +34,9 @@
 
             <div>
                 <ul class="products__list">
-                    <li class="products__item">
-                        <div class="products__img-cont">
-                            <img src="assets\img\mobile\provigil-min.png">
-                        </div>
-                        <div class="products__text-cont">
-                            <div class="products__text-info-cont">
-                                <p class="products__item-title">Provigil</p>
-                                <p class="products__item-price">from <span>€0.91</span></p>
-                                <p class="products__item-medic">Provigil</p>
-                            </div>
-                            <button class="products__button">Buy now</button>
-                        </div>
-                    </li>
-                    <li class="products__item">
-                        <div class="products__img-cont">
-                            <img src="assets\img\mobile\provigil-min.png">
-                        </div>
-                        <div class="products__text-cont">
-                            <div class="products__text-info-cont">
-                                <p class="products__item-title">Provigil</p>
-                                <p class="products__item-price">from <span>€0.91</span></p>
-                                <p class="products__item-medic">Provigil</p>
-                            </div>
-                            <button class="products__button">Buy now</button>
-                        </div>
-                    </li>
-                    <li class="products__item">
-                        <div class="products__img-cont">
-                            <img src="assets\img\mobile\provigil-min.png">
-                        </div>
-                        <div class="products__text-cont">
-                            <div class="products__text-info-cont">
-                                <p class="products__item-title">Provigil</p>
-                                <p class="products__item-price">from <span>€0.91</span></p>
-                                <p class="products__item-medic">Provigil</p>
-                            </div>
-                            <button class="products__button">Buy now</button>
-                        </div>
-                    </li>
-                    <li class="products__item">
-                        <div class="products__img-cont">
-                            <img src="assets\img\mobile\provigil-min.png">
-                        </div>
-                        <div class="products__text-cont">
-                            <div class="products__text-info-cont">
-                                <p class="products__item-title">Provigil</p>
-                                <p class="products__item-price">from <span>€0.91</span></p>
-                                <p class="products__item-medic">Provigil</p>
-                            </div>
-                            <button class="products__button">Buy now</button>
-                        </div>
-                    </li>
-                    <li class="products__item">
-                        <div class="products__img-cont">
-                            <img src="assets\img\mobile\provigil-min.png">
-                        </div>
-                        <div class="products__text-cont">
-                            <div class="products__text-info-cont">
-                                <p class="products__item-title">Provigil</p>
-                                <p class="products__item-price">from <span>€0.91</span></p>
-                                <p class="products__item-medic">Provigil</p>
-                            </div>
-                            <button class="products__button">Buy now</button>
-                        </div>
+                    <li *ngFor="let item of products">
+                        <product-card [title]="item.title" [substance]="item.substance" [price]="item.price" [id]="item.id"  [img]="item.src">
+                        </product-card>
                     </li>
                 </ul>
 

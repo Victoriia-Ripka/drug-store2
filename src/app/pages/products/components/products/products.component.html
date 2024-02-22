@@ -32,7 +32,7 @@
                 <ul class="products-list">
                     <!--  | paginate: { itemsPerPage: pageSize, currentPage: currentPage } -->
                     <li *ngFor="let item of products">
-                        <product-card [title]="item.title" [substance]="item.substance" [price]="item.price"
+                        <product-card [title]="item.title" [substance]="item.substance" [price]="item.price" [img]="item.src"
                             [id]="item.id">
                         </product-card>
                     </li>
