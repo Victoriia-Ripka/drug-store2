@@ -1,0 +1,144 @@
+section {
+    padding: 50px 10px;
+    background: #ECF8FF;
+}
+
+.product__tables-list{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+h2{
+    color: #242E49;
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.9;
+    letter-spacing: -0.6px;
+    margin-bottom: 30px;
+
+    span{
+        color: #0D6EFD;
+    }
+}
+
+.product-table-laptop{
+    display: none;
+}
+
+.product-table-mobile {
+    .head {
+        background-color: #D7F0FF;
+        height: 63px;
+        display: flex;
+        padding: 0 15px;
+        align-items: center;
+        border-radius: 20px 20px 0 0;
+        border: 1px solid #C6CACC;
+        justify-content: space-between;
+
+        p {
+            color: #21365D;
+            text-align: center;
+            font-family: "Plus Jakarta Sans";
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 120%; 
+            text-transform: uppercase;
+        }
+    }
+
+    .body {
+        background: #F7FCFF;
+        padding: 15px 0;
+        border-radius: 0 0 20px 20px;
+
+        .column {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+            padding: 6px 10px;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+            }
+        }
+
+        .product-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            div {
+                max-width: 70px;
+                color: #000;
+                font-family: Plus Jakarta Sans;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 1.2;
+
+                @media screen and (min-width: 375px) {
+                    max-width: 110px;
+                }
+            }
+
+            .price {
+                text-align: right;
+
+                p {
+                    margin: 0;
+                    text-align: right;
+                }
+
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        button {
+            width: 125px;
+            height: 39px;
+            border-radius: 10.205px;
+            background: linear-gradient(90deg, #0F2650 4.29%, #3D4F71 92.86%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: none;
+            color: #FFF;
+            font-family: Plus Jakarta Sans;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            cursor: pointer;
+
+            &:focus,
+            &:hover {
+                background-color: var(--ui-primary-hovered-blue);
+            }
+        }
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 460px;
+    }
+}
+
+.old-price {
+    color: #f00;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: line-through;
+}
+
+.discount {
+    color: #f00;
+    font-style: normal;
+    font-weight: 400;
+}

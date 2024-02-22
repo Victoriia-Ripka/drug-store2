@@ -1,0 +1,135 @@
+section{
+    padding: 50px 10px;
+
+    @media screen and (min-width: 375px) {
+        width: 355px;
+        padding: 0;
+        margin: 50px auto;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 460px;
+    }
+
+    @media screen and (min-width: 1600px) {}
+}
+
+.product__nav-cont{
+    margin-bottom: 35px;
+    padding-bottom: 6px;
+    display: flex;
+    gap: 77px;
+    border-bottom: 5px solid #EAECF0;
+}
+
+.product__nav{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    color: #164C96;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+}
+
+.selected{
+    width: 100%;
+    height: 5px;
+    background-color: #164C96;
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+}
+
+.product__desc-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product__desc-title{
+    color: #344054;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    text-align: left;
+
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.product__desc-text{
+    color: #667085;
+    font-family: Poppins;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.product__reviews-title{
+    margin-bottom: 20px;
+    color: #344054;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.product__raiting-cont{
+    border-radius: 10px;
+    background: #F9FAFB;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product__raiting-mark{
+    color: #0D6EFD;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.product__raiting-text{
+    color: #4F547B;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.product__stars-cont{
+    border-radius: 10px;
+    background: #F9FAFB;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 40px;
+
+    li{
+        display: flex;
+        text-align: center;
+    }
+}
+
+.product__stars-line{
+    width: 150px;
+    height: 5px;
+    background-color: #E6EAEEB2;
+}
+
+.product__stars-raiting{
+    color: #0D6EFD;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 3;
+}

@@ -17,10 +17,11 @@ section{
 .product__nav-cont{
     border-radius: 5.787px;
     background: #EDF0F8;
-    width: 210px;
+    width: 240px;
     padding: 5.787px 8.68px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10.127px;
     margin: 0 auto 50px;
 }
@@ -43,6 +44,7 @@ section{
 .product__main-cont{
     display: flex;
     flex-direction: column-reverse;
+    margin-bottom: 20px;
 }
 
 .product__img-cont{
@@ -81,4 +83,127 @@ section{
     font-size: 16px;
     line-height: 1.4;
     letter-spacing: -0.32px;
+}
+
+.product__price{
+    color: #3A4980;
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.product__price-text{
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Inter;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.product__opinion-cont{
+    display: flex;
+    margin-bottom: 17px;
+    gap: 15px;
+    align-items: center;
+}
+
+.product__like-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border-radius: 10px;
+    background: #FBF3EA;
+
+    width: 80px;
+    height: 40px;
+
+    color: #D48D3B;
+    font-family: Inter;
+    font-size: 17.47px;
+    font-weight: 600;
+}
+
+
+.product__reviews-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border-radius: 10px;
+    background: #EDF0F8;
+
+    width: 150px;
+    height: 40px;
+
+    color: #3A4980;
+    font-family: Inter;
+    font-size: 17.47px;
+    font-weight: 600;
+}
+
+
+.product__light-text{
+    color: #B9BBBF;
+    font-family: Inter;
+    font-size: 18px;
+    margin-bottom: 18px;
+
+    span{
+        color: #3E9242;
+    }
+}
+
+.product__details-cont{
+    padding: 18px 0;
+    border-bottom: 1px solid #E4E4E4;
+    border-top: 1px solid #E4E4E4;
+    margin-bottom: 18px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    p{
+        color: #364A6D;
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.product__delivery-cont{
+    border-radius: 17px;
+    border: 1px solid #0D6EFD;
+    padding: 21px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.product__delivery-text-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    width: 190px;
+
+    @media screen and (min-width: 375px) {
+        width: 250px;
+    }
+}
+
+.product__delivery-title{
+    color: #0D6EFD;
+    font-family: Inter;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.product__delivery-text{
+    color: #726C6C;
+    font-family: Inter;
+    font-size: 17px;;
 }
