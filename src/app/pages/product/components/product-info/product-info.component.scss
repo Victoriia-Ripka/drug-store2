@@ -117,13 +117,24 @@ section{
     li{
         display: flex;
         text-align: center;
+        gap: 40px;
+
+        @media screen and (min-width: 375px) {
+            gap: 0;
+        }
+
     }
 }
 
 .product__stars-line{
+    display: none;
     width: 150px;
     height: 5px;
     background-color: #E6EAEEB2;
+
+    @media screen and (min-width: 375px) {
+        display: block;
+    }
 }
 
 .product__stars-raiting{
@@ -131,5 +142,193 @@ section{
     font-family: Poppins;
     font-size: 18px;
     font-weight: 600;
-    line-height: 3;
+    line-height: 1;
+    margin-left: 16px;
+    width: 36px;
+    text-align: right;
+}
+
+.product__reviews-cont{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.product__review-cont{
+    display: flex;
+    gap: 27px;
+
+    
+    
+}
+
+.product__review-avatar{
+    width: 56.916px;
+    height: 56.916px;
+    border-radius: 50%;
+    border: none;
+}
+
+.product__review-text-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.product__reviewer-text-cont{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product__reviewer-name{
+    color: #1D2939;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+    text-transform: capitalize;
+
+    @media screen and (min-width: 375px) {
+        font-size: 18px;
+    }
+}
+
+.product__reviewer-text-data{
+    color: #4F547B;
+    font-family: Inter;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.product__review-info-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.product__review-topic{
+    color:#1D2939;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.product__review-text{
+    color: #667085;
+    font-family: Poppins;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.product__review-btns-cont{
+    display: flex;
+    gap: 15px
+}
+
+.product__review-like-btn{
+    border: none;
+    color: #667085;
+    font-family: Poppins;
+    font-size: 17px;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.product__review-comment-btn{
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    color:  #D94A27;
+    font-family: Poppins;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.product__reviews-link{
+    color: #0D6EFD;
+    font-family: Inter;
+    font-size: 16px;
+    text-decoration-line: underline;
+    text-align: center;
+    margin-top: -40px;
+    cursor: pointer;
+}
+
+.product__form-title-cont{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product__form-title{
+    color: #344054;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.product__form-after-title{
+    color: #1D2939;
+    font-family: Poppins;
+    font-size: 16px;
+}
+
+.product__form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product__review-input-cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    label{
+        display: block;
+        color: #1D2939;
+        font-family: Poppins;
+        font-size: 18px;
+    }
+
+    input,
+    textarea{
+        border-radius: 19px;
+        border: 1px solid #DDD;
+        background: #FFF;
+        height: 73.333px;
+        padding: 20px 30px;
+
+        font-family: Poppins;
+        font-size: 16px;
+        line-height: 2.1;
+
+        &::placeholder{
+            color: #667085;
+        }
+    }
+
+    textarea{
+        height: 240px;
+    }
+}
+
+.product__review-form-btn{
+    border-radius: 14px;
+    background: linear-gradient(90deg, #0F2650 4.29%, #3D4F71 92.86%);
+    border: none;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.7;
 }
