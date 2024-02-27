@@ -16,7 +16,7 @@ export class ProductInfoComponent {
   @Input()
   product: any
 
-  openedSection: "desc" | "reviews" = "reviews"
+  openedSection: "desc" | "reviews" = "desc"
 
   changeOpenedSection(section: "desc" | "reviews") {
     this.openedSection = section

@@ -1,10 +1,21 @@
 <section>
     <ul class="product__tables-list">
         <li class="product__table-cont">
-            <h2>{{product.title}}, <span>25mg</span></h2>
-            <!-- <div class="product__table"> -->
+            <button (click)="toggleProductTable()" class="product__table-title" [class.active]="showProductTable">
+                <div class="button-content">
+                    {{product.title}},
+                    <span>25mg</span>
+                </div>
 
-            <div class="product-table-mobile">
+                <svg *ngIf="!showProductTable" xmlns="http://www.w3.org/2000/svg" width="21" height="17"
+                    viewBox="0 0 21 17" fill="none">
+                    <path
+                        d="M12.427 15.2157C11.6314 16.3616 9.93676 16.3616 9.14122 15.2157L1.20904 3.7905C0.28828 2.46426 1.23739 0.649897 2.85192 0.649897L18.7163 0.649898C20.3308 0.649898 21.2799 2.46426 20.3592 3.7905L12.427 15.2157Z"
+                        fill="#1A3058" />
+                </svg>
+            </button>
+
+            <div *ngIf="showProductTable" class="product-table-mobile">
                 <div class="head">
                     <p>Package</p>
                     <p>Per Pill</p>
@@ -49,7 +60,6 @@
                 </ul>
             </div>
 
-            <!-- </div> -->
         </li>
     </ul>
 </section>

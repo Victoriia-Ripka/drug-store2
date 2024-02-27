@@ -12,7 +12,13 @@ export class ProductDoseComponent {
   @Input()
   product: any
 
+  showProductTable = true;
+
   addPackageToCart(id: number): void {
     console.log(id)
+  }
+
+  toggleProductTable(): void {
+    this.showProductTable = !this.showProductTable;
   }
 }

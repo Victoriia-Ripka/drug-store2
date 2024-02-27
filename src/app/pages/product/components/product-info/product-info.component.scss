@@ -18,7 +18,6 @@ section{
     margin-bottom: 35px;
     padding-bottom: 6px;
     display: flex;
-    gap: 77px;
     border-bottom: 5px solid #EAECF0;
 }
 
@@ -31,6 +30,8 @@ section{
     font-size: 20px;
     font-weight: 600;
     position: relative;
+    width: 50%;
+    text-align: left;
 }
 
 .selected{
@@ -305,7 +306,7 @@ section{
 
         font-family: Poppins;
         font-size: 16px;
-        line-height: 2.1;
+        line-height: 1.4;
 
         &::placeholder{
             color: #667085;
@@ -313,7 +314,7 @@ section{
     }
 
     textarea{
-        height: 240px;
+        height: 250px;
     }
 }
 

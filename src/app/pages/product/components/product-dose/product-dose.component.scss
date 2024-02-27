@@ -7,17 +7,66 @@ section {
     display: flex;
     flex-direction: column;
     gap: 50px;
+
+    @media screen and (min-width: 375px) {
+        width: 355px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 460px;
+    }
+
+    @media screen and (min-width: 1600px) {}
 }
 
-h2{
+.product__table-cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product__table-title{
+    width: 100%;
+    padding: 0 0 20px 0;
     color: #242E49;
+    border: none;
+    border-bottom: 1px solid rgba(18, 41, 82, 0.30);;
+    background-color: transparent;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.9;
+    letter-spacing: -0.6px;
+    cursor: pointer;
+
+    span{
+        color: #0D6EFD;
+    }
+}
+
+.button-content{
+    display: inline-block;
+}
+
+.active{
+    padding: 0;
+    color: #242E49;
+    border: none;
+    background-color: transparent;
+    display: block;
     text-align: center;
     font-family: "Plus Jakarta Sans";
     font-size: 30px;
     font-weight: 700;
     line-height: 1.9;
     letter-spacing: -0.6px;
-    margin-bottom: 30px;
+    cursor: pointer;
 
     span{
         color: #0D6EFD;
@@ -29,6 +78,9 @@ h2{
 }
 
 .product-table-mobile {
+    width: 100%;
+    margin-top: 30px;
+
     .head {
         background-color: #D7F0FF;
         height: 63px;
