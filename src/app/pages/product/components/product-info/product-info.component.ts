@@ -16,10 +16,22 @@ export class ProductInfoComponent {
   @Input()
   product: any
 
+  productInstruction: any = productInstruction
   openedSection: "desc" | "reviews" = "desc"
 
   changeOpenedSection(section: "desc" | "reviews") {
     this.openedSection = section
+  }
+
+  toggleInstructionSection(title: string) {
+    const section = this.productInstruction.find((section: { title: string; shown: boolean }) => {
+      return section.title === title;
+    });
+
+    if (section) {
+      section.shown = !section.shown; 
+      console.log('click');
+    }
   }
 
   reviewForm = new FormGroup({
@@ -41,3 +53,45 @@ export class ProductInfoComponent {
   }
 }
 
+const productInstruction: any = [
+  {
+    title: 'General',
+    shown: true
+  },
+  {
+    title: 'Directions',
+    shown: true
+  },
+  {
+    title: 'Precautions',
+    shown: true
+  },
+  {
+    title: 'Contraindications',
+    shown: true
+  },
+  {
+    title: 'Side-effect',
+    shown: true
+  },
+  {
+    title: 'Interaction',
+    shown: true
+  },
+  {
+    title: 'Missed',
+    shown: true
+  },
+  {
+    title: 'Overdose',
+    shown: true
+  },
+  {
+    title: 'Storage',
+    shown: true
+  },
+  {
+    title: 'Note',
+    shown: true
+  },
+]

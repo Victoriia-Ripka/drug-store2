@@ -22,6 +22,10 @@ footer {
         width: 355px;
         margin: 0 auto;
     }
+
+    @media screen and (min-width: 480px) {
+        width: 460px;
+    }
         
     @media screen and (min-width: 1600px) {
         flex-direction: row-reverse;
@@ -33,7 +37,7 @@ footer {
 
 .footer__columns-cont{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
 
     a{
@@ -47,7 +51,12 @@ footer {
         margin-bottom: 14px;
     }
 
+    @media screen and (min-width: 480px) {
+        justify-content: space-evenly;
+    }
+
     @media screen and (min-width: 1600px) {
+        justify-content: space-between;
         gap: 130px;
     }
 }

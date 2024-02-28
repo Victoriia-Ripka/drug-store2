@@ -12,8 +12,13 @@
 
     <div *ngIf="openedSection=='desc'" class="product__desc-cont">
         <div>
-            <button class="product__desc-title">General information</button>
-            <p class="product__desc-text">Clomid is a so called fertility drug. This medication belongs to the class of
+            <button (click)="toggleInstructionSection('General')" class="product__desc-title">
+                General information
+                <div class="product__desc-btn"> <img src="assets/img/mobile/small-arrow.png"
+                        [ngStyle]="{'transform': productInstruction[0].shown ? 'rotate(90deg)' : 'rotate(0)' }"></div>
+            </button>
+            <p class="product__desc-text" *ngIf="productInstruction[0].shown">Clomid is a so called fertility drug. This
+                medication belongs to the class of
                 medications known as ovulatory agents. It
                 helps women to achieve pregnancy. It works inducing ovulation. The medicine stimulates production of
                 follicle-stimulating hormone in the pituitary gland. It increases the amount of 3 hormones luteinizing
@@ -23,8 +28,12 @@
                 of estrogen are low and ovaries mature more follicles.</p>
         </div>
         <div>
-            <button class="product__desc-title">Directions</button>
-            <p class="product__desc-text">The recommended dose is 50 mg per day before going to sleep. You should start
+            <button (click)="toggleInstructionSection('Directions')" class="product__desc-title">
+                Directions
+                <div class="product__desc-btn"> <img src="assets/img/mobile/small-arrow.png"
+                        [ngStyle]="{'transform': productInstruction[1].shown ? 'rotate(90deg)' : 'rotate(0)' }"></div>
+            </button>
+            <p class="product__desc-text" *ngIf="productInstruction[1].shown">The recommended dose is 50 mg per day before going to sleep. You should start
                 to take Clomid from the 5th day of your
                 menstrual cycle during 5 days. In case of no effect the dosage can be increased up to 150 mg. The
                 maximum dose for this
@@ -32,23 +41,35 @@
                 cycles of treatment.</p>
         </div>
         <div>
-            <button class="product__desc-title">Precautions</button>
-            <p class="product__desc-text">Before starting your treatment with Clomid please inform your doctor if you
+            <button (click)="toggleInstructionSection('Precautions')" class="product__desc-title">
+                Precautions
+                <div class="product__desc-btn"> <img src="assets/img/mobile/small-arrow.png"
+                        [ngStyle]="{'transform': productInstruction[2].shown ? 'rotate(90deg)' : 'rotate(0)' }"></div>
+            </button>
+            <p class="product__desc-text" *ngIf="productInstruction[2].shown">Before starting your treatment with Clomid please inform your doctor if you
                 have an allergy to clomiphene, liver
                 diseases, mental depression, thrombophlebitis. The medicine can cause dizziness vision problems, or
                 lightheadedness.</p>
         </div>
         <div>
-            <button class="product__desc-title">Contraindications</button>
-            <p class="product__desc-text">The patients with the following conditions can't use Clomid: hypersensitivity,
+            <button (click)="toggleInstructionSection('Contraindications')" class="product__desc-title">
+                Contraindications
+                <div class="product__desc-btn"> <img src="assets/img/mobile/small-arrow.png"
+                        [ngStyle]="{'transform': productInstruction[3].shown ? 'rotate(90deg)' : 'rotate(0)' }"></div>
+            </button>
+            <p class="product__desc-text" *ngIf="productInstruction[3].shown">The patients with the following conditions can't use Clomid: hypersensitivity,
                 metrorrhagia, ovarian cysts, neoplasms of
                 genital organs, thrombophlebitis, liver or kidney failure, tumor or hypofunction of the hypophysis,
                 endometriosis,
                 ovarian failure together with hyperprolactinaemia, pregnancy.</p>
         </div>
         <div>
-            <button class="product__desc-title">Possible side effect</button>
-            <p class="product__desc-text">Common side effects are the following: hives, nausea, swelling of lips,
+            <button (click)="toggleInstructionSection('Side-effect')" class="product__desc-title">
+                Possible side effect
+                <div class="product__desc-btn"> <img src="assets/img/mobile/small-arrow.png"
+                        [ngStyle]="{'transform': productInstruction[4].shown ? 'rotate(90deg)' : 'rotate(0)' }"></div>
+            </button>
+            <p class="product__desc-text" *ngIf="productInstruction[4].shown">Common side effects are the following: hives, nausea, swelling of lips,
                 tongue, or face, ovarian enlargement presenting
                 as abdominal or pelvic pain, flushing, vomiting, diarrhea, blurred vision, breast discomfort,
                 restlessness, trouble
@@ -57,30 +78,50 @@
                 these effects persist or worsen, notify your doctor or pharmacist promptly.</p>
         </div>
         <div>
-            <button class="product__desc-title">Drug interaction</button>
-            <p class="product__desc-text">Before starting you treatment tell your doctor about all the medicines you are
+            <button (click)="toggleInstructionSection('Interaction')" class="product__desc-title">
+                Drug interaction
+                <div class="product__desc-btn"> <img src="assets/img/mobile/small-arrow.png"
+                        [ngStyle]="{'transform': productInstruction[5].shown ? 'rotate(90deg)' : 'rotate(0)' }"></div>
+            </button>
+            <p class="product__desc-text" *ngIf="productInstruction[5].shown">Before starting you treatment tell your doctor about all the medicines you are
                 using. An interaction between two
                 medications does not always mean that you must stop taking one of them.</p>
         </div>
         <div>
-            <button class="product__desc-title">Missed dose</button>
-            <p class="product__desc-text">Take the missed dose as soon as possible. If it is almost time of the next
+            <button (click)="toggleInstructionSection('Missed')" class="product__desc-title">
+                Missed
+                <div class="product__desc-btn"> <img src="assets/img/mobile/small-arrow.png"
+                        [ngStyle]="{'transform': productInstruction[6].shown ? 'rotate(90deg)' : 'rotate(0)' }"></div>
+            </button>
+            <p class="product__desc-text" *ngIf="productInstruction[6].shown">Take the missed dose as soon as possible. If it is almost time of the next
                 intake just skip it and go back to your
                 schedule.</p>
         </div>
         <div>
-            <button class="product__desc-title">Overdose</button>
-            <p class="product__desc-text">If you think you have overdosed the medicine seek emergency medical help at
+            <button (click)="toggleInstructionSection('Overdose')" class="product__desc-title">
+                Overdose
+                <div class="product__desc-btn"> <img src="assets/img/mobile/small-arrow.png"
+                        [ngStyle]="{'transform': productInstruction[7].shown ? 'rotate(90deg)' : 'rotate(0)' }"></div>
+            </button>
+            <p class="product__desc-text" *ngIf="productInstruction[7].shown">If you think you have overdosed the medicine seek emergency medical help at
                 once.</p>
         </div>
         <div>
-            <button class="product__desc-title">Storage</button>
-            <p class="product__desc-text">Store the medicine in a dry place away from sunlight at room temperature
+            <button (click)="toggleInstructionSection('Storage')" class="product__desc-title">
+                Storage
+                <div class="product__desc-btn"> <img src="assets/img/mobile/small-arrow.png"
+                        [ngStyle]="{'transform': productInstruction[8].shown ? 'rotate(90deg)' : 'rotate(0)' }"></div>
+            </button>
+            <p class="product__desc-text" *ngIf="productInstruction[8].shown">Store the medicine in a dry place away from sunlight at room temperature
                 between 15-30 C (59-86 F).</p>
         </div>
         <div>
-            <button class="product__desc-title">Note</button>
-            <p class="product__desc-text">The information presented at the site has a general character. Note please
+            <button (click)="toggleInstructionSection('Note')" class="product__desc-title">
+                Note
+                <div class="product__desc-btn"> <img src="assets/img/mobile/small-arrow.png"
+                        [ngStyle]="{'transform': productInstruction[9].shown ? 'rotate(90deg)' : 'rotate(0)' }"></div>
+            </button>
+            <p class="product__desc-text" *ngIf="productInstruction[9].shown">The information presented at the site has a general character. Note please
                 this information cannot be used for
                 self-treatment and self diagnosis. You should consult with your doctor or health care adviser regarding
                 any specific
