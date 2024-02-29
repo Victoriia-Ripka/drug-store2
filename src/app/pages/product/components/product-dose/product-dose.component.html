@@ -60,72 +60,59 @@
                 </ul>
             </div>
 
+            <div *ngIf="showProductTable" class="product-table-laptop">
+                <div class="head">
+                    <p>Package</p>
+                    <p>Per Pill</p>
+                    <p>Per Pack</p>
+                    <p>Order</p>
+                </div>
+
+                <div class="body">
+
+                    <div class="column">
+                        <div *ngFor="let package of product?.packages">
+                            {{package.package}}
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div *ngFor="let package of product?.packages">
+                            €{{package["per-pill"]}}
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div *ngFor="let package of product?.packages" class="price">
+                            <p *ngIf="package.discount" class="old-price">
+                                €{{package["old-price"]}} 
+                            </p>
+                            €{{package["per-pack"]}}
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div *ngFor="let package of product?.packages">
+                            <button (click)="addPackageToCart(product?.id)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_318_5952)">
+                                        <path
+                                            d="M8.92453 5.91089V3.40374C8.92453 2.84963 8.70441 2.31821 8.31259 1.92639C7.92077 1.53457 7.38936 1.31445 6.83524 1.31445C6.28113 1.31445 5.74971 1.53457 5.35789 1.92639C4.96608 2.31821 4.74595 2.84963 4.74595 3.40374V5.91089M11.0729 4.8005L11.7765 11.4862C11.8155 11.8567 11.5258 12.1788 11.1531 12.1788H2.51738C2.42947 12.1788 2.34252 12.1604 2.26218 12.1247C2.18184 12.089 2.10991 12.0368 2.05107 11.9715C1.99222 11.9062 1.94777 11.8293 1.9206 11.7456C1.89343 11.662 1.88416 11.5736 1.89338 11.4862L2.59761 4.8005C2.61385 4.64648 2.68654 4.50393 2.80166 4.40034C2.91678 4.29674 3.06618 4.23943 3.22105 4.23946H10.4494C10.7703 4.23946 11.0394 4.48181 11.0729 4.8005ZM4.95488 5.91089C4.95488 5.9663 4.93287 6.01944 4.89369 6.05862C4.85451 6.0978 4.80137 6.11982 4.74595 6.11982C4.69054 6.11982 4.6374 6.0978 4.59822 6.05862C4.55904 6.01944 4.53703 5.9663 4.53703 5.91089C4.53703 5.85548 4.55904 5.80233 4.59822 5.76315C4.6374 5.72397 4.69054 5.70196 4.74595 5.70196C4.80137 5.70196 4.85451 5.72397 4.89369 5.76315C4.93287 5.80233 4.95488 5.85548 4.95488 5.91089ZM9.13346 5.91089C9.13346 5.9663 9.11145 6.01944 9.07227 6.05862C9.03308 6.0978 8.97994 6.11982 8.92453 6.11982C8.86912 6.11982 8.81598 6.0978 8.7768 6.05862C8.73761 6.01944 8.7156 5.9663 8.7156 5.91089C8.7156 5.85548 8.73761 5.80233 8.7768 5.76315C8.81598 5.72397 8.86912 5.70196 8.92453 5.70196C8.97994 5.70196 9.03308 5.72397 9.07227 5.76315C9.11145 5.80233 9.13346 5.85548 9.13346 5.91089Z"
+                                            stroke="white" stroke-width="0.955103" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_318_5952">
+                                            <rect width="13.3714" height="13.3714" fill="white"
+                                                transform="translate(0.150261 0.0610352)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg> Add To Cart </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </li>
     </ul>
 </section>
-
-
-
-<!-- <div class="product-table-laptop">
-    <div class="head">
-        <div class="column package">
-            Package
-        </div>
-        <div class="column">
-            Per Pill
-        </div>
-        <div class="column max-width">
-            Per Pack
-        </div>
-        <div class="column">
-            Order
-        </div>
-    </div>
-    <div class="body">
-
-        <div class="column package">
-            <div *ngFor="let package of product?.packages">
-                {{package.package}}
-            </div>
-        </div>
-
-        <div class="column">
-            <div *ngFor="let package of product?.packages">
-                €{{package["per-pill"]}}
-            </div>
-        </div>
-
-        <div class="column max-width">
-            <div *ngFor="let package of product?.packages" class="price">
-                <p *ngIf="package.discount">
-                    <span class="old-price">€{{package["old-price"]}}</span>
-                    <span class="discount">{{package.discount}}</span>
-                    Only
-                </p>
-                €{{package["per-pack"]}}
-            </div>
-        </div>
-
-        <div class="column">
-            <div *ngFor="let package of product?.packages">
-                <button (click)="addPackageToCart(product?.id)">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <g clip-path="url(#clip0_318_5952)">
-                            <path
-                                d="M8.92453 5.91089V3.40374C8.92453 2.84963 8.70441 2.31821 8.31259 1.92639C7.92077 1.53457 7.38936 1.31445 6.83524 1.31445C6.28113 1.31445 5.74971 1.53457 5.35789 1.92639C4.96608 2.31821 4.74595 2.84963 4.74595 3.40374V5.91089M11.0729 4.8005L11.7765 11.4862C11.8155 11.8567 11.5258 12.1788 11.1531 12.1788H2.51738C2.42947 12.1788 2.34252 12.1604 2.26218 12.1247C2.18184 12.089 2.10991 12.0368 2.05107 11.9715C1.99222 11.9062 1.94777 11.8293 1.9206 11.7456C1.89343 11.662 1.88416 11.5736 1.89338 11.4862L2.59761 4.8005C2.61385 4.64648 2.68654 4.50393 2.80166 4.40034C2.91678 4.29674 3.06618 4.23943 3.22105 4.23946H10.4494C10.7703 4.23946 11.0394 4.48181 11.0729 4.8005ZM4.95488 5.91089C4.95488 5.9663 4.93287 6.01944 4.89369 6.05862C4.85451 6.0978 4.80137 6.11982 4.74595 6.11982C4.69054 6.11982 4.6374 6.0978 4.59822 6.05862C4.55904 6.01944 4.53703 5.9663 4.53703 5.91089C4.53703 5.85548 4.55904 5.80233 4.59822 5.76315C4.6374 5.72397 4.69054 5.70196 4.74595 5.70196C4.80137 5.70196 4.85451 5.72397 4.89369 5.76315C4.93287 5.80233 4.95488 5.85548 4.95488 5.91089ZM9.13346 5.91089C9.13346 5.9663 9.11145 6.01944 9.07227 6.05862C9.03308 6.0978 8.97994 6.11982 8.92453 6.11982C8.86912 6.11982 8.81598 6.0978 8.7768 6.05862C8.73761 6.01944 8.7156 5.9663 8.7156 5.91089C8.7156 5.85548 8.73761 5.80233 8.7768 5.76315C8.81598 5.72397 8.86912 5.70196 8.92453 5.70196C8.97994 5.70196 9.03308 5.72397 9.07227 5.76315C9.11145 5.80233 9.13346 5.85548 9.13346 5.91089Z"
-                                stroke="white" stroke-width="0.955103" stroke-linecap="round" stroke-linejoin="round" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_318_5952">
-                                <rect width="13.3714" height="13.3714" fill="white"
-                                    transform="translate(0.150261 0.0610352)" />
-                            </clipPath>
-                        </defs>
-                    </svg> Add To Cart </button>
-            </div>
-        </div>
-    </div>
-
-
-
-</div> -->

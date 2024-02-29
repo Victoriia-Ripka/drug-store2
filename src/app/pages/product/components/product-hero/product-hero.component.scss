@@ -11,7 +11,9 @@ section{
         width: 460px;
     }
 
-    @media screen and (min-width: 1600px) {}
+    @media screen and (min-width: 1600px) {
+        width: 1600px;
+    }
 }
 
 .product__nav-cont{
@@ -22,18 +24,33 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10.127px;
+    gap: 10px;
     margin: 0 auto 50px;
+
+    @media screen and (min-width: 1600px) {
+        width: 370px;
+        height: 46px;
+        margin: 0 0 40px;
+        gap: 17px;
+    }
 }
 
 .product__nav-text{
     color: #A3A9C2;
     font-family: Poppins;
     font-size: 10.127px;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 17.47px;
+    }
 }
 
 .product__nav-arrow{
 
+    @media screen and (min-width: 1600px) {
+        width: 19.966px;
+        height: 19.966px;
+    }
 }
 
 .bold{
@@ -41,10 +58,23 @@ section{
     color: #3A4980;
 }
 
+.product__cont{
+    @media screen and (min-width: 1600px){
+        display: flex;
+        gap: 138px;
+        align-items: center;
+    }
+}
+
 .product__main-cont{
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 20px;
+
+    @media screen and (min-width: 1600px) {
+        width: 732px;
+        margin-bottom: 0;
+    }
 }
 
 .product__img-cont{
@@ -61,10 +91,37 @@ section{
         max-width: 260.396px;
         height: auto;
     }
+
+    @media screen and (min-width: 1600px) {
+        height: 515.993px;
+
+        img{
+            max-width: 540.396px;
+            height: auto;
+        }
+    }
 }
 
 .product__main-text-cont{
     margin-bottom: 20px;
+
+    @media screen and (min-width: 1600px) {
+        display: none;
+    }
+}
+
+.product__info-cont{
+    @media screen and (min-width: 1600px){
+        width: 726.265px;
+    }
+}
+
+.product__main-text-cont-laptop{
+    display: none;
+
+    @media screen and (min-width: 1600px) {
+        display: block;
+    }
 }
 
 .product__title{
@@ -75,6 +132,12 @@ section{
     text-transform: uppercase;
     margin-bottom: 10px;
     text-align: center;
+
+    @media screen and (min-width: 1600px) {
+        text-align: left;
+        font-size: 50px;
+        margin-bottom: 13px;
+    }
 }
 
 .product__main-desc{
@@ -83,6 +146,22 @@ section{
     font-size: 16px;
     line-height: 1.4;
     letter-spacing: -0.32px;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #E4E4E4;
+        margin-bottom: 20px;
+    }
+}
+
+.product__price-cont{
+
+    @media screen and (min-width: 1600px) {
+        display: flex;
+        gap: 50px;
+        margin-bottom: 20px;
+    }
 }
 
 .product__price{
@@ -90,6 +169,10 @@ section{
     font-family: Inter;
     font-size: 30px;
     font-weight: 700;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 42px;
+    }
 }
 
 .product__price-text{
@@ -97,6 +180,11 @@ section{
     font-family: Inter;
     font-size: 20px;
     margin-bottom: 20px;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 26.205px;
+        margin-bottom: 0;
+    }
 }
 
 .product__opinion-cont{
@@ -121,8 +209,13 @@ section{
     font-family: Inter;
     font-size: 17.47px;
     font-weight: 600;
-}
 
+    @media screen and (min-width: 1600px) {
+        height: 50px; 
+        width: 90px;
+        font-size: 19px;
+    }
+}
 
 .product__reviews-cont{
     display: flex;
@@ -139,8 +232,13 @@ section{
     font-family: Inter;
     font-size: 17.47px;
     font-weight: 600;
-}
 
+    @media screen and (min-width: 1600px) {
+        height: 50px;
+        width: 165px;
+        font-size: 19px;
+    }
+}
 
 .product__light-text{
     color: #B9BBBF;
@@ -150,6 +248,11 @@ section{
 
     span{
         color: #3E9242;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+        margin-bottom: 0;
     }
 }
 
@@ -169,6 +272,16 @@ section{
         font-size: 18px;
         font-weight: 500;
     }
+
+    @media screen and (min-width: 1600px) {
+        padding: 20px 0;
+        margin-bottom: 20px;
+        gap: 20px;
+
+        p{
+            font-size: 20px;
+        }
+    }
 }
 
 .underlined {
@@ -182,6 +295,10 @@ section{
     display: flex;
     justify-content: center;
     gap: 25px;
+
+    @media screen and (min-width: 1600px) {
+        gap: 17px;
+    }
 }
 
 .product__delivery-text-cont{
@@ -192,6 +309,10 @@ section{
 
     @media screen and (min-width: 375px) {
         width: 250px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 620px;
     }
 }
 
@@ -205,5 +326,5 @@ section{
 .product__delivery-text{
     color: #726C6C;
     font-family: Inter;
-    font-size: 17px;;
+    font-size: 17px;
 }

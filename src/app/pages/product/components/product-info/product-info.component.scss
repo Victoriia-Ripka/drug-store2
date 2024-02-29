@@ -11,7 +11,10 @@ section{
         width: 460px;
     }
 
-    @media screen and (min-width: 1600px) {}
+    @media screen and (min-width: 1600px) {
+        margin: 80px auto 100px;
+        width: 1600px;
+    }
 }
 
 .product__nav-cont{
@@ -19,6 +22,12 @@ section{
     padding-bottom: 6px;
     display: flex;
     border-bottom: 5px solid #EAECF0;
+
+    @media screen and (min-width: 1600px) {
+        gap: 85px;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+    }
 }
 
 .product__nav{
@@ -32,6 +41,14 @@ section{
     position: relative;
     width: 50%;
     text-align: left;
+
+    cursor: pointer;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 30px;
+        text-align: center;
+        width: 175px;
+    }
 }
 
 .selected{
@@ -41,12 +58,21 @@ section{
     position: absolute;
     bottom: -11px;
     left: 0;
+
+    @media screen and (min-width: 1600px) {
+        bottom: -20px;
+    }
 }
 
 .product__desc-cont{
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media screen and (min-width: 1600px) {
+        width: 1405px;
+        gap: 30px;
+    }
 }
 
 .product__desc-title{
@@ -65,6 +91,12 @@ section{
     border: none;
     background-color: transparent;
     padding: 0;
+
+    cursor: pointer;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 30px;
+    }
 }
 
 .product__desc-btn{
@@ -78,9 +110,16 @@ section{
     align-items: center;
     justify-content: center;
 
+    
+
     img{
         width: 18px;
         height: auto;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 45px;
+        height: 45px;
     }
 }
 
@@ -90,6 +129,17 @@ section{
     font-family: Poppins;
     font-size: 16px;
     line-height: 1.6;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+        line-height: 1.8;
+    }
+}
+
+.product__reviews-section{
+    @media screen and (min-width: 1600px){
+       width: 1133px; 
+    }
 }
 
 .product__reviews-title{
@@ -99,6 +149,19 @@ section{
     font-size: 20px;
     font-weight: 600;
     text-align: center;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 30px;
+        text-align: left;
+    }
+}
+
+.product__reviews-statistic-cont{
+    @media screen and (min-width: 1600px){
+        display: flex;
+        gap: 13px;
+        margin-bottom: 40px;
+    }
 }
 
 .product__raiting-cont{
@@ -110,6 +173,12 @@ section{
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+
+    @media screen and (min-width: 1600px) {
+        width: 397.333px;
+        height: 306.667px;
+        margin-bottom: 0;
+    }
 }
 
 .product__raiting-mark{
@@ -117,6 +186,11 @@ section{
     font-family: Poppins;
     font-size: 30px;
     font-weight: 700;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 80px;
+        line-height: 1;
+    }
 }
 
 .product__raiting-text{
@@ -125,6 +199,11 @@ section{
     font-size: 20px;
     font-weight: 700;
     line-height: 1.6;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 22px;
+        margin-top: 15px;
+    }
 }
 
 .product__stars-cont{
@@ -144,9 +223,21 @@ section{
         gap: 40px;
 
         @media screen and (min-width: 375px) {
+            align-items: center;
             gap: 0;
         }
 
+        @media screen and (min-width: 1600px){
+            gap: 20px;
+        }
+
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 722px;
+        gap: 35px;
+        padding: 20px 40px;
+        margin-bottom: 0;
     }
 }
 
@@ -159,6 +250,10 @@ section{
     @media screen and (min-width: 375px) {
         display: block;
     }
+
+    @media screen and (min-width: 1600px) {
+        width: 420px;
+    }
 }
 
 .product__stars-raiting{
@@ -170,20 +265,27 @@ section{
     margin-left: 16px;
     width: 36px;
     text-align: right;
+
+    @media screen and (min-width: 1600px) {}
 }
 
 .product__reviews-cont{
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    @media screen and (min-width: 1600px) {
+        gap: 25px;
+    }
 }
 
 .product__review-cont{
     display: flex;
     gap: 27px;
 
-    
-    
+    @media screen and (min-width: 1600px) {
+        gap: 32px;
+    } 
 }
 
 .product__review-avatar{
@@ -191,17 +293,31 @@ section{
     height: 56.916px;
     border-radius: 50%;
     border: none;
+
+    @media screen and (min-width: 1600px) {
+        width: 68px;
+        height: 68px;
+    }
 }
 
 .product__review-text-cont{
     display: flex;
     flex-direction: column;
     gap: 25px;
+
+    @media screen and (min-width: 1600px) {
+        width: 987px;
+    }
 }
 
 .product__reviewer-text-cont{
     display: flex;
     justify-content: space-between;
+
+    @media screen and (min-width: 1600px) {
+        gap: 6px;
+        justify-content: flex-start;
+    }
 }
 
 .product__reviewer-name{
@@ -215,6 +331,11 @@ section{
     @media screen and (min-width: 375px) {
         font-size: 18px;
     }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 25px;
+        line-height: 1.4;
+    }
 }
 
 .product__reviewer-text-data{
@@ -222,12 +343,20 @@ section{
     font-family: Inter;
     font-size: 13px;
     line-height: 2;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 19px;
+    }
 }
 
 .product__review-info-cont{
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+    @media screen and (min-width: 1600px) {
+        gap: 6px;
+    }
 }
 
 .product__review-topic{
@@ -235,6 +364,10 @@ section{
     font-family: Poppins;
     font-size: 16px;
     font-weight: 600;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+    }
 }
 
 .product__review-text{
@@ -242,11 +375,21 @@ section{
     font-family: Poppins;
     font-size: 16px;
     line-height: 1.4;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+        line-height: 1.7;
+        margin-bottom: 9px;
+    }
 }
 
 .product__review-btns-cont{
     display: flex;
-    gap: 15px
+    gap: 15px;
+
+    @media screen and (min-width: 1600px) {
+        gap: 20px;
+    }
 }
 
 .product__review-like-btn{
@@ -257,6 +400,11 @@ section{
     padding: 0;
     background-color: transparent;
     cursor: pointer;
+
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+    }
 }
 
 .product__review-comment-btn{
@@ -267,6 +415,10 @@ section{
     font-family: Poppins;
     font-size: 17px;
     cursor: pointer;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+    }
 }
 
 .product__reviews-link{
@@ -277,6 +429,11 @@ section{
     text-align: center;
     margin-top: -40px;
     cursor: pointer;
+
+    @media screen and (min-width: 1600px) {
+        margin-top: 15px;
+        font-size: 20px;
+    }
 }
 
 .product__form-title-cont{
@@ -285,6 +442,12 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (min-width: 1600px) {
+        margin-top: 40px;
+        margin-bottom: 30px;
+        align-items: flex-start;
+    }
 }
 
 .product__form-title{
@@ -292,18 +455,31 @@ section{
     font-family: Poppins;
     font-size: 20px;
     font-weight: 600;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 32px;
+        margin-bottom: 18px;
+    }
 }
 
 .product__form-after-title{
     color: #1D2939;
     font-family: Poppins;
     font-size: 16px;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 25px;
+    }
 }
 
 .product__form{
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media screen and (min-width: 1600px) {
+        gap: 30px;
+    }
 }
 
 .product__review-input-cont{
@@ -339,10 +515,27 @@ section{
     textarea{
         height: 250px;
     }
+
+    @media screen and (min-width: 1600px) {
+
+        label{
+            font-size: 25px;
+        }
+
+        input,
+        textarea{
+            font-size: 20px;
+            line-height: 1.7;
+        }
+
+        textarea{
+            height: 240px;
+        }
+    }
 }
 
 .product__review-form-btn{
-    border-radius: 14px;
+    border-radius: 15px;
     background: linear-gradient(90deg, #0F2650 4.29%, #3D4F71 92.86%);
     border: none;
     height: 70px;
@@ -355,4 +548,13 @@ section{
     font-size: 20px;
     font-weight: 600;
     line-height: 1.7;
+
+    cursor: pointer;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 24px;
+        width: 250px;
+        height: 80px;
+        margin-top: -8px;
+    }
 }
