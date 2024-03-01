@@ -50,7 +50,7 @@ li{
     @media screen and (min-width: 1600px) {
         border-radius: 20px;
         min-height: 100px;
-        padding: 20px 217px 20px 70px;
+        padding: 20px 70px;
     }
 }
 
@@ -117,6 +117,7 @@ h3{
     }
 
     @media screen and (min-width: 1600px) {
+        width: 836.489px;
         font-size: 30px;
     }
 }
@@ -137,8 +138,14 @@ p{
     color: #242331;
     font-family: Poppins;
     font-size: 16px;
+    width: 240px;
+
+    @media screen and (min-width: 375px) {
+        width: 250px;
+    }
 
     @media screen and (min-width: 1600px) {
         font-size: 20px;
+        width: 836.489px;
     }
 }
