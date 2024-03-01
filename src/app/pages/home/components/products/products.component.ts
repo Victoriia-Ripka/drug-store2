@@ -15,7 +15,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ProductsComponent {
   categories = categoriesList
   isOpenedCategoriesModal: boolean = false;
-  selectedCategory: string = 'All Products'
+  isOpenedCategoriesList: boolean = true
+  selectedCategory: string = 'BestSellers'
   query: string = ''
   pageSize: number = 9
   currentPage: number = 1
@@ -35,6 +36,10 @@ export class ProductsComponent {
 
   toggleCategoriesModal(): void {
     this.isOpenedCategoriesModal = !this.isOpenedCategoriesModal
+  }
+
+  toggleCategoriesList(): void {
+    this.isOpenedCategoriesList = !this.isOpenedCategoriesList
   }
 
   selectCategoryInModal(selectedCategory: string) {

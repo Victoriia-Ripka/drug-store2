@@ -2,23 +2,15 @@
     <h2>Ordering FAQ</h2>
     <ul>
         <li *ngFor="let item of content" [ngClass]="{'selected-item': isItemSelected(item.id)}">
-            <div>
+
+            <button (click)="toggleAnswer(item.id)">
                 <h3>{{item.question}}</h3>
-                <p *ngIf="selectedQuestion == item.id">{{item.answer}}</p>
-            </div>
 
-            <button *ngIf="selectedQuestion !== item.id" type="button" (click)="showAnswer(item.id)">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                    <circle cx="17.2881" cy="16.9668" r="16.5215" fill="#21365D" />
-                </svg>
+                <div class="faq-btn"> <img src="assets/img/mobile/small-arrow.png"
+                        [ngStyle]="{'transform': selectedQuestion === item.id ? 'rotate(90deg)' : 'rotate(0)' }"></div>
             </button>
 
-            <button *ngIf="selectedQuestion == item.id" type="button" (click)="hideAnswer()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                    <circle cx="17.2881" cy="16.9668" r="16.5215" fill="#21365D" />
-                </svg>
-            </button>
-
+            <p *ngIf="selectedQuestion == item.id">{{item.answer}}</p>
         </li>
     </ul>
 </section>

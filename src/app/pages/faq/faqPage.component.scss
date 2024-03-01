@@ -41,11 +41,9 @@ ul{
 }
 
 li{
-    padding: 20px 45px 14px 12px;
+    padding: 10px 12px;
     border-radius: 10px;
     min-height: 55px;
-    display: flex;
-    align-items: center;
     background: #ECF8FF;
     position: relative; 
     
@@ -57,16 +55,45 @@ li{
 }
 
 button{
-    position: absolute;
-    top: 10px;
-    right: 12px;
+    width: 100%;
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: #242331;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 110%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0;
+}
+
+.faq-btn {
     width: 33.043px;
     height: 33.043px;
-    background-color: #21365D;;
+    background-color: #21365D;
     border-radius: 50%;
     border: none;
     padding: 0;
     cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div{
+        width: 33.043px;
+        height: 33.043px;
+    }
+
+    img{
+        width: 18px;
+        height: auto;
+    }
 
     @media screen and (min-width: 1600px) {
         width: 59px;
@@ -77,11 +104,17 @@ button{
 }
 
 h3{
+    width: 240px;
+    text-align: left;
     color: #242331;
     font-family: Poppins;
     font-size: 16px;
     font-weight: 600;
     line-height: 110%; /* 17.6px */
+
+    @media screen and (min-width: 375px) {
+        width: 250px;
+    }
 
     @media screen and (min-width: 1600px) {
         font-size: 30px;
@@ -100,6 +133,7 @@ div{
 }
 
 p{
+    margin-top: 20px;
     color: #242331;
     font-family: Poppins;
     font-size: 16px;

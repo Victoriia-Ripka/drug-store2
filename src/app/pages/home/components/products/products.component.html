@@ -16,8 +16,9 @@
             <div>
                 <div class="products__categories-menu-cont">
                     <p class="products__categories-menu-title">Category</p>
-                    <button class="products__categories-menu-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <button class="products__categories-menu-button" (click)="toggleCategoriesList()">
+                        <svg [ngStyle]="{'transform': isOpenedCategoriesList ? 'rotate(0)' : 'rotate(180deg)' }"
+                            xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                             <path
                                 d="M16.2989 11.356L8.50146 19.1534L10.3339 20.9858L16.2989 15.0338L22.264 20.9858L24.0964 19.1534L16.2989 11.356Z"
                                 fill="#8B96A5" />
@@ -25,24 +26,28 @@
                     </button>
                 </div>
 
-                <ul class="products__categories-list">
-                    <li class="products__categories-item">BestSellers</li>
-                    <li class="products__categories-item">Erectile Dysfunction</li>
-                    <li class="products__categories-item">Trial Erection Packs</li>
+                <ul *ngIf="isOpenedCategoriesList" class="products__categories-list">
+                    <li class="products__categories-item"><button
+                            (click)="selectCategoryInModal('BestSellers')">BestSellers</button></li>
+                    <li class="products__categories-item"><button
+                            (click)="selectCategoryInModal('Erectile Dysfunction')">Erectile Dysfunction</button></li>
+                    <li class="products__categories-item"><button
+                            (click)="selectCategoryInModal('Trial Erection Packs')">Trial
+                            Erection Packs</button></li>
                 </ul>
             </div>
 
             <div>
                 <ul class="products__list">
                     <li *ngFor="let item of products">
-                        <product-card [title]="item.title" [substance]="item.substance" [price]="item.price" [id]="item.id"  [img]="item.src">
+                        <product-card [title]="item.title" [substance]="item.substance" [price]="item.price"
+                            [id]="item.id" [img]="item.src">
                         </product-card>
                     </li>
                 </ul>
 
-                <a class="products__link"  href="products">See All Products</a>
+                <a class="products__link" href="products">See All Products</a>
             </div>
-
 
         </div>
     </div>

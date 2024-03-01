@@ -114,7 +114,7 @@ button{
     }
 }
 
-ul{
+.products__list{
     margin-bottom: 25px;
     display: flex;
     flex-wrap: wrap;
@@ -131,19 +131,18 @@ ul{
         width: 1238.024px;
         gap: 42px;
     }
-}
 
-li{
-    display: flex;
-    width: calc(50% - 5px);
+    li{
+        width: calc(50% - 5px);
 
-    @media screen and (min-width: 375px) {
-        width: 168px;
-    }
+        @media screen and (min-width: 375px) {
+            width: 168px;
+        }
 
-    @media screen and (min-width: 1600px) {
-        height: 376px;
-        width: 384px;
+        @media screen and (min-width: 1600px) {
+            height: 376px;
+            width: 384px;
+        }
     }
 }
 

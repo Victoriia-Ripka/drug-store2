@@ -40,12 +40,13 @@ export class FaqOrderingComponent {
     this.content = content;
   }
 
-  showAnswer(id: number): void {
-    this.selectedQuestion = id
-  }
-
-  hideAnswer(): void {
-    this.selectedQuestion = 0
+  toggleAnswer(id: number): void {
+    if (id === this.selectedQuestion) {
+      this.selectedQuestion = 0
+    }
+    else {
+      this.selectedQuestion = id
+    }
   }
 
   isItemSelected(id: number): boolean {

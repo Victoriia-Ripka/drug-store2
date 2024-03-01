@@ -44,6 +44,8 @@ header {
     margin: 0;
     padding: 0;
 
+    cursor: pointer;
+
     div{
         height: 2px;
         border-radius: 1px;
@@ -300,9 +302,9 @@ nav{
     right: 0;
     
     flex-direction: column;
-    background-color: #f9f9f9;
+    background-color: rgba(256, 256, 256, 0.6);
     border-radius: 0;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 
     color: #0F2650;
     font-family: Inter;
@@ -310,6 +312,13 @@ nav{
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+
+    width: 80px;
+     
+    p{
+        cursor: pointer;
+        padding: 5px;
+    }
 }
 
 .dropdown-content.show {
@@ -369,4 +378,11 @@ nav{
     color: #333;
     font-family: Poppins;
     font-size: 20px;
+
+    transition: ease 0.3s color;
+
+    &:hover,
+    &:focus{
+        color: #000;
+    }
 }

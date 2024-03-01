@@ -28,12 +28,12 @@
             </div>
 
             <!-- <mat-drawer-content> -->
-            <div class="products__list-cont">
-                <ul class="products-list">
+            <div>
+                <ul class="products__list">
                     <!--  | paginate: { itemsPerPage: pageSize, currentPage: currentPage } -->
                     <li *ngFor="let item of products">
-                        <product-card [title]="item.title" [substance]="item.substance" [price]="item.price" [img]="item.src"
-                            [id]="item.id">
+                        <product-card [title]="item.title" [substance]="item.substance" [price]="item.price"
+                            [img]="item.src" [id]="item.id">
                         </product-card>
                     </li>
                 </ul>
