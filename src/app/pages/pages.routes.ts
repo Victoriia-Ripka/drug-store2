@@ -7,7 +7,8 @@ import {
     ShippingPageComponent,
     ContactUsPageComponent,
     ProductsPageComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    AccountPageComponent
 } from './index';
 
 export const routes: Routes = [
@@ -50,17 +51,15 @@ export const routes: Routes = [
         title: 'Product - Canadian Drug Store',
         component: ProductPageComponent
     },
+    {
+        path: 'account',
+        title: 'My Account - Canadian Drug Store',
+        component: AccountPageComponent
+    },
 ];
 
-
-// {
-//     path: 'account',
-//     title: 'My Account - Canadian Drug Store',
-//     component: AccountPageComponent
-// },
 // {
 //     path: 'shopping-cart',
 //     title: 'Shopping Cart - Canadian Drug Store',
 //     component: ShoppingCartPageComponent
-// },
-// ]
+// }

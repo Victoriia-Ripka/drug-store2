@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AccountModalComponent } from './components';
 
 const languages = [
   { value: 'german', currency: "EURO", language: 'DE' },
@@ -11,7 +12,7 @@ const languages = [
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, AccountModalComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
