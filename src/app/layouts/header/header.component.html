@@ -90,7 +90,8 @@
 
             </div>
 
-            <a href="#" class="header__actions-account">
+            <button (click)="toggleAccountModal()" class="header__actions-account">
+                <!-- *ngIf="!isAuthorizated" -->
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 18" fill="none">
                     <g clip-path="url(#clip0_271_8176)">
                         <path
@@ -107,8 +108,20 @@
                         </clipPath>
                     </defs>
                 </svg>
+                <!-- <div class="header__actions-account-authorized" *ngIf="isAuthorizated">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                        <circle cx="4.01245" cy="4.20264" r="3.33887" fill="#0F2650" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                        <path
+                            d="M3.99946 0.895053L5.5102 1.7515L6.84873 2.05847L8.89638 1.59437L10.6164 0.720703L12.4183 1.59437L13.0463 3.94234L13.2101 7.30044L9.52432 8.52907L2.43804 8.0103L0.977295 6.788V5.1259L1.22934 3.01049L2.43804 0.895053H3.99946Z"
+                            fill="#0F2650" />
+                    </svg>
+                </div> -->
                 <p>account</p>
-            </a>
+            </button>
+
+            <account-modal *ngIf="isAccountModal" class="header__account-modal" [authorizated]="isAuthorizated" (toggleModal)="toggleAccountModal()"></account-modal>
 
             <a href="#" class="header__actions-purchase-cont">
                 <svg class="header__actions-purchase" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"

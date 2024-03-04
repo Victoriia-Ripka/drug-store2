@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'account-modal',
@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './account-modal.component.scss'
 })
 export class AccountModalComponent {
+  @Input()
+  authorizated: boolean = true;
 
+  @Output()
+  toggleModal: EventEmitter<void> = new EventEmitter<void>()
+
+  closeModel(): void {
+    this.toggleModal.emit()
+  }
 }

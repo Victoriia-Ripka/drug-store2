@@ -20,6 +20,8 @@ export class HeaderComponent {
   languages: Array<any> = languages
   isMenuOpened: boolean = false;
   isModalOpen: boolean = false;
+  isAuthorizated: boolean = true
+  isAccountModal: boolean = false;
   selectedLanguage: string = 'ENG';
   selectedCurrency: string = 'USD';
 
@@ -29,6 +31,10 @@ export class HeaderComponent {
 
   toggleModal() {
     this.isModalOpen = !this.isModalOpen
+  }
+
+  toggleAccountModal() {
+    this.isAccountModal = !this.isAccountModal
   }
 
   selectLanguage(language: any): void {
