@@ -1,3 +1,9 @@
+section{
+    @media screen and (min-width: 1600px) {
+        width: 1300px;
+    }
+}
+
 .account__user-email-cont {
     display: flex;
     align-items: center;
@@ -8,6 +14,19 @@
         width: 57.644px;
         height: 57.644px;
         border-radius: 57.644px;
+    }
+
+    @media screen and (min-width: 375px) {}
+
+    @media screen and (min-width: 480px) {}
+
+    @media screen and (min-width: 1600px) {
+        gap: 23px;
+
+        img{
+            width: 114.35px;
+            height: 114.35px;
+        }
     }
 }
 
@@ -20,6 +39,10 @@
     @media screen and (min-width: 375px) {
         font-size: 16px;
     }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+    }
 }
 
 .account__secondary-text {
@@ -31,6 +54,14 @@
     @media screen and (min-width: 375px) {
         font-size: 16px;
     }
+
+    @media screen and (min-width: 375px) {}
+
+    @media screen and (min-width: 480px) {}
+
+    @media screen and (min-width: 1600px) {
+        font-size: 18px;
+    }
 }
 
 .account__order-list {
@@ -38,6 +69,17 @@
     flex-direction: column;
     gap: 14px;
     margin-bottom: 50px;
+
+    @media screen and (min-width: 375px) {}
+
+    @media screen and (min-width: 480px) {}
+
+    @media screen and (min-width: 1600px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-bottom: 80px;
+    }
 }
 
 .account__order-item {
@@ -48,6 +90,14 @@
     justify-content: center;
     gap: 19px;
     flex-shrink: 0;
+
+    @media screen and (min-width: 375px) {}
+
+    @media screen and (min-width: 480px) {}
+
+    @media screen and (min-width: 1600px) {
+        width: 424px;
+    }
 }
 
 .account__order-item-svg {
@@ -60,6 +110,14 @@
     flex-direction: column;
     gap: 7px;
     width: 200px;
+
+    @media screen and (min-width: 375px) {}
+
+    @media screen and (min-width: 480px) {}
+
+    @media screen and (min-width: 1600px) {
+        width: 320px;
+    }
 }
 
 .account__order-title {
@@ -68,6 +126,12 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 110%;
+
+    @media screen and (min-width: 375px) {}
+
+    @media screen and (min-width: 480px) {}
+
+    @media screen and (min-width: 1600px) {}
 }
 
 .account__order-text {
@@ -75,12 +139,26 @@
     font-family: Poppins;
     font-size: 16px;
     line-height: 130%;
+
+    @media screen and (min-width: 375px) {}
+
+    @media screen and (min-width: 480px) {}
+
+    @media screen and (min-width: 1600px) {}
 }
 
 .account__recommended-cont {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (min-width: 375px) {}
+
+    @media screen and (min-width: 480px) {}
+
+    @media screen and (min-width: 1600px) {
+        align-items: flex-start;
+    }
 
 }
 
@@ -92,6 +170,14 @@
     line-height: 110%;
     text-transform: uppercase;
     margin-bottom: 24px;
+
+    @media screen and (min-width: 375px) {}
+
+    @media screen and (min-width: 480px) {}
+
+    @media screen and (min-width: 1600px) {
+        margin-bottom: 26px;
+    }
 }
 
 .account__recommended-list {
@@ -99,6 +185,14 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 35px;
+
+    @media screen and (min-width: 375px) {}
+
+    @media screen and (min-width: 480px) {}
+
+    @media screen and (min-width: 1600px) {
+        gap: 60px;
+    }
 }
 
 .account__recommended-item {
@@ -107,4 +201,13 @@
     justify-content: center;
     width: 120px;
     height: 80px;
+
+    @media screen and (min-width: 375px) {}
+
+    @media screen and (min-width: 480px) {}
+
+    @media screen and (min-width: 1600px) {
+        width: 160px;
+        height: 100px;
+    }
 }

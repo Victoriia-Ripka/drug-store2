@@ -10,6 +10,12 @@
     @media screen and (min-width: 480px) {
         width: 460px;
     }
+
+    @media screen and (min-width: 1600px) {
+        display: flex;
+        gap: 90px;
+        width: 1600px;
+    }
 }
 
 .account__nav-cont{
@@ -17,9 +23,26 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    justify-content: center;
     gap: 17px;
     width: 250px;
+
+    @media screen and (min-width: 375px) {
+        width: 355px;
+        padding: 0;
+        margin: 25px auto 50px;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 460px;
+    }
+
+    @media screen and (min-width: 1600px){
+        width: 182px;
+        margin: 0;
+        justify-content: flex-start;
+        gap: 19px;
+    }
+
 }
 
 .account__nav-title{
@@ -31,6 +54,10 @@
     font-weight: 600;
     padding-bottom: 17px;
     border-bottom: 1px solid #CCC;
+
+    @media screen and (min-width: 1600px){
+        text-align: left;
+    }
 }
 
 .account__nav-list{
@@ -38,6 +65,12 @@
     flex-direction: column;
     gap: 9px;
     align-items: center;
+
+    @media screen and (min-width: 1600px){
+        gap: 27px;
+        align-items: flex-start;
+        margin-bottom: 60px;
+    }
 }
 
 .account__nav{
@@ -70,4 +103,9 @@
     border: none;
     padding-top: 17px;
     border-top: 1px solid #CCC;
+
+    @media screen and (min-width: 1600px) {
+        padding-top: 19px;
+        text-align: left;
+    }
 }
