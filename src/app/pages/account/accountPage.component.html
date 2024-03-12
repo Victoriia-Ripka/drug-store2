@@ -4,10 +4,10 @@
         <ul class="account__nav-list">
             <!-- a or btn -->
             <li class="account__nav" [ngClass]="{'selected': 'dashboard' === selectedSection}"><button (click)="selectSection('dashboard')">Dashboard</button></li>
-            <li class="account__nav" [ngClass]="{'selected': 'info' === selectedSection}"><button (click)="selectSection('info')">Orders</button></li>
-            <li class="account__nav" [ngClass]="{'selected': 'orders' === selectedSection}"><button (click)="selectSection('orders')">Pesonal info</button></li>
-            <li class="account__nav" [ngClass]="{'selected': 'methods' === selectedSection}"><button (click)="selectSection('methods')">My Reviews</button></li>
-            <li class="account__nav" [ngClass]="{'selected': 'reviews' === selectedSection}"><button (click)="selectSection('reviews')">Payment Methods</button></li>
+            <li class="account__nav" [ngClass]="{'selected': 'orders' === selectedSection}"><button (click)="selectSection('orders')">Orders</button></li>
+            <li class="account__nav" [ngClass]="{'selected': 'info' === selectedSection}"><button (click)="selectSection('info')">Pesonal info</button></li>
+            <li class="account__nav" [ngClass]="{'selected': 'reviews' === selectedSection}"><button (click)="selectSection('reviews')">My Reviews</button></li>
+            <li class="account__nav" [ngClass]="{'selected': 'methods' === selectedSection}"><button (click)="selectSection('methods')">Payment Methods</button></li>
         </ul>
         <button class="account__nav-btn">LOG OUT</button>
     </div>
