@@ -11,6 +11,7 @@ import { ReviewsComponent, PersonalInfoComponent, PaymentMethodsComponent, Order
 })
 export class AccountPageComponent {
   userEmail: string = 'usermail@gmail.com';
+  userName: string = 'User Name'
   selectedSection: 'dashboard' | 'info' | 'orders' | 'methods' | 'reviews' = 'dashboard'
 
   selectSection(section: 'dashboard' | 'info' | 'orders' | 'methods' | 'reviews'): void{
