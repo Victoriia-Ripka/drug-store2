@@ -61,6 +61,13 @@ li{
     }
 }
 
+.svg-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+}
+
 .info__user-private-data{
     color: #9D9D9D;
     font-family: Inter;
