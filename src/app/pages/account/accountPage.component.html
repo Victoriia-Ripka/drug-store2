@@ -16,5 +16,5 @@
     <account-personal-info *ngIf="selectedSection == 'info'"></account-personal-info>
     <account-orders *ngIf="selectedSection == 'orders'"></account-orders>
     <account-payment-methods *ngIf="selectedSection == 'methods'"></account-payment-methods>
-    <account-reviews *ngIf="selectedSection == 'reviews'"></account-reviews>
+    <account-reviews *ngIf="selectedSection == 'reviews'" [userName]="userName"></account-reviews>
 </div>

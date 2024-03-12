@@ -1,0 +1,140 @@
+.reviews__cont{
+
+    @media screen and (min-width: 1600px) {
+        width: 1300px;
+    }
+}
+
+.reviews__title{
+    color: #000;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 1600px) {
+        text-align: left;
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+.reviews__user-cont{
+    display: none;
+
+    @media screen and (min-width: 1600px) {
+        display: block;
+        margin-bottom: 35px;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+}
+
+.reviews__user-avatar{
+    width: 114.35px;
+    height: 114.35px;
+}
+
+.reviews__user-name{
+    color: #333;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.reviews__user-act-cont{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    div{
+        display: flex;
+        align-items: center;
+    }
+
+    p{
+        color: #999;
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+}
+
+.reviews__main-cont {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #005ADE;
+
+    @media screen and (min-width: 1600px) {
+        height: 486.949px;
+        justify-content: center;
+        gap: 0;
+        border-radius: 15px;
+
+        svg {
+            width: 170.526px;
+            height: 170.526px;
+            margin-bottom: 10px;
+        }
+    }
+
+}
+
+.reviews__text-bold{
+    color: #0F2650;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 25px;
+    }
+}
+
+.reviews__text{
+    color: #333;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+
+    @media screen and (min-width: 1600px) {
+        width: 528.416px;
+        font-size: 20px;
+        margin-bottom: 45px;
+    }
+}
+
+.reviews__btn{
+    display: flex;
+    width: 191px;
+    height: 60px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 8.061px;
+    border: none;
+    border-radius: 16.122px;
+    background: linear-gradient(90deg, #0F2650 4.29%, rgba(15, 38, 80, 0.81) 92.86%);
+    color: #EEFBFA;
+    font-family: Inter;
+    font-size: 16.122px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    &:hover,
+    &:focus{
+        transform: scale(1.06);
+    }
+}
