@@ -9,7 +9,7 @@
             <li class="account__nav" [ngClass]="{'selected': 'reviews' === selectedSection}"><button (click)="selectSection('reviews')">My Reviews</button></li>
             <li class="account__nav" [ngClass]="{'selected': 'methods' === selectedSection}"><button (click)="selectSection('methods')">Payment Methods</button></li>
         </ul>
-        <button class="account__nav-btn">LOG OUT</button>
+        <button class="account__nav-btn"><img src="assets/img/mobile/logout-min.png">LOG OUT</button>
     </div>
 
     <account-dashboard *ngIf="selectedSection == 'dashboard'" [userEmail]="userEmail"></account-dashboard>
