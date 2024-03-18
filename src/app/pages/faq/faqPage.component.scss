@@ -7,6 +7,10 @@ section {
         margin: 0 auto 50px;
     }
 
+    @media screen and (min-width: 480px) {
+        width: 460px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 1121px;
         margin: 0 auto 100px;
@@ -116,6 +120,10 @@ h3{
         width: 250px;
     }
 
+    @media screen and (min-width: 480px) {
+        width: 350px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 836.489px;
         font-size: 30px;
@@ -142,6 +150,10 @@ p{
 
     @media screen and (min-width: 375px) {
         width: 250px;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 350px;
     }
 
     @media screen and (min-width: 1600px) {

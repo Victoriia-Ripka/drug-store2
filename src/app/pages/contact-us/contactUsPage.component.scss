@@ -7,6 +7,10 @@ section {
         margin: 30px auto 50px;
     }
 
+    @media screen and (min-width: 480px) {
+        width: 460px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 1285px;
         margin: 100px auto 100px;

@@ -88,6 +88,10 @@ input {
         color: rgba(28, 28, 28, 0.50);
     }
 
+    @media screen and (min-width: 480px) {
+        width: 410px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 676px;
         height: 64px;
@@ -126,6 +130,10 @@ button{
         gap: 18px;
     }
 
+    @media screen and (min-width: 480px) {
+        gap: 20px;
+    }
+
     @media screen and (min-width: 1600px) {
         margin-bottom: 70px;
         width: 1238.024px;
@@ -137,6 +145,10 @@ button{
 
         @media screen and (min-width: 375px) {
             width: 168px;
+        }
+
+        @media screen and (min-width: 480px){
+            width: 220px;
         }
 
         @media screen and (min-width: 1600px) {

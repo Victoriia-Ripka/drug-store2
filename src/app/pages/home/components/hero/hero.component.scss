@@ -37,6 +37,12 @@ section {
         margin: 0 auto 20px;
         position: relative;
     }
+
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 h1{

@@ -14,6 +14,10 @@ section{
         margin: 30px auto 50px;
     }
 
+    @media screen and (min-width: 480px) {
+        width: 460px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 1500px;
         height: 400px;
@@ -131,6 +135,10 @@ img{
     left: 50%;
     transform: translateX(-50%);
     top: 170px;
+
+    @media screen and (min-width: 480px){
+        top: 120px;
+    }
 
     @media screen and (min-width: 1600px) {
         top: 50%;
