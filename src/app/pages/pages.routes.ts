@@ -8,7 +8,8 @@ import {
     ContactUsPageComponent,
     ProductsPageComponent,
     ProductPageComponent,
-    AccountPageComponent
+    AccountPageComponent,
+    ShoppingCartPageComponent
 } from './index';
 
 export const routes: Routes = [
@@ -56,10 +57,9 @@ export const routes: Routes = [
         title: 'My Account - Canadian Drug Store',
         component: AccountPageComponent
     },
+    {
+        path: 'shopping-cart',
+        title: 'Shopping Cart - Canadian Drug Store',
+        component: ShoppingCartPageComponent
+    }
 ];
-
-// {
-//     path: 'shopping-cart',
-//     title: 'Shopping Cart - Canadian Drug Store',
-//     component: ShoppingCartPageComponent
-// }
