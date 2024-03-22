@@ -1,0 +1,201 @@
+<section>
+    <h1 class="mobile-title">Shopping Cart</h1>
+
+    <div class="cart__aside">
+        <div class="cart__cont cart__promo-cont">
+            <p class="cart__promo-bold-text cart__sub-title">Promo code</p>
+            <form>
+                <input class="cart__promo-input">
+                <button class="cart__promo-btn">Apply</button>
+            </form>
+            <p class="cart__promo-text">One code per order</p>
+        </div>
+
+        <div class="cart__cont cart__order-cont">
+            <p class="cart__order-bold-text cart__sub-title">Order summary</p>
+
+            <ul class="cart__order-list">
+                <li class="cart__order-item">
+                    <p class="cart__order-text">Items Total ({{totalItems}})</p>
+                    <p class="cart__order-price">{{totalItemsPrice}}$</p>
+                </li>
+                <li class="cart__order-item">
+                    <p class="cart__order-text bolder">Discounts</p>
+                    <p class="cart__order-price cart__discount-price">-{{discountPrice}}$</p>
+                </li>
+                <li class="line"></li>
+                <li class="cart__order-item">
+                    <p class="cart__order-bold-text">Subtotal</p>
+                    <p class="cart__order-price">{{subtotalPrice}}$</p>
+                </li>
+                <li class="cart__order-item">
+                    <p class="cart__order-grey-text">{{deliveryFirm.charAt(0).toUpperCase() + deliveryFirm.slice(1)}} |
+                        <button class="cart__order-btn">Change</button>
+                    </p>
+                    <p class="cart__order-price">{{deliveryPrice}}$</p>
+                </li>
+                <li class="cart__order-item">
+                    <p class="cart__order-grey-text">VAT included</p>
+                    <p class="cart__order-price">{{vatPrice}}$</p>
+                </li>
+                <li class="line"></li>
+                <li class="cart__order-item">
+                    <p class="cart__order-bold-text">Total</p>
+                    <p class="cart__order-price">{{totalPrice}}$</p>
+                </li>
+            </ul>
+
+            <div class="cart__free-delivery-cont" *ngIf="toFreeDelivery>0">
+                <p>Spend <span>{{toFreeDelivery}} €</span> more to get free shipping!</p>
+                <div class="cart__free-delivery-line">
+                    <div class="cart__progress-delivery-line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart__payment-methods-cont">
+            <p class="cart__promo-bold-text cart__sub-title payments-title">Accepted Payment Methods</p>
+            <img src="assets/img/mobile/payment-methods-min.png">
+        </div>
+    </div>
+
+    <div class="cart__main">
+        <h1 class="laptop-title">Shopping Cart</h1>
+
+        <ul class="cart__products-list">
+            <li class="cart__products-list-header">
+                <p class="product-column">Product</p>
+                <p class="price-column">Price</p>
+                <p class="qty-column">Qty.</p>
+                <p class="total-column">Total</p>
+            </li>
+            <li class="cart__product">
+                <div class="cart__product-info-cont product-column">
+                    <div>
+                        <img src="assets/img/mobile/clomid-min.png">
+                    </div>
+                    <div class="cart__product-text-cont">
+                        <p class="cart__product-title">Provigil</p>
+                        <p class="cart__product-desc">Clomid is a fertility drug used to help become pregnant.
+                        </p>
+                        <p class="cart__product-grey-text">Product code: СПТ-69585</p>
+                        <p class="cart__product-grey-text">Weight: 0.13 kg</p>
+                        <button class="cart__product-remove">Remove</button>
+                    </div>
+                </div>
+
+                <ul class="cart__product-price-cont">
+                    <li class="cart__product-price-column price-column">
+                        <p class="cart__product-price-title">Price</p>
+                        <p class="cart__product-price">26.33 $</p>
+                    </li>
+                    <li class="cart__product-price-column">
+                        <p class="cart__product-price-title">Qty.</p>
+                        <div class="cart__product-btns-cont qty-column">
+                            <button><svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18"
+                                    fill="none">
+                                    <path
+                                        d="M9.22796 17.5956C13.9757 17.5956 17.8246 13.7467 17.8246 8.99896C17.8246 4.25118 13.9757 0.402344 9.22796 0.402344C4.48018 0.402344 0.631348 4.25118 0.631348 8.99896C0.631348 13.7467 4.48018 17.5956 9.22796 17.5956Z"
+                                        stroke-opacity="0.3" stroke-width="0.418755" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M13.3391 8.99902H5.11621" stroke-opacity="0.3" stroke-width="0.418755"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></button>
+
+                            <p>1</p>
+                            <button><svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18"
+                                    fill="none">
+                                    <path
+                                        d="M9.71771 17.702C14.4655 17.702 18.3143 13.8532 18.3143 9.10541C18.3143 4.35763 14.4655 0.508789 9.71771 0.508789C4.96993 0.508789 1.12109 4.35763 1.12109 9.10541C1.12109 13.8532 4.96993 17.702 9.71771 17.702Z"
+                                        stroke-width="0.418755" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M9.7168 4.99414V13.217" stroke-width="0.418755" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M13.8283 9.10596H5.60547" stroke-width="0.418755" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg></button>
+
+                        </div>
+                    </li>
+                    <li class="cart__product-price-column total-column">
+                        <p class="cart__product-price-title left">Total</p>
+                        <p class="cart__product-price">26.33$</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="cart__delivery-cont">
+            <p class="cart__delivery-text">Shipping <button class="cart__order-btn margin-left">View all</button></p>
+
+            <div class="cart__delivery-personal-info-cont">
+                <p>Ship to <span>Lithuania</span></p>
+                <button class="cart__order-btn">Change</button>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                    <circle cx="8.24615" cy="8.20465" r="7.39465" stroke="#333333" stroke-width="0.836791" />
+                </svg>
+
+                <p class="cart__delivery-weight">Total Weight: 0 13 kg</p>
+            </div>
+
+            <ul class="cart__delivery-list">
+                <li>
+                    <button (click)="changedeliveryFirm('dpd')" class="cart__delivery-item"
+                        [ngClass]="{'selected': 'dpd' === deliveryFirm}">
+                        <img src="assets/img/mobile/dpd-min.png">
+                        <div class="cart__delivery-info-cont">
+                            <div>
+                                <p>Feb 07 - Feb 09</p>
+                                <p>4.00 $</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                fill="none">
+                                <circle cx="8.24615" cy="8.20465" r="7.39465" stroke="#333333"
+                                    stroke-width="0.836791" />
+                            </svg>
+                        </div>
+                        <p class="cart__delivery-extra-info">• Prepaid import Duties & Taxes - included</p>
+                    </button>
+                </li>
+                <li>
+                    <button (click)="changedeliveryFirm('dhl')" class="cart__delivery-item"
+                        [ngClass]="{'selected': 'dhl' === deliveryFirm}">
+                        <img src="assets/img/mobile/dhl-min.png">
+                        <div class="cart__delivery-info-cont">
+                            <div>
+                                <p>Feb 07 - Feb 09</p>
+                                <p>4.00 $</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                fill="none">
+                                <circle cx="8.24615" cy="8.20465" r="7.39465" stroke="#333333"
+                                    stroke-width="0.836791" />
+                            </svg>
+                        </div>
+                        <p class="cart__delivery-extra-info">• Prepaid import Duties & Taxes - included</p>
+                    </button>
+                </li>
+                <li>
+                    <button (click)="changedeliveryFirm('venipak')" class="cart__delivery-item"
+                        [ngClass]="{'selected': 'venipak' === deliveryFirm}">
+                        <img src="assets/img/mobile/venipak-min.png">
+                        <div class="cart__delivery-info-cont">
+                            <div>
+                                <p>Feb 07 - Feb 09</p>
+                                <p>4.00 $</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                fill="none">
+                                <circle cx="8.24615" cy="8.20465" r="7.39465" stroke="#333333"
+                                    stroke-width="0.836791" />
+                            </svg>
+                        </div>
+                        <p class="cart__delivery-extra-info">• Prepaid import Duties & Taxes - included</p>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <button class="cart_btn">Proceed to checkout (1)</button>
+    </div>
+</section>

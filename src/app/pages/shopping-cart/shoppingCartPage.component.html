@@ -1,1 +1,4 @@
-<p>shopping-cart-page works!</p>
+<shopping-cart *ngIf="purchasePhase=='cart'"></shopping-cart>
+<shipping-info *ngIf="purchasePhase=='shipping-info'"></shipping-info>
+<shipping-method *ngIf="purchasePhase=='shipping-method'"></shipping-method>
+<completed-purchase *ngIf="purchasePhase=='completed'"></completed-purchase>
