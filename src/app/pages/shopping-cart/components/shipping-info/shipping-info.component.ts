@@ -5,7 +5,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './shipping-info.component.html',
-  styleUrl: './shipping-info.component.scss'
+  styleUrls: ['./shipping-info.component.scss', '../../shoppingCartPage.component.scss']
 })
 export class ShippingInfoComponent {
   @Output()

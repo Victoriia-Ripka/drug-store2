@@ -5,7 +5,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './shipping-method.component.html',
-  styleUrl: './shipping-method.component.scss'
+  styleUrls: ['./shipping-method.component.scss', '../../shoppingCartPage.component.scss']
+
 })
 export class ShippingMethodComponent {
   @Output()

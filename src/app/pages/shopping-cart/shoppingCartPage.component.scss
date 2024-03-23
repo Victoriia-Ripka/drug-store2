@@ -1,0 +1,73 @@
+.purchase-progres-bar-cont{
+    margin-bottom: 40px;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: 1600px) {
+        display: flex;
+    }
+}
+
+.purchase-progres-bar-titles-cont{
+    display: flex;
+    justify-content: center;
+    width: 1060px;
+    gap: 181px;
+    margin-bottom: 15px;
+
+    p{
+        color: #D0D5DD;
+        text-align: left;
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.55;
+        position: relative;
+
+        &::after{
+            content: '';
+            width: 22px;
+            height: 22px;
+            background-color: #D0D5DD;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -28px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.active{
+    color: #0D6EFD !important;
+
+    &::after {
+        background-color: #0D6EFD !important;
+    }
+
+}
+
+.purchase-progres-bar-line{
+    border-radius: 2px;
+    background: #D0D5DD;
+    width: 903px;
+    height: 4px;
+}
+
+.purchase-progres-bar-line-second-phase,
+.purchase-progres-bar-line-third-phase{
+    height: 100%;
+    background-color: #0D6EFD;
+    border-radius: 2px;
+}
+
+.purchase-progres-bar-line-second-phase{
+    width: 310px;
+}
+
+.purchase-progres-bar-line-third-phase{
+    width: 620px;
+}
