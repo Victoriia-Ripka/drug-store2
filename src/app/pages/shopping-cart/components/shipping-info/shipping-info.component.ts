@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'shipping-info',
@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './shipping-info.component.scss'
 })
 export class ShippingInfoComponent {
+  @Output()
+  nextPhase: EventEmitter<string> = new EventEmitter<string>()
 
+  toNextPhase() {
+    this.nextPhase.emit('completed')
+  }
 }

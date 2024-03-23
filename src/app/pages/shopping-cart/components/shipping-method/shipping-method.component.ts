@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'shipping-method',
@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './shipping-method.component.scss'
 })
 export class ShippingMethodComponent {
+  @Output()
+  nextPhase: EventEmitter<string> = new EventEmitter<string>()
 
+  toNextPhase() {
+    this.nextPhase.emit('shipping-method')
+  }
 }

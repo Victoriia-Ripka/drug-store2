@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormGroup, Validators, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -20,6 +20,12 @@ export class ShoppingCartComponent {
   deliveryFirm: string = 'venipak';
   toFreeDelivery: number = 60 - this.totalItemsPrice;
 
+  @Output()
+  nextPhase: EventEmitter<string> = new EventEmitter<string>()
+
+  toNextPhase() {
+    this.nextPhase.emit('shipping-info')
+  }
 
   changedeliveryFirm(firm: string) {
     this.deliveryFirm = firm
