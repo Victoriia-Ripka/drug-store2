@@ -1,0 +1,140 @@
+section {
+    padding: 50px 12px 50px;
+
+    @media screen and (min-width: 375px) {
+        width: 355px;
+        padding: 0;
+        margin: 50px auto 50px;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 460px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 580px;
+        margin: 100px auto 100px;
+    }
+}
+
+h1{
+    color: #364A6D;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 600;
+    width: 276.798px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 480px) {
+        width: auto;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 40px;
+    }
+}
+
+.cart__completed-relative-cont{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    height: 158px;
+    width: 100%;
+
+    @media screen and (min-width: 1600px){
+        margin: 33px 0;
+        height: 258px;
+    }
+}
+
+.left-circle{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+
+    @media screen and (min-width: 375px) {
+        left: 23px;
+    }
+
+    @media screen and (min-width: 480px){
+        left: 60px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 92.799px;
+        height: 92.799px;
+    }
+}
+
+.right-circle{
+    position: absolute;
+    right: 30px;
+    bottom: 19px;
+
+    @media screen and (min-width: 375px) {
+        right: 45px;
+    }
+
+    @media screen and (min-width: 480px){
+        right: 75px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 54.852px;
+        height: 54.852px;
+    }
+}
+
+.dotted-circle{
+    width: 158.875px;
+    height: 158.875px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px dashed #0D6EFD66;
+
+    @media screen and (min-width: 1600px) {
+        width: 261.098px;
+        height: 261.098px;
+    }
+}
+
+.filled-circle{
+    background-color: #DBEFFA80;
+    width: 135.303px;
+    height: 135.303px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg{
+        width: 62.682px;
+        height: 53.954px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 222.359px;
+        height: 222.359px;
+
+        svg{
+            width: 103.013px;
+            height: 88.669px;
+        }
+    }
+}
+
+.cart__completed-text{
+    color: #333;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 18px;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+    }
+}
