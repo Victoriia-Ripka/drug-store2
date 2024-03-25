@@ -24,7 +24,7 @@ export class ShippingInfoComponent {
   nextPhase: EventEmitter<string> = new EventEmitter<string>()
 
   toNextPhase() {
-    this.nextPhase.emit('completed')
+    this.nextPhase.emit('shipping-method')
   }
 
   shippingForm = new FormGroup({

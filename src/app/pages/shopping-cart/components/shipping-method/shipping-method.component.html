@@ -1,13 +1,265 @@
-<p>shipping-method works!</p>
+<section>
+    <h1 class="mobile-title">Shipping Method</h1>
 
-<div class="purchase-progres-bar-cont">
-    <div class="purchase-progres-bar-titles-cont">
-        <p class="active">Shopping Cart</p>
-        <p class="active">Shipping info</p>
-        <p class="active">Shipping Method</p>
-        <p>Payment</p>
+    <div class="cart__aside">
+
+        <div class="cart__cont cart__order-cont">
+            <p class="cart__order-bold-text cart__sub-title">Order summary</p>
+
+            <ul class="cart__order-list">
+                <li class="cart__order-item">
+                    <p class="cart__order-text">Items Total ({{totalItems}})</p>
+                    <p class="cart__order-price">{{totalItemsPrice}}$</p>
+                </li>
+                <li class="cart__order-item">
+                    <p class="cart__order-text bolder">Discounts</p>
+                    <p class="cart__order-price cart__discount-price">-{{discountPrice}}$</p>
+                </li>
+                <li class="line"></li>
+                <li class="cart__order-item">
+                    <p class="cart__order-bold-text">Subtotal</p>
+                    <p class="cart__order-price">{{subtotalPrice}}$</p>
+                </li>
+                <li class="cart__order-item">
+                    <p class="cart__order-grey-text">{{deliveryFirm.charAt(0).toUpperCase() + deliveryFirm.slice(1)}} |
+                        <button class="cart__order-btn" (click)="toCartPhase()">Change</button>
+                    </p>
+                    <p class="cart__order-price">{{deliveryPrice}}$</p>
+                </li>
+                <li class="cart__order-item">
+                    <p class="cart__order-grey-text">VAT included</p>
+                    <p class="cart__order-price">{{vatPrice}}$</p>
+                </li>
+                <li class="line"></li>
+                <li class="cart__order-item">
+                    <p class="cart__order-bold-text">Total</p>
+                    <p class="cart__order-price">{{totalPrice}}$</p>
+                </li>
+
+            </ul>
+
+            <p class="term-and-cond-text">By choosing this shipping method you are agreeing to DAP <a href="#">Terms and
+                    Conditions</a></p>
+        </div>
     </div>
-    <div class="purchase-progres-bar-line">
-        <div class="purchase-progres-bar-line-third-phase"></div>
+
+    <div class="cart__main">
+        <h1 class="laptop-title">Shipping Method</h1>
+
+        <div class="purchase-progres-bar-cont">
+            <div class="purchase-progres-bar-titles-cont">
+                <p class="active">Shopping Cart</p>
+                <p class="active">Shipping info</p>
+                <p class="active">Shipping Method</p>
+                <p>Payment</p>
+            </div>
+            <div class="purchase-progres-bar-line">
+                <div class="purchase-progres-bar-line-third-phase"></div>
+            </div>
+        </div>
+
+        <div class="shipp-info__cont">
+            <div>
+                <p class="shipp-info__title">Shipping Information</p>
+                <p class="shipp-info__name">Hanna Cooper</p>
+                <p class="shipp-info__adress">Address line</p>
+                <button class="cart__order-btn shipp-info__btn" (click)="toShippingInfoPhase()">Change</button>
+            </div>
+
+            <div>
+                <img src="assets/img/mobile/venipak-min.png">
+                <p class="shipp-info__date">Feb 07 - Feb 09</p>
+                <p class="shipp-info__cost">4.00 $</p>
+                <button class="cart__order-btn shipp-info__btn" (click)="toCartPhase()">Change</button>
+            </div>
+
+        </div>
+
+
+        <div class="payments-cont" [ngSwitch]="selectedPaymentMethod">
+            <div class="payment-cont">
+                <div class="payment-checkbox-cont">
+                    <input type="checkbox" id="credit" (click)="selectMethod('credit')" value="credit"
+                        [checked]="selectedPaymentMethod === 'credit'">
+
+                    <div class="img-cont">
+                        <label for="credit">Payment Method</label>
+                        <p>Add a payment method</p>
+                        <img src="assets/img/mobile/credit-methods-min.png">
+                    </div>
+                </div>
+
+
+                <form *ngIf="selectedPaymentMethod==='credit'" class="payment-cart-info-cont" [formGroup]="paymentForm"
+                    (ngSubmit)="sendData()">
+                    <div class="payment-cart-input-cont">
+                        <label for="number">Card number</label>
+                        <input placeholder="8487 8487 8487 8487" id="number" [formControl]="numberControl">
+                    </div>
+
+                    <div class="payment-cart-input-extra-cont">
+                        <div class="payment-cart-input-cont">
+                            <label for="date">Expire date</label>
+                            <input placeholder="MM/YY" id="date" [formControl]="dateControl">
+                        </div>
+
+                        <div class="payment-cart-input-cont">
+                            <label for="code">CVC /CVV</label>
+                            <input placeholder="3 dijits" id="code" [formControl]="codeControl">
+                        </div>
+                    </div>
+
+                    <div class="payment-cart-input-cont">
+                        <label for="name">Name on card</label>
+                        <input placeholder="Hanna Cooper" id="name" [formControl]="cardNameControl">
+                    </div>
+
+
+                    <div class="payment-checkboxes-cont">
+                        <div>
+                            <input type="checkbox" id="future-purchases" required>
+                            <label for="future-purchases">Save credit card for future purchases</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="future-purchases" required>
+                            <label for="future-purchases">Set as my default payment method</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="future-purchases">
+                            <label for="future-purchases">Billing Address is the same as Shipping Address</label>
+                        </div>
+
+                    </div>
+
+                    <button class="cart__btn payment-btn" type="submit">PAY</button>
+                </form>
+
+            </div>
+
+            <div class="payment-cont">
+                <div class="payment-checkbox-cont">
+                    <input type="checkbox" id="paypal" (click)="selectMethod('paypal')" value="paypal"
+                        [checked]="selectedPaymentMethod === 'paypal'" class="lower">
+
+                    <div class="img-cont row">
+                        <div class="img-border"><img src="assets/img/mobile/paypal-min.png"></div>
+                        <label for="paypal">Pay with PayPal</label>
+                    </div>
+                </div>
+
+
+                <form *ngIf="selectedPaymentMethod==='paypal'" class="payment-cart-info-cont" [formGroup]="paymentForm"
+                    (ngSubmit)="sendData()">
+                    <div class="payment-cart-input-cont">
+                        <label for="number">Card number</label>
+                        <input placeholder="8487 8487 8487 8487" id="number" [formControl]="numberControl">
+                    </div>
+
+                    <div class="payment-cart-input-extra-cont">
+                        <div class="payment-cart-input-cont">
+                            <label for="date">Expire date</label>
+                            <input placeholder="MM/YY" id="date" [formControl]="dateControl">
+                        </div>
+
+                        <div class="payment-cart-input-cont">
+                            <label for="code">CVC /CVV</label>
+                            <input placeholder="3 dijits" id="code" [formControl]="codeControl">
+                        </div>
+                    </div>
+
+
+                    <div class="payment-cart-input-cont">
+                        <label for="name">Name on card</label>
+                        <input placeholder="Hanna Cooper" id="name" [formControl]="cardNameControl">
+                    </div>
+
+
+                    <div class="payment-checkboxes-cont">
+                        <div>
+                            <input type="checkbox" id="future-purchases" required>
+                            <label for="future-purchases">Save credit card for future purchases</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="future-purchases" required>
+                            <label for="future-purchases">Set as my default payment method</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="future-purchases">
+                            <label for="future-purchases">Billing Address is the same as Shipping Address</label>
+                        </div>
+
+                    </div>
+
+                    <button class="cart__btn payment-btn" type="submit">PAY</button>
+                </form>
+
+            </div>
+
+            <div class="payment-cont">
+                <div class="payment-checkbox-cont">
+                    <input type="checkbox" id="googlepay" (click)="selectMethod('googlepay')" value="googlepay"
+                        [checked]="selectedPaymentMethod === 'googlepay'" class="lower">
+
+                    <div class="img-cont row">
+                        <div class="img-border"><img src="assets/img/mobile/googlepay-min.png"></div>
+                        <label for="googlepay">Pay with Google Pay</label>
+                    </div>
+                </div>
+
+
+                <form *ngIf="selectedPaymentMethod==='googlepay'" class="payment-cart-info-cont"
+                    [formGroup]="paymentForm" (ngSubmit)="sendData()">
+                    <div class="payment-cart-input-cont">
+                        <label for="number">Card number</label>
+                        <input placeholder="8487 8487 8487 8487" id="number" [formControl]="numberControl">
+                    </div>
+
+                    <div class="payment-cart-input-extra-cont">
+                        <div class="payment-cart-input-cont">
+                            <label for="date">Expire date</label>
+                            <input placeholder="MM/YY" id="date" [formControl]="dateControl">
+                        </div>
+
+                        <div class="payment-cart-input-cont">
+                            <label for="code">CVC /CVV</label>
+                            <input placeholder="3 dijits" id="code" [formControl]="codeControl">
+                        </div>
+                    </div>
+
+
+                    <div class="payment-cart-input-cont">
+                        <label for="name">Name on card</label>
+                        <input placeholder="Hanna Cooper" id="name" [formControl]="cardNameControl">
+                    </div>
+
+
+                    <div class="payment-checkboxes-cont">
+                        <div>
+                            <input type="checkbox" id="future-purchases" required>
+                            <label for="future-purchases">Save credit card for future purchases</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="future-purchases" required>
+                            <label for="future-purchases">Set as my default payment method</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="future-purchases">
+                            <label for="future-purchases">Billing Address is the same as Shipping Address</label>
+                        </div>
+
+                    </div>
+
+                    <button class="cart__btn payment-btn" type="submit">PAY</button>
+                </form>
+
+            </div>
+        </div>
     </div>
-</div>
+
+</section>
