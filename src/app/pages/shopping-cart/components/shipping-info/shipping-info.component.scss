@@ -1,0 +1,113 @@
+section {
+    padding: 30px 10px 50px;
+
+    @media screen and (min-width: 375px) {
+        width: 355px;
+        padding: 0;
+        margin: 30px auto 50px;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 460px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 1600px;
+        margin: 20px auto 100px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        gap: 80px;
+    }
+}
+
+h1 {
+    color: #333;
+    font-family: Poppins;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 40px;
+        text-align: left;
+        text-transform: capitalize;
+        margin-bottom: 12px;
+    }
+}
+
+.shipping__aside{
+    width: auto;
+
+    @media screen and (min-width: 1600px){
+        width: 455px;
+    }
+}
+
+.shipping__form{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (min-width: 1600px) {
+        width: 1060px;
+    }
+}
+
+.shipping__form-extra-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (min-width: 1600px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.shipping__input-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    width: 520px;
+    
+}
+
+label{
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 110%;
+    
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+    }
+}
+
+input{
+    height: 53px;
+    padding: 12px 17px;
+    border-radius: 10px;
+    border: 1px solid #CCC;
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    line-height: 110%;
+
+    &::placeholder{
+        color: rgba(0, 0, 0, 0.50);
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 18px;
+    }
+}
+
+.phone{
+    width: 100%;
+}

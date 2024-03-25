@@ -1,14 +1,97 @@
-<p>shipping-info works!</p>
+<section>
+    <h1 class="mobile-title">Shipping information</h1>
 
+    <div class="cart__aside shipping__aside">
+        <div class="cart__cont cart__order-cont">
+            <p class="cart__order-bold-text cart__sub-title">Order summary</p>
 
-<div class="purchase-progres-bar-cont">
-    <div class="purchase-progres-bar-titles-cont">
-        <p class="active">Shopping Cart</p>
-        <p class="active">Shipping info</p>
-        <p>Shipping Method</p>
-        <p>Payment</p>
+            <ul class="cart__order-list">
+                <li class="cart__order-item">
+                    <p class="cart__order-text">Items Total ({{totalItems}})</p>
+                    <p class="cart__order-price">{{totalItemsPrice}}$</p>
+                </li>
+                <li class="cart__order-item">
+                    <p class="cart__order-text bolder">Discounts</p>
+                    <p class="cart__order-price cart__discount-price">-{{discountPrice}}$</p>
+                </li>
+                <li class="line"></li>
+                <li class="cart__order-item">
+                    <p class="cart__order-bold-text">Subtotal</p>
+                    <p class="cart__order-price">{{subtotalPrice}}$</p>
+                </li>
+                <li class="cart__order-item">
+                    <p class="cart__order-grey-text">Shipping </p>
+                    <p class="cart__order-price">{{deliveryPrice}}$</p>
+                </li>
+                <li class="cart__order-item">
+                    <p class="cart__order-grey-text">VAT included</p>
+                    <p class="cart__order-price">{{vatPrice}}$</p>
+                </li>
+                <li class="line"></li>
+                <li class="cart__order-item">
+                    <p class="cart__order-bold-text">Total</p>
+                    <p class="cart__order-price">{{totalPrice}}$</p>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="purchase-progres-bar-line">
-        <div class="purchase-progres-bar-line-second-phase"></div>
+
+    <div class="cart__main">
+        <h1 class="laptop-title">Shipping information</h1>
+
+        <div class="purchase-progres-bar-cont">
+            <div class="purchase-progres-bar-titles-cont">
+                <p class="active">Shopping Cart</p>
+                <p class="active">Shipping info</p>
+                <p>Shipping Method</p>
+                <p>Payment</p>
+            </div>
+            <div class="purchase-progres-bar-line">
+                <div class="purchase-progres-bar-line-second-phase"></div>
+            </div>
+        </div>
+
+        <form class="shipping__form" [formGroup]="shippingForm" (ngSubmit)="sendData()">
+            <div class="shipping__form-extra-cont">
+                <div class="shipping__input-cont">
+                    <label for="name">First Name</label>
+                    <input type="text" id="name" placeholder="Anna" [formControl]="nameControl" />
+                </div>
+
+                <div class="shipping__input-cont">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Cooper" [formControl]="lastNameControl" />
+                </div>
+
+                <div class="shipping__input-cont">
+                    <label for="country">Country / Region*</label>
+                    <input type="text" id="country" placeholder="LT - Lithuania" [formControl]="countryControl" />
+                </div>
+
+                <div class="shipping__input-cont">
+                    <label for="city">City</label>
+                    <input type="text" id="city" placeholder="Vilnius" [formControl]="cityControl" />
+                </div>
+
+                <div class="shipping__input-cont">
+                    <label for="address">Address Line</label>
+                    <input type="text" id="address" placeholder="Address" [formControl]="addressControl" />
+                </div>
+
+                <div class="shipping__input-cont">
+                    <label for="postalCode">Zip / Postal Code</label>
+                    <input type="number" id="postalCode" placeholder="00000" [formControl]="postalCodeControl" />
+                </div>
+            </div>
+
+            <div class="shipping__input-cont phone">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="+3700000000000" [formControl]="phoneControl" />
+            </div>
+
+            <button class="cart__btn" type="submit">Save and Continue</button>
+
+        </form>
     </div>
-</div>
+
+</section>
