@@ -1,4 +1,8 @@
 <section>
+    <categories-modal *ngIf="isOpenedCategoriesModal" [selectedCategory]="selectedCategory"
+        (close)="toggleCategoriesModal()" (selectCategoryInModal)="selectCategory($event)">
+    </categories-modal>
+
     <div class="products__extra-cont">
         <div class="products__head-cont">
             <h2 class="products__title">All Products</h2>
@@ -22,10 +26,17 @@
         </div>
 
         <div class="products__main-cont">
-
             <div class="products__categories-cont">
-
+                <p class="category-modal__title">Category</p>
+                <ul class="category-modal__list">
+                    <li class="category-modal__item products__categories-item" *ngFor="let category of categories"
+                        (click)="selectCategory(category)"
+                        [ngStyle]="{'background': category === selectedCategory ? '#93C1FE' : 'transparent'}">
+                        {{ category }}
+                    </li>
+                </ul>
             </div>
+
 
             <!-- <mat-drawer-content> -->
             <div>
@@ -38,7 +49,8 @@
                     </li>
                 </ul>
 
-                <div class="products__pagination">paggination</div>
+                <div *ngIf="products.length > 0 " class="products__pagination">paggination</div>
+                <div *ngIf="products.length == 0 " class="products__pagination">Nothing here</div>
             </div>
         </div>
         <!-- <pagination-controls class="my-pagination" (pageChange)="currentPage = $event" previousLabel="" nextLabel="">
