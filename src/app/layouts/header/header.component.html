@@ -109,14 +109,15 @@
                     </defs>
                 </svg>
                 <div class="header__actions-account-authorized" *ngIf="isAuthorizated">
-                    <img src="assets\img\mobile\authorized_user-min.png" >
+                    <img src="assets\img\mobile\authorized_user-min.png">
                 </div>
                 <p>account</p>
             </button>
 
-            <account-modal *ngIf="isAccountModal" class="header__account-modal" [authorizated]="isAuthorizated" (toggleModal)="toggleAccountModal()"></account-modal>
+            <account-modal *ngIf="isAccountModal" class="header__account-modal" [authorizated]="isAuthorizated"
+                (toggleModal)="toggleAccountModal()"></account-modal>
 
-            <a href="/shopping-cart" class="header__actions-purchase-cont">
+            <button class="header__actions-purchase-cont" (click)="toggleCartModal()">
                 <svg class="header__actions-purchase" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                     fill="none">
                     <path
@@ -124,7 +125,7 @@
                         stroke="#0F2650" stroke-width="1.07864" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
                 <p class="header__actions-purchase-amount">$0</p>
-            </a>
+            </button>
         </div>
 
         <div *ngIf="isMenuOpened" class="header__menu">
@@ -137,6 +138,7 @@
             </nav>
         </div>
 
+        <cart-modal *ngIf="isCartModalOpened" [itemsInCart]="itemsInCart" (toggleCartModal)="toggleCartModal()"></cart-modal>
     </div>
 </header>
 <div class="extra"></div>

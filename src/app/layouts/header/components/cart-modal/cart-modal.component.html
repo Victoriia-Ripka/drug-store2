@@ -1,0 +1,105 @@
+<div class="backdrop">
+
+    <div class="cart-modal__cont">
+        <div class="cart-modal__main-cont">
+            <div class="cart-modal__title-cont">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <path
+                        d="M13.2357 0.381568C20.2147 0.453707 25.5899 6.08892 25.5379 12.8213C25.4859 19.7299 19.8993 25.1419 13.125 25.1034C6.1812 25.0631 0.772475 19.4363 0.821126 12.6686C0.873133 5.74668 6.47815 0.373179 13.2357 0.379889V0.381568ZM11.4624 13.7591C10.6203 12.9153 9.72942 12.0127 8.82685 11.1202C8.06017 10.3636 6.92943 10.3434 6.20134 11.0581C5.44639 11.7979 5.45143 12.922 6.22986 13.7088C7.5552 15.0459 8.88557 16.3779 10.2243 17.7033C11.0111 18.4817 12.0966 18.4951 12.8733 17.715C15.3042 15.274 17.7268 12.8263 20.1426 10.3703C20.9109 9.58848 20.9109 8.47789 20.1795 7.74811C19.4547 7.02337 18.3391 7.03343 17.5556 7.78502C17.1933 8.13229 16.8544 8.50305 16.4954 8.85368C14.8295 10.481 13.1602 12.105 11.4641 13.7591H11.4624Z"
+                        fill="#1F345C" />
+                </svg>
+                <p class="cart-modal__title">Added to cart!</p>
+            </div>
+
+            <button class="cart-modal__close-btn" (click)="closeModal()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                    <path
+                        d="M13.4696 16.6016C13.4131 16.6837 13.3676 16.778 13.2983 16.8481C10.5729 19.6093 7.84452 22.3685 5.11716 25.1276C4.30608 25.9485 2.9008 26.1168 1.91939 25.5125C0.784471 24.8129 0.548773 23.1101 1.43809 22.0257C1.52227 21.9235 1.61437 21.8272 1.70746 21.733C4.4467 18.9608 7.18496 16.1896 9.92718 13.4204C9.99551 13.3513 10.0945 13.3122 10.1797 13.2591C10.1708 13.223 10.1619 13.1869 10.153 13.1508C10.0797 13.0967 9.99848 13.0516 9.9351 12.9875C7.20576 10.2293 4.47839 7.47014 1.75103 4.70997C1.01324 3.9663 0.81022 2.93099 1.21625 1.9979C1.6213 1.06682 2.52547 0.49855 3.55046 0.550666C4.14861 0.581736 4.66557 0.817262 5.09339 1.24722C7.79302 3.9643 10.4936 6.67937 13.1933 9.39745C13.3042 9.5087 13.4012 9.63398 13.5201 9.77028C13.6211 9.67306 13.6924 9.60692 13.7607 9.53776C16.4534 6.81367 19.1451 4.08858 21.8388 1.36549C22.9124 0.281063 24.5523 0.349216 25.4714 1.51282C26.223 2.46394 26.1507 3.84804 25.304 4.70496C22.5945 7.44709 19.8839 10.1892 17.1724 12.9293C17.1031 12.9995 17.0179 13.0536 16.8743 13.1669C17.0169 13.2801 17.1209 13.3463 17.2061 13.4325C19.9374 16.1766 22.6658 18.9237 25.3981 21.6659C25.815 22.0838 26.0943 22.5629 26.1913 23.1552C26.4142 24.5163 25.3684 25.8122 24.0017 25.8683C23.1302 25.9034 22.4053 25.6257 21.7804 24.9883C19.1105 22.2642 16.4227 19.5592 13.7439 16.8441C13.6756 16.7749 13.635 16.6777 13.5805 16.5935C13.5429 16.5965 13.5052 16.5996 13.4676 16.6026L13.4696 16.6016Z"
+                        fill="#1F345C" />
+                </svg>
+            </button>
+
+            <p *ngIf="!itemsInCart" class="cart-modal__empty">Nothing here</p>
+
+            <ul class="cart-modal__list" *ngIf="itemsInCart">
+                <li class="cart-modal__item" *ngFor="let item of itemsInCart">
+                    <img src={{item.src}}>
+                    <div>
+                        <p class="cart-modal__item-title">{{item.title}}</p>
+                        <p class="cart-modal__item-price">from <span>€{{item.price}}</span></p>
+                    </div>
+                </li>
+            </ul>
+
+            <div *ngIf="itemsInCart" class="cart-modal__total-cont">
+                <div>
+                    <p class="cart-modal__total-text">
+                        Subtotal
+                        <span *ngIf="itemsInCart.length > 1">({{itemsInCart.length}} items)</span>
+                        <span *ngIf="itemsInCart.length == 1">({{itemsInCart.length}} item)</span>
+                    </p>
+                    <p class="cart-modal__discount-text">Includes all discounts</p>
+                </div>
+                <p>${{totalPrice}}</p>
+            </div>
+
+            <div class="cart-modal__recomendations-cont">
+                <div class="cart-modal__recomendations-extra-cont">
+                    <p class="cart-modal__recomendations-title">Frequently purchased together</p>
+                    <ul>
+                        <li>
+                            <a href="/product/1">
+                                <img src="assets/img/mobile/provigil-min.png">
+                                <p class="cart-modal__item-title">Provigil</p>
+                                <p class="cart-modal__item-price">from <span>€0.91</span></p>
+                                <p class="cart-modal__discount-text">Provigil</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/product/1">
+                                <img src="assets/img/mobile/provigil-min.png">
+                                <p class="cart-modal__item-title">Provigil</p>
+                                <p class="cart-modal__item-price">from <span>€0.91</span></p>
+                                <p class="cart-modal__discount-text">Provigil</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="line"></div>
+
+            <div class="cart-modal__recomendations-cont">
+                <div class="cart-modal__recomendations-extra-cont">
+                    <p class="cart-modal__recomendations-title">Customer also viewed</p>
+                    <ul>
+                        <li>
+                            <a href="/product/1">
+                                <img src="assets/img/mobile/provigil-min.png">
+                                <p class="cart-modal__item-title">Provigil</p>
+                                <p class="cart-modal__item-price">from <span>€0.91</span></p>
+                                <p class="cart-modal__discount-text">Provigil</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/product/1">
+                                <img src="assets/img/mobile/provigil-min.png">
+                                <p class="cart-modal__item-title">Provigil</p>
+                                <p class="cart-modal__item-price">from <span>€0.91</span></p>
+                                <p class="cart-modal__discount-text">Provigil</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cart-modal__btns-cont">
+            <a [href]="itemsInCart !== null ? '/shopping-cart' : null"
+                [ngStyle]="{'color': itemsInCart ? 'white' : 'grey' }">View cart & check out</a>
+            <a href="/products" class="reverse-styles">Continue shopping</a>
+        </div>
+    </div>
+</div>
