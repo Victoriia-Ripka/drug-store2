@@ -66,12 +66,12 @@ section {
     }
 
     @media screen and (min-width: 1600px) {
-        overflow: hidden;
+        // overflow: hidden;
         padding: 40px 0 50px;
         flex-direction: row;
         overflow: visible;
         align-items: center;
-        justify-content: center;
+        // justify-content: center;
         justify-content: space-evenly;
         width: auto;
         gap: 42.14px;
@@ -227,3 +227,4 @@ section {
         height: 100px;
     }
 }
+

@@ -81,27 +81,55 @@
         </li>
     </ul>
 
-    <div class="account__recommended-cont">
-        <h3 class="account__recommended-title">Recommended for you</h3>
-        <ul class="account__recommended-list">
-            <li class="account__recommended-item">
-                <img src="assets\img\mobile\clomid-min.png">
-            </li>
-            <li class="account__recommended-item">
-                <img src="assets\img\mobile\neurontin-min.png">
-            </li>
-            <li class="account__recommended-item">
-                <img src="assets\img\mobile\doxycycline-min.png">
-            </li>
-            <li class="account__recommended-item">
-                <img src="assets\img\mobile\clomid-min.png">
-            </li>
-            <li class="account__recommended-item">
-                <img src="assets\img\mobile\clomid-min.png">
-            </li>
-            <li class="account__recommended-item">
-                <img src="assets\img\mobile\flagyl-min.png">
-            </li>
-        </ul>
+    <div class="account__rel">
+        <div class="account__recommended-cont swiper" id="recomendationSwiper">
+            <h3 class="account__recommended-title">Recommended for you</h3>
+            
+            <ul class="account__recommended-list swiper-wrapper">
+                <li class="account__recommended-item swiper-slide">
+                    <img src="assets\img\mobile\clomid-min.png">
+                </li>
+                <li class="account__recommended-item swiper-slide">
+                    <img src="assets\img\mobile\neurontin-min.png">
+                </li>
+                <li class="account__recommended-item swiper-slide">
+                    <img src="assets\img\mobile\doxycycline-min.png">
+                </li>
+                <li class="account__recommended-item swiper-slide">
+                    <img src="assets\img\mobile\clomid-min.png">
+                </li>
+                <li class="account__recommended-item swiper-slide">
+                    <img src="assets\img\mobile\clomid-min.png">
+                </li>
+                <li class="account__recommended-item swiper-slide">
+                    <img src="assets\img\mobile\flagyl-min.png">
+                </li>
+                <li class="account__recommended-item swiper-slide">
+                    <img src="assets\img\mobile\doxycycline-min.png">
+                </li>
+                <li class="account__recommended-item swiper-slide">
+                    <img src="assets\img\mobile\clomid-min.png">
+                </li>
+            </ul>
+        </div>
+
+        <div class="pagination-section account__recommended-btns-cont">
+            <button class="swiper-button swiper-button-prev" (click)="prevSlide()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+                    <circle cx="23.2705" cy="23.3987" r="22.7705" fill="#FAFAFA" stroke="#E0E0E0" />
+                    <path d="M26.9473 30.7523L19.5938 23.3986L26.9473 16.045" stroke="#666666" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <button class="swiper-button swiper-button-next" (click)="nextSlide()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+                    <circle cx="23.2705" cy="23.2705" r="22.7705" transform="matrix(-1 0 0 1 46.7129 0.128174)"
+                        fill="#FAFAFA" stroke="#E0E0E0" />
+                    <path d="M19.7656 30.7523L27.1191 23.3986L19.7656 16.045" stroke="#666666" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
     </div>
 </section>

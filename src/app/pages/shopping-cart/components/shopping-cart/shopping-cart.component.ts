@@ -54,7 +54,7 @@ export class ShoppingCartComponent {
   toFreeDelivery: number = 60 - this.totalItemsPrice;
 
   @Output()
-  nextPhase: EventEmitter<string> = new EventEmitter<string>()
+  nextPhase: EventEmitter<string> = new EventEmitter<string>();
 
   ngAfterViewInit() {
     this.mySwiper = new Swiper('#deliverySwiper', swiperParams);
@@ -70,8 +70,12 @@ export class ShoppingCartComponent {
     if (this.mySwiper) {
       this.mySwiper.slideNext();
       this.currentPage = this.currentPage < this.slidesAmount ? this.currentPage + 1 : this.currentPage;
-      // if (this.currentPage == this.slidesAmount) {
         
+        
+      // } else {
+      //   this.currentPage += 1;
+      // }
+
       // } else {
       //   this.currentPage += 1;
       // }
@@ -79,10 +83,10 @@ export class ShoppingCartComponent {
   }
 
   toNextPhase() {
-    this.nextPhase.emit('shipping-info')
+    this.nextPhase.emit('shipping-info');
   }
 
   changedeliveryFirm(firm: string) {
-    this.deliveryFirm = firm
+    this.deliveryFirm = firm;
   }
 }

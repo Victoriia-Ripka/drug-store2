@@ -9,12 +9,6 @@ const swiperParams: SwiperOptions = {
   enabled: false,
   loop: false,
   allowTouchMove: false,
-  pagination: {
-    el: '.custom-pagination',
-    renderCustom: (_, current, total) => {
-      return current + ' of ' + total;
-    }
-  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
@@ -74,4 +68,4 @@ export class TestimonialsComponent {
     }
   }
 
- }
+}
