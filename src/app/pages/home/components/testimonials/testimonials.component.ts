@@ -38,9 +38,9 @@ const swiperParams: SwiperOptions = {
 })
 export class TestimonialsComponent {
   mySwiper: Swiper | undefined;
-  slidesQuantity: number = 3
+  slidesQuantity: number = 3;
   currentPage: number = 1;
-  slidesAmount = 5
+  slidesAmount = 5;
 
   ngAfterViewInit() {
     this.mySwiper = new Swiper('#reviewsSwiper', swiperParams);
@@ -48,7 +48,7 @@ export class TestimonialsComponent {
 
   ngOnChanges() {
     if (this.slidesQuantity) {
-      this.slidesQuantity = Math.max(1, this.slidesQuantity)
+      this.slidesQuantity = Math.max(1, this.slidesQuantity);
     }
   }
 
@@ -56,9 +56,9 @@ export class TestimonialsComponent {
     if (this.mySwiper) {
       this.mySwiper.slideNext();
       if (this.currentPage == this.slidesAmount) {
-        this.currentPage = 1
+        this.currentPage = 1;
       } else {
-        this.currentPage += 1
+        this.currentPage += 1;
       }
     }
   }
@@ -67,9 +67,9 @@ export class TestimonialsComponent {
     if (this.mySwiper) {
       this.mySwiper.slidePrev();
       if (this.currentPage == 1) {
-        this.currentPage = this.slidesAmount
+        this.currentPage = this.slidesAmount;
       } else {
-        this.currentPage -= 1
+        this.currentPage -= 1;
       }
     }
   }

@@ -381,6 +381,16 @@
     }
 }
 
+.swiper {
+    position: relative;
+}
+
+.swiper-slide{
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+}
+
 .cart__delivery-text{
     color: #000;
     font-family: Poppins;
@@ -455,11 +465,20 @@
     border: 1.674px solid #CCC;
     cursor: pointer;
 
+    img{
+
+    }
+
     @media screen and (min-width: 1600px) {
         padding: 22px 11px;
         gap: 16px;
         border-radius: 10px;
         width: 390px;
+
+        img{
+            max-width: 70.411px;
+            max-height: 20.364px;
+        }
     }
 }
 
@@ -489,5 +508,22 @@
     @media screen and (min-width: 1600px) {
         font-size: 16px;
         text-align: left;
+    }
+}
+
+.swiper-button-next{
+    display: none;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    cursor: pointer;
+    padding: 0;
+    width: 41.493px;
+    height: 41.493px;
+    top: 167px;
+    right: 20px;
+
+    @media screen and (min-width: 1600px) {
+        display: block;
     }
 }
