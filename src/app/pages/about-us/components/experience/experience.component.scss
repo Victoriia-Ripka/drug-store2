@@ -69,6 +69,7 @@ section{
     @media screen and (min-width: 1600px) {
         width: 1070px;
         height: 567px;
+        background-size: 1070px 567px;
         background-image: url('/assets/img/laptop/about-min.png');
     }
 }
@@ -92,6 +93,7 @@ section{
     @media screen and (min-width: 1600px) {
         width: 480px;
         height: 567px;
+        background-size: 480px 567px;
         background-image: url('/assets/img/laptop/about2-min.png');
     }
 }

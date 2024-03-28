@@ -11,7 +11,7 @@ export class ExperienceComponent {
   initialValues: number[] = [0, 0, 0, 0];
   finalValues: number[] = [1, 24, 3, 85];
   intervals: any = [];
-  duration = 5000;
+  duration = 10000;
 
   constructor(private elementRef: ElementRef) { }
 
