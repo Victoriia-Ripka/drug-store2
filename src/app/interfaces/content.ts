@@ -1,5 +1,6 @@
 export type Content = {
     id: number,
     question: string,
-    answer: string
+    answer: string,
+    table?: boolean
 }
