@@ -75,4 +75,12 @@ export class FaqShippingComponent {
   isItemSelected(id: number): boolean {
     return this.selectedQuestion === id;
   }
+
+  isString(courier: any): boolean {
+    return typeof courier === 'string';
+  }
+
+  isArray(courier: any): boolean {
+    return Array.isArray(courier);
+  }
 }

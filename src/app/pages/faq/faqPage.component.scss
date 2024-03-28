@@ -242,3 +242,28 @@ p{
     font-weight: 600 !important;
 }
 
+.countries{
+    gap: 0px;
+    list-style-type: disc;
+}
+
+.country{
+    background-color: transparent;
+    padding: 0;
+    width: auto;
+    margin: 0;
+    // height: 20px !important;
+    min-height: 20px;
+    text-align: center;
+
+    color: #21365D;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 110%;
+
+    @media screen and (min-width: 1600px){
+        font-size: 20px;
+    }
+}

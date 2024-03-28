@@ -12,16 +12,36 @@
 
             <p *ngIf="selectedQuestion == item.id">{{item.answer}}</p>
 
-            <ul *ngIf="item.table" class="table">
+            <ul *ngIf="item.table && selectedQuestion == item.id" class="table">
                 <li class="header">
-                    <div><p class="bolder">Questions</p></div>
-                    <div><p class="bolder">Trackable Courier Service</p></div>
-                    <div><p class="bolder">International Unregistered Mail</p></div>
+                    <div>
+                        <p class="bolder">Questions</p>
+                    </div>
+                    <div>
+                        <p class="bolder">Trackable Courier Service</p>
+                    </div>
+                    <div>
+                        <p class="bolder">International Unregistered Mail</p>
+                    </div>
                 </li>
                 <li *ngFor="let question of tableContent" class="row">
-                    <div><p class="bolder">{{question.question}}</p></div>
-                    <div><p>{{question.courier}}</p></div>
-                    <div><p>{{question.mail}}</p></div>
+                    <div>
+                        <p class="bolder">{{question.question}}</p>
+                    </div>
+
+                    <div *ngIf="isString(question.courier)">
+                        <p>{{ question.courier }}</p>
+                    </div>
+                    
+                    <div *ngIf="isArray(question.courier)">
+                        <ul class="countries">
+                            <li *ngFor="let country of question.courier" class="country">{{ country }}</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p>{{question.mail}}</p>
+                    </div>
                 </li>
             </ul>
         </li>
