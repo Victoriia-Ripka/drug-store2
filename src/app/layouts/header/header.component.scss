@@ -399,6 +399,14 @@ nav{
     width: 100vw;
     height: 100vh;
     background-color: #fff;
+
+    @media screen and (min-width: 1600px) {
+        top: 70px;
+        width: 310px;
+        height: 480px;
+        left: 75%;
+        background-color: transparent;
+    }
 }
 
 .header__actions-account-authorized{
