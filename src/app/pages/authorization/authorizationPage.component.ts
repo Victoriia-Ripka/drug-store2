@@ -19,6 +19,7 @@ const languages: any[] = [
 export class AuthorizationPageComponent {
   languages: any[] = languages;
   selectedLanguage: string = 'ENG';
+  hidePassword: boolean = true
 
   loginForm = new FormGroup({
     email: new FormControl('', Validators.required),
@@ -43,5 +44,9 @@ export class AuthorizationPageComponent {
 
   selectLanguage(language: any): void {
     this.selectedLanguage = language;
+  }
+
+  togglePassword() {
+    this.hidePassword = !this.hidePassword
   }
 }

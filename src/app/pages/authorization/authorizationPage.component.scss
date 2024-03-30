@@ -263,6 +263,7 @@ section{
     gap: 4px;
     flex-direction: column;
     width: 100%;
+    position: relative;
 }
 
 label{
@@ -413,4 +414,31 @@ input{
             padding: 0;
         }
     }
+}
+
+.password-recovery-link{
+    color: #111;
+    text-align: right;
+    font-family: Poppins;
+    font-size: 15px;
+    text-decoration-line: underline;
+}
+
+.hide-btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    color: rgba(102, 102, 102, 0.80);
+    text-align: right;
+    font-family: Urbanist;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
 }
