@@ -18,6 +18,7 @@
     justify-content: space-between;
     overflow-y: scroll;
     height: 100%;
+    padding: 0 0 30px;
 
     @media screen and (min-width: 480px) {
         overflow-y: auto;

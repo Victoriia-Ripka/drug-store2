@@ -10,7 +10,8 @@ import {
     ProductPageComponent,
     AccountPageComponent,
     ShoppingCartPageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    AuthorizationPageComponent
 } from './index';
 
 export const routes: Routes = [
@@ -62,6 +63,11 @@ export const routes: Routes = [
         path: 'shopping-cart',
         title: 'Shopping Cart - Canadian Drug Store',
         component: ShoppingCartPageComponent
+    },
+    {
+        path: 'authorization',
+        title: 'Authorization - Canadian Drug Store',
+        component: AuthorizationPageComponent
     },
     {
         path: '**',

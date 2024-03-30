@@ -1,0 +1,117 @@
+<section>
+    <div class="authorization__white-background">
+        <a class="home" href="/">
+            <img src="assets/img/mobile/home.png">
+        </a>
+
+        <div>
+            <a href="/" class="authorization__logo">
+                <img class="authorization__logo-img" src="/assets/img/mobile/logo-min.png" alt="logo" />
+                <p class="authorization__logo-text">
+                    <span class="italic">Canadian</span>
+                    <span class="bold">Drug</span>
+                    <span>Store</span>
+                </p>
+            </a>
+            <p class="authorization__text-after-logo">Trusted brands. Healthy rewards.</p>
+        </div>
+        <div class="authorization__main-cont">
+            <div class="authorizations__cont">
+                <div class="authorization__cont sign-up">
+                    <p class="authorization__title ">Sign up</p>
+                    <button class="authorization__sign-up-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                            <path
+                                d="M21.5125 11.8001C21.5125 11.0086 21.4469 10.431 21.3051 9.83197H12.082V13.4046H17.4958C17.3867 14.2924 16.7973 15.6295 15.4874 16.528L15.4691 16.6476L18.3852 18.8615L18.5873 18.8813C20.4428 17.2019 21.5125 14.731 21.5125 11.8001"
+                                fill="#4285F4" />
+                            <path
+                                d="M12.0763 21.2132C14.7286 21.2132 16.9552 20.3575 18.5816 18.8814L15.4817 16.528C14.6522 17.095 13.5389 17.4907 12.0763 17.4907C9.47862 17.4907 7.27384 15.8114 6.48789 13.4902L6.37269 13.4998L3.34044 15.7996L3.30078 15.9076C4.91616 19.0524 8.23428 21.2132 12.0763 21.2132Z"
+                                fill="#34A853" />
+                            <path
+                                d="M6.49274 13.4904C6.28536 12.8914 6.16534 12.2495 6.16534 11.5864C6.16534 10.9231 6.28536 10.2814 6.48183 9.68236L6.47633 9.55479L3.40607 7.21808L3.30561 7.2649C2.63984 8.5699 2.25781 10.0354 2.25781 11.5864C2.25781 13.1374 2.63984 14.6027 3.30561 15.9077L6.49274 13.4904"
+                                fill="#FBBC05" />
+                            <path
+                                d="M12.0764 5.68179C13.921 5.68179 15.1652 6.46264 15.8747 7.11518L18.6471 4.46241C16.9444 2.91141 14.7287 1.95941 12.0764 1.95941C8.2343 1.95941 4.91617 4.1201 3.30078 7.26487L6.477 9.68233C7.27386 7.36118 9.47865 5.68179 12.0764 5.68179"
+                                fill="#EB4335" />
+                        </svg>
+                        Continue with Google
+                    </button>
+                    <button class="authorization__sign-up-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <circle cx="14.9257" cy="15.1859" r="12.8359" fill="#0C82EE" />
+                            <path
+                                d="M19.7071 19.1114L20.2772 15.4885H16.7103V13.1385C16.7103 12.1472 17.2077 11.1802 18.8053 11.1802H20.428V8.09586C20.428 8.09586 18.956 7.85107 17.5493 7.85107C14.6104 7.85107 12.6913 9.58661 12.6913 12.7273V15.4885H9.42578V19.1114H12.6913V27.87C13.3469 27.9704 14.0176 28.0218 14.7008 28.0218C15.3841 28.0218 16.0548 27.9704 16.7103 27.87V19.1114H19.7071Z"
+                                fill="white" />
+                        </svg>
+                        Continue with Facebook
+                    </button>
+                    <button class="authorization__sign-up-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                            <g clip-path="url(#clip0_2261_1292)">
+                                <path
+                                    d="M19.2611 4.61694H4.59151C3.58298 4.61694 2.76698 5.44211 2.76698 6.45064L2.75781 17.4528C2.75781 18.4614 3.58298 19.2865 4.59151 19.2865H19.2611C20.2696 19.2865 21.0948 18.4614 21.0948 17.4528V6.45064C21.0948 5.44211 20.2696 4.61694 19.2611 4.61694ZM19.2611 8.28434L11.9263 12.8686L4.59151 8.28434V6.45064L11.9263 11.0349L19.2611 6.45064V8.28434Z"
+                                    fill="#333333" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2261_1292">
+                                    <rect width="22.0044" height="22.0044" fill="white"
+                                        transform="translate(0.925781 0.949524)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Sign up with email
+                    </button>
+
+                    <p class="terms-and-conds">By signing up, you agree to the <a href="#">Terms of Service</a>
+                        and acknowledge you’ve read our <a href="/policy">Privacy Policy</a>.</p>
+                </div>
+                <div class="authorization__cont log-in">
+                    <p class="authorization__title">Log in</p>
+                    <form [formGroup]="loginForm" (ngSubmit)="sendData()" class="authorization__form">
+
+                        <div class="authorization__input-cont">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" [formControl]="emailControl" />
+                        </div>
+
+                        <div class="authorization__input-cont">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" [formControl]="passwordControl" />
+                        </div>
+
+                        <button class="authorization__form-btn" type="submit"
+                            [ngStyle]="{'background': loginForm.valid ? '#005ADE' : '#797979' }">Log in</button>
+                    </form>
+                </div>
+            </div>
+            <div class="authorization__footer-cont">
+                <div class="authorization__lang-cont">
+                    <button class="select">
+                        <p class="header__actions-lang-text">{{selectedLanguage}}</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                            <path
+                                d="M7.92482 8.49574C7.52454 8.99316 6.76696 8.99316 6.36668 8.49574L1.13541 1.995C0.608888 1.3407 1.07464 0.368062 1.91449 0.368062L12.377 0.368063C13.2169 0.368063 13.6826 1.3407 13.1561 1.995L7.92482 8.49574Z"
+                                fill="#0F2650" />
+                        </svg>
+                    </button>
+
+                    <div class="dropdown-lang-content">
+                        <div *ngFor="let country of languages" (click)="selectLanguage(country.language)">
+                            <p>{{country.value}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="authorization__footer-links-cont">
+                    <nav>
+                        <a href="/about-us">About</a>
+                        <a href="/help">Help Center</a>
+                        <a href="/terms-and-conds">Terms of Service</a>
+                        <a href="/policies">Privacy Policy</a>
+                        <a href="/cookies">Cookie Policy</a>
+                        <p>&#64;2024canadiandrugstore</p>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

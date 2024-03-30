@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'account-modal',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './account-modal.component.html',
   styleUrl: './account-modal.component.scss'
 })
