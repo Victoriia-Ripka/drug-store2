@@ -13,9 +13,13 @@ export class AccountModalComponent {
   authorizated: boolean = true;
 
   @Output()
-  toggleModal: EventEmitter<void> = new EventEmitter<void>()
+  toggleModal = new EventEmitter();
 
   closeModel(): void {
-    this.toggleModal.emit()
+    this.toggleModal.emit();
+  }
+
+  sign_out() {
+    this.authorizated = !this.authorizated;
   }
 }

@@ -30,4 +30,9 @@ export class ProductsService {
     const product = this.products.find(product => product.id === id);
     return product
   }
+
+  getProductByTitle(title: string): any {
+    const filteredProducts = this.products.filter(product => product.title.toLowerCase().includes(title));
+    return filteredProducts;
+  }
 }

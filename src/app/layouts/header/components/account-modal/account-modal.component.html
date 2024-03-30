@@ -1,4 +1,4 @@
-<div class="account-modal__section">
+<div class="account-modal__section" (click)="closeModel()">
     <div class="account-modal__cont">
         <div>
             <a class="account-modal__title" href="/account/dashboard">My Account</a>
@@ -12,7 +12,7 @@
         </div>
 
 
-        <button *ngIf="authorizated"><a href="/authorization">Sign in</a></button>
-        <button *ngIf="!authorizated">Sign out'</button>
+        <button *ngIf="!authorizated"><a href="/authorization">Sign in</a></button>
+        <button *ngIf="authorizated" (click)="sign_out()">Sign out</button>
     </div>
 </div>

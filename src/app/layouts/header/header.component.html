@@ -1,9 +1,13 @@
 <header>
     <div class="header__main-cont">
-        <button class="burger-menu" (click)="toggleMenu()">
+        <button class="burger-menu" (click)="toggleMenu()" *ngIf="!isMenuOpened">
             <div class="first"></div>
             <div class="second"></div>
             <div class="third"></div>
+        </button>
+
+        <button class="burger-menu" (click)="toggleMenu()" *ngIf="isMenuOpened">
+            <img src="assets/img/mobile/cross.png">
         </button>
 
         <a href="/" class="header__logo">

@@ -9,8 +9,8 @@
 
             <div class="products__actions-cont">
                 <div class="products__search-cont">
-                    <input placeholder="Search pills" />
-                    <img class="search-img" src="assets\img\mobile\search-min.png" />
+                    <input placeholder="Search pills"  [(ngModel)]="query" (keyup.enter)="search()" />
+                    <img class="search-img" src="assets\img\mobile\search-min.png" (click)="search()"/>
                 </div>
                 <button (click)="toggleCategoriesModal()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">

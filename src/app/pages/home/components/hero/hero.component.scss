@@ -190,6 +190,7 @@ h1{
 
 .first {
     top: 200px;
+    left: 10px;
 
     @media screen and (min-width: 1600px) {
         top: 203px;
@@ -202,7 +203,8 @@ h1{
     right: 20px;
 
     @media screen and (min-width: 1600px) {
-        display: none;
+        top: 400px;
+        right: 90%;
     }
 }
 
@@ -359,11 +361,14 @@ h1{
         top: 230px;
         left: 655px;
         z-index: 1;
+        justify-content: center !important;
+        align-items: center !important;
 
         div{
             width: 83.046px;
             height: 83.046px;
             border-radius: 18.455px;
+
             img{
                 width: 46.137px;
                 height: 46.137px;

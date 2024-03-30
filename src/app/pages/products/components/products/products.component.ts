@@ -5,12 +5,12 @@ import { ProductsService } from '../../../../services';
 import { CommonModule } from '@angular/common';
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { CategoriesModalComponent } from '../categories-modal/categories-modal.component';
-
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'products',
   standalone: true,
-  imports: [CommonModule, ProductCardComponent, CategoriesModalComponent],
+  imports: [CommonModule, ProductCardComponent, CategoriesModalComponent, FormsModule],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss', '../categories-modal/categories-modal.component.scss']
 })
@@ -67,6 +67,12 @@ export class ProductsComponent {
     }
 
     this.products = interData;
+  }
+
+  search(): void {
+    this.router.navigate(['/products'], { queryParams: { category: this.selectedCategory, query: this.query.toLowerCase() } });
+    const results = this.productsService.getProductByTitle(this.query.toLowerCase());
+    this.products = results;
   }
 
 }
