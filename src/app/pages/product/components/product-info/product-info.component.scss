@@ -219,13 +219,11 @@ section{
 
     li{
         display: flex;
-        text-align: center;
+        align-items: center;
+        justify-content: center;
         gap: 40px;
-
-        @media screen and (min-width: 375px) {
-            align-items: center;
-            gap: 0;
-        }
+        width: 100%;
+        padding: 0 16px;
 
         @media screen and (min-width: 1600px){
             gap: 20px;
@@ -557,4 +555,30 @@ section{
         height: 80px;
         margin-top: -8px;
     }
+}
+
+.zero{
+    width: 0px;
+    height: 5px;
+    background-color: #0D6EFD;
+}
+.twenty-five {
+    width: 25%;
+    height: 5px;
+    background-color: #0D6EFD;
+}
+.fifty {
+    width: 50%;
+    height: 5px;
+    background-color: #0D6EFD;
+}
+.seventy-five {
+    width: 75%;
+    height: 5px;
+    background-color: #0D6EFD;
+}
+.hundred {
+    width: 100%;
+    height: 5px;
+    background-color: #0D6EFD;
 }
