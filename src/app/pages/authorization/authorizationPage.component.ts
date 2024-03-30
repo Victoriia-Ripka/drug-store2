@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 import { FormGroup, Validators, FormControl, ReactiveFormsModule } from '@angular/forms';
 
 const languages: any[] = [
-  { value: 'german', language: 'DE' },
-  { value: 'polish', language: 'PL' },
-  { value: 'japanese', language: 'JAP' },
-  { value: 'english', language: 'ENG' },
+  { value: 'English (United States)', language: 'English (United States)' },
+  { value: 'English (Canadian)', language: 'English (Canadian)' },
+  // { value: 'japanese', language: 'JAP' },
+  // { value: 'english', language: 'ENG' },
 ];
 
 @Component({
@@ -18,7 +18,7 @@ const languages: any[] = [
 })
 export class AuthorizationPageComponent {
   languages: any[] = languages;
-  selectedLanguage: string = 'ENG';
+  selectedLanguage: string = 'English (United States)';
   hidePassword: boolean = true
 
   loginForm = new FormGroup({
