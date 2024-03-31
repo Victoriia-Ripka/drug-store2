@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'account-page',
@@ -8,10 +9,9 @@ import { Component } from '@angular/core';
 export class AccountPageComponent {
   userEmail: string = 'usermail@gmail.com';
   userName: string = 'User Name';
-  selectedSection: 'dashboard' | 'info' | 'orders' | 'methods' | 'reviews' = 'dashboard';
+  selectedSection: string = 'dashboard';
 
-  // selectSection(section: 'dashboard' | 'info' | 'orders' | 'methods' | 'reviews'): void {
-  //   this.selectedSection = section;
-  //   this.router.navigate(['/account', section]); 
-  // }
+  constructor(private router: Router) {
+    this.selectedSection = this.router.url.slice(9)
+  }
 }
