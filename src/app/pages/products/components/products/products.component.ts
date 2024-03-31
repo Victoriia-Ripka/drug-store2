@@ -17,11 +17,12 @@ import { FormsModule } from '@angular/forms';
 export class ProductsComponent {
   categories = categoriesList;
   isOpenedCategoriesModal: boolean = false;
-  selectedCategory: string = 'Anti Acidity';
+  selectedCategory: string = 'All Products';
   query: string = '';
-  pageSize: number = 9;
+  pageSize: number = 12;
   currentPage: number = 1;
-  products: any[] = [];
+  totalPages: number = 1;
+  productsOnPage: any[] = []
 
   constructor(private productsService: ProductsService, private route: ActivatedRoute, private router: Router) { }
 
@@ -41,6 +42,7 @@ export class ProductsComponent {
 
   selectCategory(selectedCategory: string) {
     this.selectedCategory = selectedCategory;
+    this.currentPage = 1;
     this.selectCategoryAndSearchQuery(this.selectedCategory, this.query);
   }
 
@@ -54,7 +56,6 @@ export class ProductsComponent {
   loadData(query: string = '') {
     // this.productsService.getData().subscribe((data: any[]) => {
     const initialData = this.productsService.getData();
-    // .slice(0, 12)
 
     let interData = initialData;
     if (this.selectedCategory !== 'All Products') {
@@ -66,13 +67,29 @@ export class ProductsComponent {
       interData = filteredData;
     }
 
-    this.products = interData;
+    this.totalPages = Math.ceil(interData.length / this.pageSize);
+
+    if (this.currentPage == 1) {
+      this.productsOnPage = interData.slice(0, this.pageSize);
+    } else {
+      const startIndex = (this.currentPage - 1) * this.pageSize;
+      const endIndex = startIndex + this.pageSize;
+      this.productsOnPage = interData.slice(startIndex, endIndex);
+    }
   }
 
   search(): void {
     this.router.navigate(['/products'], { queryParams: { category: this.selectedCategory, query: this.query.toLowerCase() } });
     const results = this.productsService.getProductByTitle(this.query.toLowerCase());
-    this.products = results;
+    this.productsOnPage = results;
+  }
+
+  changePage(page: number): void {
+    if (page >= 1 && page <= this.totalPages) {
+      this.currentPage = page;
+      this.currentPage = page;
+      this.loadData();
+    }
   }
 
 }

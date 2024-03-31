@@ -1,4 +1,5 @@
 export const categoriesList = [
+    'All Products',
     'Anti Acidity',
     'Anti Allergic And Asthma',
     'Anti Depressant',

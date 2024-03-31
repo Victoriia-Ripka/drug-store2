@@ -9,8 +9,8 @@
 
             <div class="products__actions-cont">
                 <div class="products__search-cont">
-                    <input placeholder="Search pills"  [(ngModel)]="query" (keyup.enter)="search()" />
-                    <img class="search-img" src="assets\img\mobile\search-min.png" (click)="search()"/>
+                    <input placeholder="Search pills" [(ngModel)]="query" (keyup.enter)="search()" />
+                    <img class="search-img" src="assets\img\mobile\search-min.png" (click)="search()" />
                 </div>
                 <button (click)="toggleCategoriesModal()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
@@ -37,26 +37,29 @@
                 </ul>
             </div>
 
-
-            <!-- <mat-drawer-content> -->
             <div>
                 <ul class="products__list">
-                    <!--  | paginate: { itemsPerPage: pageSize, currentPage: currentPage } -->
-                    <li *ngFor="let item of products">
+                    <li *ngFor="let item of productsOnPage">
                         <product-card [title]="item.title" [substance]="item.substance" [price]="item.price"
                             [img]="item.src" [id]="item.id">
                         </product-card>
                     </li>
                 </ul>
 
-                <div *ngIf="products.length > 0 " class="products__pagination">paggination</div>
-                <div *ngIf="products.length == 0 " class="products__pagination">Nothing here</div>
+                <div class="pagination products__pagination" *ngIf="productsOnPage.length > 0 ">
+                    <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1" class="paggination-btn previous">
+                        <img src="assets/img/mobile/page-btn.png">
+                    </button>
+
+                    <span class="pagination_text">Page {{ currentPage }} of {{ totalPages }}</span>
+
+                    <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages" class="paggination-btn next">
+                        <img src="assets/img/mobile/page-btn.png">
+                    </button>
+                </div>
+                <div *ngIf="productsOnPage.length == 0 " class="products__pagination">Nothing here</div>
             </div>
         </div>
-        <!-- <pagination-controls class="my-pagination" (pageChange)="currentPage = $event" previousLabel="" nextLabel="">
-        </pagination-controls> -->
-
-        <!-- </mat-drawer-content> -->
     </div>
 
 </section>

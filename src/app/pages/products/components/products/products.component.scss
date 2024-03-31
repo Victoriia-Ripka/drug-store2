@@ -184,6 +184,43 @@ button{
     }
 }
 
+.paggination-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    @media screen and (min-width: 1600px) {
+        display: block;
+    }
+}
+
+.previous {
+    &:focus,
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+
+.next{
+    transform: rotate(180deg);
+
+    &:focus,
+    &:hover{
+        transform: scale(1.05) rotate(180deg);
+    }
+}
+
+.pagination_text{
+    width: auto;
+    margin-top: 12px;
+
+    @media screen and (min-width: 1600px){
+        margin-top: 16px;
+    }
+}
+
 .products__main-cont{
     @media screen and (min-width: 1600px){
         display: flex;
