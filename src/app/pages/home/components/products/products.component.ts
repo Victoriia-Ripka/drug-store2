@@ -13,50 +13,50 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent {
-  categories = categoriesList
+  categories = categoriesList;
   isOpenedCategoriesModal: boolean = false;
-  isOpenedCategoriesList: boolean = true
-  selectedCategory: string = 'BestSellers'
-  query: string = ''
-  pageSize: number = 9
-  currentPage: number = 1
-  products: any[] = []
+  isOpenedCategoriesList: boolean = true;
+  selectedCategory: string = 'BestSellers';
+  query: string = '';
+  pageSize: number = 9;
+  currentPage: number = 1;
+  products: any[] = [];
 
   constructor(private productsService: ProductsService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe((params) => {
       if (params['category'] || params['query']) {
-        this.selectCategoryAndSearchQuery(params['category'], params['query'])
+        this.selectCategoryAndSearchQuery(params['category'], params['query']);
       } else {
-        this.loadData()
+        this.loadData();
       }
     })
   }
 
   toggleCategoriesModal(): void {
-    this.isOpenedCategoriesModal = !this.isOpenedCategoriesModal
+    this.isOpenedCategoriesModal = !this.isOpenedCategoriesModal;
   }
 
   toggleCategoriesList(): void {
-    this.isOpenedCategoriesList = !this.isOpenedCategoriesList
+    this.isOpenedCategoriesList = !this.isOpenedCategoriesList;
   }
 
   selectCategoryInModal(selectedCategory: string) {
-    this.selectedCategory = selectedCategory
-    this.selectCategoryAndSearchQuery(this.selectedCategory, this.query)
+    this.selectedCategory = selectedCategory;
+    this.selectCategoryAndSearchQuery(this.selectedCategory, this.query);
   }
 
   selectCategoryAndSearchQuery(category: string, query: string = '') {
-    this.query = query.toLowerCase()
-    this.selectedCategory = category
-    this.router.navigate(['/products'], { queryParams: { category: category, query: this.query } })
-    this.loadData(query)
+    this.query = query.toLowerCase();
+    this.selectedCategory = category;
+    this.router.navigate(['/products'], { queryParams: { category: category, query: this.query } });
+    this.loadData(query);
   }
 
   loadData(query: string = '') {
     // this.productsService.getData().subscribe((data: any[]) => {
-    const initialData = this.productsService.getData().slice(0, 12)
+    const initialData = this.productsService.getData().slice(0, 12);
 
     // let interData = initialData
     // if (this.selectedCategory !== 'All Products') {
@@ -69,7 +69,7 @@ export class ProductsComponent {
     // }
 
     // this.products = interData
-    this.products = initialData
+    this.products = initialData;
 
   }
 }

@@ -6,14 +6,11 @@ import { FormGroup, Validators, FormControl, ReactiveFormsModule } from '@angula
   selector: 'account-orders',
   templateUrl: './orders.component.html',
   styleUrl: './orders.component.scss',
-  imports: [
-    ReactiveFormsModule,
-    CommonModule
-  ],
+  imports: [ ReactiveFormsModule, CommonModule ],
   standalone: true
 })
 export class OrdersComponent {
-  orders: any = []
+  orders: any = [];
 
   orderForm = new FormGroup({
     number: new FormControl('', Validators.required),
@@ -34,7 +31,7 @@ export class OrdersComponent {
   }
 
   sendData() {
-    console.log(this.orderForm.value)
-    this.orderForm.reset()
+    console.log(this.orderForm.value);
+    this.orderForm.reset();
   }
 }

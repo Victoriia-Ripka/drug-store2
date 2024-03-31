@@ -14,7 +14,7 @@ export class ProductsService {
   // getData(): Observable<any[]> {
   //   return this.http.get<any[]>(this.dataUrl);
   // }
-  products = PRODUCTS
+  products = PRODUCTS;
 
   getData(): any {
     return this.products;
@@ -28,7 +28,7 @@ export class ProductsService {
 
   getProduct(id: number): any {
     const product = this.products.find(product => product.id === id);
-    return product
+    return product;
   }
 
   getProductByTitle(title: string): any {

@@ -1,4 +1,4 @@
-<header>
+<header *ngIf="!isShoppingCartPages">
     <div class="header__main-cont">
         <button class="burger-menu" (click)="toggleMenu()" *ngIf="!isMenuOpened">
             <div class="first"></div>
@@ -119,8 +119,6 @@
                     <p>account</p>
                     <span *ngIf="isAuthorizated">{{userEmail}}</span>
                 </div>
-                
-                
             </button>
 
             <account-modal *ngIf="isAccountModal" class="header__account-modal" [authorizated]="isAuthorizated"
@@ -150,5 +148,8 @@
         <cart-modal *ngIf="isCartModalOpened" [itemsInCart]="itemsInCart"
             (toggleCartModal)="toggleCartModal()"></cart-modal>
     </div>
+</header>
+<header *ngIf="isShoppingCartPages">
+
 </header>
 <div class="extra"></div>

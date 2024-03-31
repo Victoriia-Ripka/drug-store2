@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './productPage.component.html'
 })
 export class ProductPageComponent {
-  product: any
+  product: any;
 
   constructor(private route: ActivatedRoute, private productsService: ProductsService) { }
 

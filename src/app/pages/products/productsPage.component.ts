@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { HeroProductsComponent, ProductsComponent } from './components';
 import { TestimonialsComponent } from '../home/components';
-// import { MatSidenavModule } from '@angular/material/sidenav';
 
 @Component({
   selector: 'products-page',

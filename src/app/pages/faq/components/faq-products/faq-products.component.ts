@@ -62,10 +62,10 @@ export class FaqProductsComponent {
 
   toggleAnswer(id: number): void {
     if (id === this.selectedQuestion) {
-      this.selectedQuestion = 0
+      this.selectedQuestion = 0;
     }
     else {
-      this.selectedQuestion = id
+      this.selectedQuestion = id;
     }
   }
 

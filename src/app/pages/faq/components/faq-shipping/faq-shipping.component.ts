@@ -57,7 +57,7 @@ const tableContent: any[] = [
 export class FaqShippingComponent {
   content: Content[] = [];
   selectedQuestion: number | null = 1;
-  tableContent: any[] = tableContent
+  tableContent: any[] = tableContent;
 
   ngOnInit(): void {
     this.content = content;
@@ -65,10 +65,10 @@ export class FaqShippingComponent {
 
   toggleAnswer(id: number): void {
     if (id === this.selectedQuestion) {
-      this.selectedQuestion = 0
+      this.selectedQuestion = 0;
     }
     else {
-      this.selectedQuestion = id
+      this.selectedQuestion = id;
     }
   }
 

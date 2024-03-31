@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { routes } from './pages.routes';
 import { ContactUsPageModule } from './contact-us/contactUsPage.module';
 import { AccountPageModule } from './account/accountPage.module';
-// import { HttpClient } from '@angular/common/http';
 
 @NgModule({
     imports: [
@@ -15,7 +14,6 @@ import { AccountPageModule } from './account/accountPage.module';
         ContactUsPageModule,
         AccountPageModule
     ],
-    // providers: [HttpClient],
     exports: [RouterModule],
 })
 export class PagesModule { }

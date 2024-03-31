@@ -32,7 +32,7 @@ export class ContactUsPageComponent {
   }
 
   sendData() {
-    console.log(this.contactForm.value)
-    this.contactForm.reset()
+    console.log(this.contactForm.value);
+    this.contactForm.reset();
   }
 }

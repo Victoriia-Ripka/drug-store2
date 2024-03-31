@@ -9,5 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ReviewsComponent {
   @Input()
-  userName: string = ''
+  userName: string = '';
 }

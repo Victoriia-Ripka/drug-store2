@@ -12,6 +12,6 @@ export class AccountPageComponent {
   selectedSection: string = 'dashboard';
 
   constructor(private router: Router) {
-    this.selectedSection = this.router.url.slice(9)
+    this.selectedSection = this.router.url.slice(9);
   }
 }

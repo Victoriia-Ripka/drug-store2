@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AccountModalComponent, CartModalComponent } from './components';
+import { Router } from '@angular/router';
 
 const languages = [
   { value: 'german', currency: "EURO", language: 'DE' },
@@ -45,6 +46,14 @@ export class HeaderComponent {
   selectedCurrency: string = 'USD';
   itemsInCart: any[] | null = itemsInCart;
   userEmail: string = 'user_email@gmail.com'
+  isShoppingCartPages: boolean = false;
+
+  constructor(private router: Router) {
+    // console.log(this.router.url)
+    if (this.router.url == '/shopping-cart') {
+      this.isShoppingCartPages = true;
+    }
+  }
 
   toggleMenu() {
     this.isMenuOpened = !this.isMenuOpened;

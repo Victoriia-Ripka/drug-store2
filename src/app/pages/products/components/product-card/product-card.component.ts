@@ -11,15 +11,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductCardComponent {
   @Input()
-  title: string = ''
+  title: string = '';
   @Input()
-  substance: string = ''
+  substance: string = '';
   @Input()
-  price: number = 0
+  price: number = 0;
   @Input()
-  id: number = 0
+  id: number = 0;
   @Input()
-  img: string = 'a.png'
+  img: string = 'a.png';
 
   constructor(private router: Router) { }
 

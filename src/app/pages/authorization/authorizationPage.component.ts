@@ -19,7 +19,7 @@ const languages: any[] = [
 export class AuthorizationPageComponent {
   languages: any[] = languages;
   selectedLanguage: string = 'English (United States)';
-  hidePassword: boolean = true
+  hidePassword: boolean = true;
 
   loginForm = new FormGroup({
     email: new FormControl('', Validators.required),
@@ -35,10 +35,9 @@ export class AuthorizationPageComponent {
   }
 
   sendData() {
-    console.log("click")
     if (this.loginForm.valid) {
-      console.log(this.loginForm.value)
-      this.loginForm.reset()
+      console.log(this.loginForm.value);
+      this.loginForm.reset();
     }
   }
 
@@ -47,6 +46,6 @@ export class AuthorizationPageComponent {
   }
 
   togglePassword() {
-    this.hidePassword = !this.hidePassword
+    this.hidePassword = !this.hidePassword;
   }
 }
