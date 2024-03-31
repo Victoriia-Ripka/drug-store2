@@ -208,6 +208,15 @@ nav{
     }
 }
 
+.header__actions-account-text-cont{
+    width: 90px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    justify-content: flex-start;
+}
+
 .header__actions-purchase-cont{
     border-radius: 5.393px;
     background-color: #DBEFFA;

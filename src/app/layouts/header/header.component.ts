@@ -44,6 +44,7 @@ export class HeaderComponent {
   selectedLanguage: string = 'ENG';
   selectedCurrency: string = 'USD';
   itemsInCart: any[] | null = itemsInCart;
+  userEmail: string = 'user_email@gmail.com'
 
   toggleMenu() {
     this.isMenuOpened = !this.isMenuOpened;
