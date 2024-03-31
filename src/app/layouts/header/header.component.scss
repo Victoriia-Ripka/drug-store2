@@ -185,7 +185,7 @@ nav{
         height: 18px;
     }
 
-    p{
+    p, span{
         display: none;
     }
     
@@ -204,17 +204,31 @@ nav{
             font-size: 18px;
             font-weight: 500;
             text-transform: capitalize;
+            text-align: left;
+        }
+
+        span{
+            display: block;
+            font-size: 12px;
+            color: #0F2650;
+            font-family: Inter;
+            text-align: left;
         }
     }
 }
 
 .header__actions-account-text-cont{
-    width: 90px;
+    display: none;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 1px;
     justify-content: flex-start;
+
+    @media screen and (min-width: 1600px){
+        display: block;
+        width: 90px;
+    }
 }
 
 .header__actions-purchase-cont{
