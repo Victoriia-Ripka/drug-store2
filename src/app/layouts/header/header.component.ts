@@ -48,8 +48,9 @@ export class HeaderComponent {
   userEmail: string = 'user_email@gmail.com'
   isShoppingCartPages: boolean = false;
 
-  constructor(private router: Router) {
-    // console.log(this.router.url)
+  constructor(private router: Router) { }
+
+  ngAfterViewChecked() {
     if (this.router.url == '/shopping-cart') {
       this.isShoppingCartPages = true;
     }
