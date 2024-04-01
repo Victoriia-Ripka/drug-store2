@@ -424,10 +424,11 @@ nav{
     background-color: #fff;
 
     @media screen and (min-width: 1600px) {
-        top: 70px;
         width: 310px;
         height: 480px;
-        left: 75%;
+        top: 70px;
+        left: 50%;
+        transform: translateX(445px);
         background-color: transparent;
     }
 }
