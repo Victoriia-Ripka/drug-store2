@@ -108,6 +108,48 @@ select {
     font: inherit;
 }
 
+.hover-black-underline{
+    position: relative;
+    background-color: inherit;
+
+    &::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    }
+
+    &:hover::after {
+        background-color: black;
+        width: 100%;
+    }
+}
+
+.hover-white-underline {
+    position: relative;
+    background-color: inherit;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        background-color: transparent;
+        transition: all 0.3s ease;
+    }
+
+    &:hover::after {
+        background-color: white;
+        width: 100%;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
