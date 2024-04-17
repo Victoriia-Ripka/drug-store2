@@ -41,7 +41,7 @@ export class HeaderComponent {
   isModalOpen: boolean = false;
   isAuthorizated: boolean = true;
   isAccountModal: boolean = false;
-  isCartModalOpened: boolean = true;
+  isCartModalOpened: boolean = false;
   selectedLanguage: string = 'ENG';
   selectedCurrency: string = 'USD';
   itemsInCart: any[] | null = itemsInCart;
