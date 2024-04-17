@@ -121,8 +121,11 @@
                 </div>
             </button>
 
-            <account-modal *ngIf="isAccountModal" class="header__account-modal" [authorizated]="isAuthorizated"
-                (toggleModal)="toggleAccountModal()"></account-modal>
+            <div class="header__account-backdrop" *ngIf="isAccountModal" (click)="toggleAccountModal()">
+                <account-modal class="header__account-modal" [authorizated]="isAuthorizated"
+                    (toggleModal)="toggleAccountModal()"></account-modal>
+            </div>
+
 
             <button class="header__actions-purchase-cont" (click)="toggleCartModal()">
                 <svg class="header__actions-purchase" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"

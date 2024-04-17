@@ -23,6 +23,11 @@ header {
         margin: 16px auto;
     }
 
+    @media screen and (min-width: 1280px) {
+        width: 1200px;
+        margin: 25px auto;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 1600px;
         margin: 35px auto;
@@ -49,10 +54,10 @@ header {
     div{
         height: 2px;
         border-radius: 1px;
-        background: #0F2650;
+        background: var(--ui-primary-dark-color);
     }
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         display: none;
     }
 }
@@ -93,6 +98,11 @@ header {
         height: 28px;
     }
 
+    @media screen and (min-width: 1280px) {
+        width: 30px;
+        height: 30px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 40px;
         height: 40px;
@@ -116,6 +126,10 @@ header {
         font-size: 24px;
     }
 
+    @media screen and (min-width: 1280px) {
+        font-size: 26px;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 30px;
     }
@@ -136,17 +150,25 @@ header {
 nav{
     display: none;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         display: flex;
         align-items: center;
-        gap: 33px;
+        gap: 30px;
 
         a{
             color: #000;
             font-family: Inter;
-            font-size: 18px;
+            font-size: 13px;
             font-weight: 600;
             text-transform: capitalize;
+        }
+    }
+
+    @media screen and (min-width: 1600px) {
+        gap: 33px;
+
+        a{
+            font-size: 18px;
         }
     }
 }
@@ -157,6 +179,10 @@ nav{
     justify-content: center;
     gap: 12px;
 
+    @media screen and (min-width: 1280px) {
+        gap: 22px;
+    }
+
     @media screen and (min-width: 1600px) {
         gap: 30px;
     }
@@ -165,8 +191,12 @@ nav{
 .header__actions-extra{
     display: none;
 
-    @media screen and (min-width: 1600px){
+    @media screen and (min-width: 1280px) {
         display: flex;
+        gap: 21px;
+    }
+
+    @media screen and (min-width: 1600px){
         align-items: center;
         gap: 30px;
     }
@@ -189,6 +219,33 @@ nav{
         display: none;
     }
     
+    @media screen and (min-width: 1280px) {
+        gap: 7px;
+
+        svg{
+            width: 18px;
+            height: 22px;
+        }
+
+        p{
+            display: block;
+            color: var(--ui-primary-dark-color);
+            font-family: Inter;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: capitalize;
+            text-align: left;
+        }
+
+        span{
+            display: block;
+            font-size: 10px;
+            color: var(--ui-primary-dark-color);
+            font-family: Inter;
+            text-align: left;
+        }
+    }
+
     @media screen and (min-width: 1600px) {
         gap: 10px;
 
@@ -198,21 +255,11 @@ nav{
         }
 
         p{
-            display: block;
-            color: #0F2650;
-            font-family: Inter;
             font-size: 18px;
-            font-weight: 500;
-            text-transform: capitalize;
-            text-align: left;
         }
 
         span{
-            display: block;
             font-size: 12px;
-            color: #0F2650;
-            font-family: Inter;
-            text-align: left;
         }
     }
 }
@@ -225,8 +272,12 @@ nav{
     gap: 1px;
     justify-content: flex-start;
 
-    @media screen and (min-width: 1600px){
+    @media screen and (min-width: 1280px){
         display: block;
+        width: 60px;
+    }
+
+    @media screen and (min-width: 1600px){
         width: 75px;
     }
 }
@@ -237,8 +288,21 @@ nav{
     padding: 7.011px 10.786px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 7px;
     border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover,
+    &:focus{
+        background-color: #AEE2FF;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding: 9px 15px;
+        gap: 10px;
+    }
 
     @media screen and (min-width: 1600px) {
         padding: 13px 20px;
@@ -250,6 +314,11 @@ nav{
 .header__actions-purchase{
     width: 19.416px;
     height: 19.416px;
+
+    @media screen and (min-width: 1280px){
+        width: 27px;
+        height: 27px;
+    }
 
     @media screen and (min-width: 1600px){
         width: 36px;
@@ -266,6 +335,11 @@ nav{
     padding: 0;
     margin: 0;
 
+    @media screen and (min-width: 1280px){
+        font-size: 13px;
+        margin-top: 2px;
+    }
+
     @media screen and (min-width: 1600px){
         font-size: 18px;
     }
@@ -274,30 +348,47 @@ nav{
 .header__actions-lang,
 .header__actions-curr{
     display: flex;
-    gap: 10px;
+    gap: 7px;
     align-items: center;
+
+    @media screen and (min-width: 1600px) {
+        gap: 10px;
+    }
 }
 
 .header__actions-lang-text{
-    color: #0F2650;
+    color: var(--ui-primary-dark-color);
     font-family: Inter;
-    font-size: 18px;
+    font-size: 13px;
     font-weight: 500;
     width: 50px;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 18px;
+    }
 }
 
 .select {
     background-color: transparent;
     border: none;
     display: flex;
-    gap: 2px;
+    gap: 0px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    padding: 0;
 
     svg {
-        width: 16px;
+        width: 12px;
         height: auto;
+    }
+
+    @media screen and (min-width: 1600px) {
+        gap: 2px;
+
+        svg {
+            width: 16px;
+        }
     }
 }
 
@@ -334,7 +425,7 @@ nav{
     border-radius: 0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 
-    color: #0F2650;
+    color: var(--ui-primary-dark-color);
     font-family: Inter;
     font-size: 18px;
     font-style: normal;
@@ -353,29 +444,16 @@ nav{
     display: flex;
 }
 
-.cur-option {
-    color: #1c1c1c;
-    font-family: Urbanist;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.37;
-    padding: 5px;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-
-    &:focus,
-    &:hover {
-        transform: scale(1.08);
-    }
-}
-
 .dropdown-content div:hover {
     background-color: #ddd;
 }
 
 .extra {
     height: 66px;
+
+    @media screen and (min-width: 1280px) {
+        height: 95px;
+    }
 
     @media screen and (min-width: 1600px) {
         height: 130px;
@@ -393,7 +471,7 @@ nav{
     background-color: #fff;
     z-index: 10;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         display: none;
     }
 }
@@ -415,6 +493,15 @@ nav{
     }
 }
 
+.header__account-backdrop{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
 .header__account-modal{
     position: absolute;
     top: 65px;
@@ -423,13 +510,18 @@ nav{
     height: 100vh;
     background-color: #fff;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         width: 310px;
         height: 480px;
-        top: 70px;
+        top: 55px;
         left: 50%;
-        transform: translateX(445px);
+        transform: translateX(300px);
         background-color: transparent;
+    }
+
+    @media screen and (min-width: 1600px) {
+        top: 70px;
+        transform: translateX(445px);
     }
 }
 
@@ -465,8 +557,15 @@ nav{
         padding: 8px 0;
     }
 
+    @media screen and (min-width: 1280px) {
+        padding: 31px 0;
+        width: 1200px;
+        flex-direction: row;
+        gap: 55px;
+    }
+
     @media screen and (min-width: 1600px) {
-        padding: 27px 0;
+        padding: 35px 0;
         width: 1600px;
         flex-direction: row;
         gap: 70px;
@@ -486,10 +585,17 @@ nav{
         color: #FFF;
         font-family: Poppins;
         font-size: 18px;
-        line-height: 110%; /* 19.8px */
+        line-height: 110%; 
         display: flex;
         align-items: center;
         gap: 9px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        a{
+            font-size: 20px;
+            gap: 10px;
+        }
     }
 
     @media screen and (min-width: 1600px) {

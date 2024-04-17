@@ -1,5 +1,5 @@
 .backdrop{
-    @media screen and (min-width: 1600px){
+    @media screen and (min-width: 1280px){
         position: absolute;
         left: 0;
         top: 0;
@@ -17,7 +17,7 @@
     z-index: 100;
     width: 100vw;
     height: 100vh;
-    background-color: #fff;
+    background-color: var(--ui-secondary-light-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -34,14 +34,21 @@
         background: var(--ui-primary-blue-color);
     }
 
+    @media screen and (min-width: 1280px) {
+        border-radius: 7px;
+        width: 326.969px;
+        height: 90%;
+        overflow-x: scroll;
+        max-height: 732.745px;
+        top: 25px;
+        right: 3%;
+    }
+
     @media screen and (min-width: 1600px) {
         border-radius: 10px;
         width: 445px;
-        height: 90%;
-        overflow-x: scroll;
         max-height: 975px;
         top: 35px;
-        right: 3%;
     }
 }
 
@@ -59,6 +66,11 @@
         width: 460px;
     }
 
+    @media screen and (min-width: 1280px){
+        margin: 20px auto 0;
+        width: 280px;
+    }
+
     @media screen and (min-width: 1600px){
         margin: 30px;
         width: 377px;
@@ -71,8 +83,14 @@
     align-items: center;
     margin-bottom: 50px;
 
+    @media screen and (min-width: 1280px) {
+        margin-bottom: 16px;
+        gap: 6px;
+    }
+
     @media screen and (min-width: 1600px) {
         margin-bottom: 21px;
+        gap: 8px;
     }
 }
 
@@ -82,6 +100,14 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 110%;
+
+    @media screen and (min-width: 1280px) {
+        font-size: 15px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+    }
 }
 
 .cart-modal__close-btn{
@@ -107,7 +133,7 @@
     height: auto;
     max-height: calc(100vh - 354px);
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         max-height: 500px;
         margin: 0 0 21px;
     }
@@ -127,12 +153,23 @@
         max-height: 60.987px;
     }
 
+    @media screen and (min-width: 1280px){
+        gap: 15px;
+        padding: 9px 15px;
+        border-radius: 7px;
+        height: 70px;
+
+        img{
+            max-width: 66px;
+            max-height: 51px;
+        }
+    }
+
     @media screen and (min-width: 1600px){
         gap: 24px;
         padding: 12px 21px;
         border-radius: 10px;
         height: 93px;
-
 
         img{
             max-width: 88.512px;
@@ -146,6 +183,10 @@
     font-family: Poppins;
     font-size: 16px;
     font-weight: 700;
+
+    @media screen and (min-width: 1280px) {
+        font-size: 15px;
+    }
 
     @media screen and (min-width: 1600px) {
         font-size: 18px;
@@ -161,6 +202,10 @@
         font-weight: 700;
     }
 
+    @media screen and (min-width: 1280px){
+        font-size: 15px;
+    }
+
     @media screen and (min-width: 1600px){
         font-size: 17px;
     }
@@ -170,7 +215,7 @@
     padding: 0 0 18px;
     border-bottom: 1px solid #CCC;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         padding: 0 0 21px;
     }
 }
@@ -230,7 +275,7 @@
     height: 128px;
     padding: 25px;
     border-radius: 9px;
-    background: #FFF;
+    background: var(--ui-secondary-light-color);
     box-shadow: 0px -9px 12px 0px rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
@@ -253,7 +298,7 @@
         font-weight: 700;
         text-transform: uppercase;
         background-color: #3B4E70;
-        color: #fff;
+        color: var(--ui-secondary-light-color);
 
         @media screen and (min-width: 375px){
             width: 355px;
@@ -281,7 +326,7 @@
 }
 
 .reverse-styles{
-    background-color: #fff !important;
+    background-color: var(--ui-secondary-light-color) !important;
     color: #34476B !important;
 }
 
