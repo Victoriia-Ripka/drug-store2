@@ -11,6 +11,11 @@ section {
         width: 460px;
     }
 
+    @media screen and (min-width: 1280px) {
+        width: 842px;
+        margin: 0 auto 70px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 1121px;
         margin: 0 auto 100px;
@@ -30,9 +35,14 @@ h2{
     text-align: center;
     margin-bottom: 20px;
 
+    @media screen and (min-width: 1280px) {
+        font-size: 40px;
+        line-height: 110%;
+        margin-bottom: 40px;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 50px;
-        line-height: 110%;
         margin-bottom: 50px;
     }
 }
@@ -50,6 +60,12 @@ li{
     min-height: 55px;
     background: #ECF8FF;
     position: relative; 
+
+    @media screen and (min-width: 1280px) {
+        border-radius: 15px;
+        min-height: 70px;
+        padding: 15px 50px;
+    }
     
     @media screen and (min-width: 1600px) {
         border-radius: 20px;
@@ -99,6 +115,13 @@ button{
         height: auto;
     }
 
+    @media screen and (min-width: 1280px) {
+        width: 45px;
+        height: 45px;
+        top: 15px;
+        right: 50px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 59px;
         height: 59px;
@@ -114,7 +137,7 @@ h3{
     font-family: Poppins;
     font-size: 16px;
     font-weight: 600;
-    line-height: 110%; /* 17.6px */
+    line-height: 110%; 
 
     @media screen and (min-width: 375px) {
         width: 250px;
@@ -122,6 +145,11 @@ h3{
 
     @media screen and (min-width: 480px) {
         width: 350px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 627.367px;
+        font-size: 22px;
     }
 
     @media screen and (min-width: 1600px) {
@@ -135,6 +163,10 @@ div{
     justify-content: center;
     flex-direction: column;
     gap: 21px;
+
+    @media screen and (min-width: 1280px) {
+        gap: 25px;
+    }
 
     @media screen and (min-width: 1600px) {
         gap: 35px;
@@ -156,6 +188,11 @@ p{
         width: 350px;
     }
 
+    @media screen and (min-width: 1280px) {
+        font-size: 18px;
+        width: 627.367px;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 20px;
         width: 836.489px;
@@ -168,6 +205,11 @@ p{
     gap: 0;
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.31);
+
+    @media screen and (min-width: 1280px) {
+        margin-top: 15px;
+        border-radius: 15px;
+    }
 
     @media screen and (min-width: 1600px) {
         margin-top: 20px;
@@ -205,6 +247,19 @@ p{
 
             @media screen and (min-width: 375px) {
                 max-width: 90px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        div{
+            width: 246px;
+            height: 75px;
+
+            p{
+                font-size: 15px;
+
+                max-width: 190px;
             }
         }
     }
@@ -252,7 +307,6 @@ p{
     padding: 0;
     width: auto;
     margin: 0;
-    // height: 20px !important;
     min-height: 20px;
     text-align: center;
 

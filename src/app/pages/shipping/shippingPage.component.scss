@@ -11,6 +11,11 @@ section {
         width: 460px;
     }
 
+    @media screen and (min-width: 1280px) {
+        width: 1200px;
+        margin: 15px auto 100px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 1600px;
         margin: 15px auto 100px;
@@ -26,13 +31,20 @@ section {
     text-transform: uppercase;
     margin-bottom: 20px;
 
-    @media screen and (min-width: 1600px) {
-        font-size: 50px;
+    @media screen and (min-width: 1280px) {
+        font-size: 40px;
         line-height: 110%;
-        width: 1600px;
-        padding: 40px 0 50px 0;
+        width: 1200px;
+        padding: 30px 0 40px 0;
         margin-bottom: 0;
         background: #F9F9F9;
+        border-radius: 22px 22px 0 0;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 50px;
+        width: 1600px;
+        padding: 40px 0 50px 0;
         border-radius: 30px 30px 0 0;
     }
 }
@@ -44,6 +56,12 @@ section {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @media screen and (min-width: 1280px) {
+        padding: 15px 50px;
+        border-radius: 0 0 22px 22px;
+        gap: 40px;
+    }
 
     @media screen and (min-width: 1600px) {
         padding: 20px 70px;
@@ -59,6 +77,10 @@ section {
     font-weight: 700;
     line-height: normal;
 
+    @media screen and (min-width: 1280px) {
+        font-size: 22px;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 30px;
     }
@@ -69,6 +91,10 @@ section {
     font-family: Poppins;
     font-size: 16px;
     line-height: normal;
+
+    @media screen and (min-width: 1280px) {
+        font-size: 16px;
+    }
 
     @media screen and (min-width: 1600px) {
         font-size: 18px;
