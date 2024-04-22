@@ -11,6 +11,11 @@ section{
         width: 460px;
     }
 
+    @media screen and (min-width: 1280px) {
+        margin: 65px auto 100px;
+        width: 1200px;
+    }
+
     @media screen and (min-width: 1600px) {
         margin: 80px auto 100px;
         width: 1600px;
@@ -22,6 +27,12 @@ section{
     padding-bottom: 6px;
     display: flex;
     border-bottom: 5px solid #EAECF0;
+
+    @media screen and (min-width: 1280px) {
+        gap: 66px;
+        padding-bottom: 13px;
+        margin-bottom: 23px;
+    }
 
     @media screen and (min-width: 1600px) {
         gap: 85px;
@@ -44,9 +55,14 @@ section{
 
     cursor: pointer;
 
+    @media screen and (min-width: 1280px) {
+        font-size: 22px;
+        text-align: center;
+        width: 125px;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 30px;
-        text-align: center;
         width: 175px;
     }
 }
@@ -59,6 +75,10 @@ section{
     bottom: -11px;
     left: 0;
 
+    @media screen and (min-width: 1280px) {
+        bottom: -16px;
+    }
+
     @media screen and (min-width: 1600px) {
         bottom: -20px;
     }
@@ -68,6 +88,11 @@ section{
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media screen and (min-width: 1280px) {
+        width: 1054px;
+        gap: 20px;
+    }
 
     @media screen and (min-width: 1600px) {
         width: 1405px;
@@ -94,6 +119,10 @@ section{
 
     cursor: pointer;
 
+    @media screen and (min-width: 1280px) {
+        font-size: 18px;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 30px;
     }
@@ -109,8 +138,6 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-
-    
 
     img{
         width: 18px;
@@ -130,6 +157,10 @@ section{
     font-size: 16px;
     line-height: 1.6;
 
+    @media screen and (min-width: 1280px) {
+        margin-top: 18px;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 20px;
         line-height: 1.8;
@@ -137,6 +168,11 @@ section{
 }
 
 .product__reviews-section{
+
+    @media screen and (min-width: 1280px){
+       width: 852px; 
+    }
+
     @media screen and (min-width: 1600px){
        width: 1133px; 
     }
@@ -150,13 +186,23 @@ section{
     font-weight: 600;
     text-align: center;
 
+    @media screen and (min-width: 1280px) {
+        font-size: 22px;
+        text-align: left;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 30px;
-        text-align: left;
     }
 }
 
 .product__reviews-statistic-cont{
+    @media screen and (min-width: 1280px){
+        display: flex;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
     @media screen and (min-width: 1600px){
         display: flex;
         gap: 13px;
@@ -174,10 +220,15 @@ section{
     align-items: center;
     margin-bottom: 20px;
 
-    @media screen and (min-width: 1600px) {
-        width: 397.333px;
-        height: 306.667px;
+    @media screen and (min-width: 1280px) {
+        width: 298.873px;
+        height: 230.674px;
         margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 398px;
+        height: 307px;
     }
 }
 
@@ -187,9 +238,13 @@ section{
     font-size: 30px;
     font-weight: 700;
 
+    @media screen and (min-width: 1280px) {
+        font-size: 60px;
+        line-height: 1;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 80px;
-        line-height: 1;
     }
 }
 
@@ -199,6 +254,10 @@ section{
     font-size: 20px;
     font-weight: 700;
     line-height: 1.6;
+
+    @media screen and (min-width: 1280px) {
+        margin-top: 10px;
+    }
 
     @media screen and (min-width: 1600px) {
         font-size: 22px;
@@ -225,10 +284,21 @@ section{
         width: 100%;
         padding: 0 16px;
 
+        @media screen and (min-width: 1280px){
+            gap: 15px;
+        }
+
         @media screen and (min-width: 1600px){
             gap: 20px;
         }
 
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 543.588px;
+        gap: 27px;
+        padding: 15px 25px;
+        margin-bottom: 0;
     }
 
     @media screen and (min-width: 1600px) {
@@ -249,6 +319,10 @@ section{
         display: block;
     }
 
+    @media screen and (min-width: 1280px) {
+        width: 350px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 420px;
     }
@@ -263,14 +337,16 @@ section{
     margin-left: 16px;
     width: 36px;
     text-align: right;
-
-    @media screen and (min-width: 1600px) {}
 }
 
 .product__reviews-cont{
     display: flex;
     flex-direction: column;
     gap: 60px;
+
+    @media screen and (min-width: 1280px) {
+        gap: 40px;
+    }
 
     @media screen and (min-width: 1600px) {
         gap: 25px;
@@ -280,6 +356,10 @@ section{
 .product__review-cont{
     display: flex;
     gap: 27px;
+
+    @media screen and (min-width: 1280px) {
+        gap: 24px;
+    } 
 
     @media screen and (min-width: 1600px) {
         gap: 32px;
@@ -292,9 +372,29 @@ section{
     border-radius: 50%;
     border: none;
 
+    svg{
+        width: 56.916px;
+        height: 56.916px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 51px;
+        height: 51px;
+
+        svg{
+            width: 51px;
+            height: 51px;
+        }
+    }
+
     @media screen and (min-width: 1600px) {
         width: 68px;
         height: 68px;
+
+        svg{
+            width: 68px;
+            height: 68px;
+        }
     }
 }
 
@@ -303,8 +403,14 @@ section{
     flex-direction: column;
     gap: 25px;
 
+    @media screen and (min-width: 1280px) {
+        width: 742.168px;
+        gap: 20px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 987px;
+        gap: 25px;
     }
 }
 
@@ -312,9 +418,13 @@ section{
     display: flex;
     justify-content: space-between;
 
+    @media screen and (min-width: 1280px) {
+        gap: 5px;
+        justify-content: flex-start;
+    }
+
     @media screen and (min-width: 1600px) {
         gap: 6px;
-        justify-content: flex-start;
     }
 }
 
@@ -330,9 +440,12 @@ section{
         font-size: 18px;
     }
 
+    @media screen and (min-width: 1280px) {
+        line-height: 1.4;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 25px;
-        line-height: 1.4;
     }
 }
 
@@ -341,6 +454,10 @@ section{
     font-family: Inter;
     font-size: 13px;
     line-height: 2;
+
+    @media screen and (min-width: 1280px) {
+        font-size: 14px;
+    }
 
     @media screen and (min-width: 1600px) {
         font-size: 19px;
@@ -374,10 +491,13 @@ section{
     font-size: 16px;
     line-height: 1.4;
 
-    @media screen and (min-width: 1600px) {
-        font-size: 20px;
+    @media screen and (min-width: 1280px) {
         line-height: 1.7;
         margin-bottom: 9px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
     }
 }
 
@@ -428,6 +548,10 @@ section{
     margin-top: -40px;
     cursor: pointer;
 
+    @media screen and (min-width: 1280px) {
+        margin-top: 0;
+    }
+
     @media screen and (min-width: 1600px) {
         margin-top: 15px;
         font-size: 20px;
@@ -441,10 +565,15 @@ section{
     flex-direction: column;
     align-items: center;
 
+    @media screen and (min-width: 1280px) {
+        margin-top: 30px;
+        margin-bottom: 24px;
+        align-items: flex-start;
+    }
+
     @media screen and (min-width: 1600px) {
         margin-top: 40px;
         margin-bottom: 30px;
-        align-items: flex-start;
     }
 }
 
@@ -453,6 +582,11 @@ section{
     font-family: Poppins;
     font-size: 20px;
     font-weight: 600;
+
+    @media screen and (min-width: 1280px) {
+        font-size: 24px;
+        margin-bottom: 13px;
+    }
 
     @media screen and (min-width: 1600px) {
         font-size: 32px;
@@ -465,6 +599,10 @@ section{
     font-family: Poppins;
     font-size: 16px;
 
+    @media screen and (min-width: 1280px) {
+        font-size: 18px;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 25px;
     }
@@ -474,6 +612,10 @@ section{
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media screen and (min-width: 1280px) {
+        gap: 22px;
+    }
 
     @media screen and (min-width: 1600px) {
         gap: 30px;
@@ -512,6 +654,26 @@ section{
 
     textarea{
         height: 250px;
+        resize: none;
+    }
+
+    @media screen and (min-width: 1280px) {
+
+        label{
+            font-size: 18px;
+        }
+
+        input,
+        textarea{
+            border-radius: 15px;
+            padding: 15px 22px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        textarea{
+            height: 180px;
+        }
     }
 
     @media screen and (min-width: 1600px) {
@@ -523,7 +685,6 @@ section{
         input,
         textarea{
             font-size: 20px;
-            line-height: 1.7;
         }
 
         textarea{
@@ -549,11 +710,17 @@ section{
 
     cursor: pointer;
 
+    @media screen and (min-width: 1280px) {
+        font-size: 20px;
+        width: 190px;
+        height: 60px;
+        margin-top: -8px;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 24px;
         width: 250px;
         height: 80px;
-        margin-top: -8px;
     }
 }
 

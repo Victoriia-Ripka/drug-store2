@@ -11,6 +11,10 @@ section{
         width: 460px;
     }
 
+    @media screen and (min-width: 1280px) {
+        width: 1200px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 1600px;
     }
@@ -27,6 +31,13 @@ section{
     gap: 10px;
     margin: 0 auto 50px;
 
+    @media screen and (min-width: 1280px) {
+        width: 300px;
+        height: 38px;
+        margin: 0 0 30px;
+        gap: 13px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 370px;
         height: 46px;
@@ -40,8 +51,12 @@ section{
     font-family: Poppins;
     font-size: 10.127px;
 
+    @media screen and (min-width: 1280px) {
+        font-size: 15px;
+    }
+
     @media screen and (min-width: 1600px) {
-        font-size: 17.47px;
+        font-size: 17px;
     }
 }
 
@@ -59,10 +74,14 @@ section{
 }
 
 .product__cont{
-    @media screen and (min-width: 1600px){
+    @media screen and (min-width: 1280px){
         display: flex;
-        gap: 138px;
+        gap: 100px;
         align-items: center;
+    }
+
+    @media screen and (min-width: 1600px){
+        gap: 138px;
     }
 }
 
@@ -71,9 +90,13 @@ section{
     flex-direction: column-reverse;
     margin-bottom: 20px;
 
+    @media screen and (min-width: 1280px) {
+        width: 550px;
+        margin-bottom: 0;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 732px;
-        margin-bottom: 0;
     }
 }
 
@@ -92,6 +115,15 @@ section{
         height: auto;
     }
 
+    @media screen and (min-width: 1280px) {
+        height: 400px;
+
+        img{
+            max-width: 400px;
+            height: auto;
+        }
+    }
+
     @media screen and (min-width: 1600px) {
         height: 515.993px;
 
@@ -105,12 +137,16 @@ section{
 .product__main-text-cont{
     margin-bottom: 20px;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         display: none;
     }
 }
 
 .product__info-cont{
+    @media screen and (min-width: 1280px){
+        width: 547px;
+    }
+
     @media screen and (min-width: 1600px){
         width: 726.265px;
     }
@@ -119,7 +155,7 @@ section{
 .product__main-text-cont-laptop{
     display: none;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         display: block;
     }
 }
@@ -133,8 +169,13 @@ section{
     margin-bottom: 10px;
     text-align: center;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         text-align: left;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 1600px) {
         font-size: 50px;
         margin-bottom: 13px;
     }
@@ -147,18 +188,28 @@ section{
     line-height: 1.4;
     letter-spacing: -0.32px;
 
+    @media screen and (min-width: 1280px) {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #E4E4E4;
+        margin-bottom: 15px;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 20px;
         padding-bottom: 20px;
-        border-bottom: 1px solid #E4E4E4;
         margin-bottom: 20px;
     }
 }
 
 .product__price-cont{
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         display: flex;
+        gap: 38px;
+        margin-bottom: 15px;
+    }
+
+    @media screen and (min-width: 1600px) {
         gap: 50px;
         margin-bottom: 20px;
     }
@@ -181,9 +232,12 @@ section{
     font-size: 20px;
     margin-bottom: 20px;
 
-    @media screen and (min-width: 1600px) {
-        font-size: 26.205px;
+    @media screen and (min-width: 1280px) {
         margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 26px;
     }
 }
 
@@ -192,6 +246,14 @@ section{
     margin-bottom: 17px;
     gap: 15px;
     align-items: center;
+
+    @media screen and (min-width: 1280px) {
+        margin-bottom: 13px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        margin-bottom: 17px;
+    }
 }
 
 .product__like-cont{
@@ -209,6 +271,12 @@ section{
     font-family: Inter;
     font-size: 17.47px;
     font-weight: 600;
+
+    @media screen and (min-width: 1280px) {
+        height: 40px; 
+        width: 70px;
+        font-size: 15px;
+    }
 
     @media screen and (min-width: 1600px) {
         height: 50px; 
@@ -233,6 +301,12 @@ section{
     font-size: 17.47px;
     font-weight: 600;
 
+    @media screen and (min-width: 1280px) {
+        height: 40px; 
+        width: 130px;
+        font-size: 15px;
+    }
+
     @media screen and (min-width: 1600px) {
         height: 50px;
         width: 165px;
@@ -250,9 +324,13 @@ section{
         color: #3E9242;
     }
 
+    @media screen and (min-width: 1280px) {
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 20px;
-        margin-bottom: 0;
     }
 }
 
@@ -271,6 +349,16 @@ section{
         font-family: Inter;
         font-size: 18px;
         font-weight: 500;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding: 15px 0;
+        margin-bottom: 15px;
+        gap: 15px;
+
+        p{
+            font-size: 15px;
+        }
     }
 
     @media screen and (min-width: 1600px) {
@@ -296,8 +384,16 @@ section{
     justify-content: center;
     gap: 25px;
 
+    @media screen and (min-width: 1280px) {
+        gap: 13px;
+        border-radius: 13px;
+        padding: 15px;
+    }
+
     @media screen and (min-width: 1600px) {
         gap: 17px;
+        border-radius: 17px;
+        padding: 21px;
     }
 }
 
@@ -309,6 +405,10 @@ section{
 
     @media screen and (min-width: 375px) {
         width: 250px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 467.664px;
     }
 
     @media screen and (min-width: 1600px) {
