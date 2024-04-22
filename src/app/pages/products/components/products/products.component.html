@@ -47,13 +47,15 @@
                 </ul>
 
                 <div class="pagination products__pagination" *ngIf="productsOnPage.length > 0 ">
-                    <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1" class="paggination-btn previous">
+                    <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1"
+                        class="paggination-btn previous">
                         <img src="assets/img/mobile/page-btn.png">
                     </button>
 
                     <span class="pagination_text">Page {{ currentPage }} of {{ totalPages }}</span>
 
-                    <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages" class="paggination-btn next">
+                    <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages"
+                        class="paggination-btn next">
                         <img src="assets/img/mobile/page-btn.png">
                     </button>
                 </div>
