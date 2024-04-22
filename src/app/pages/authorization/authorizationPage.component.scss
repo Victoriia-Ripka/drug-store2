@@ -27,14 +27,19 @@ section{
 
     overflow: scroll;
 
-    @media screen and (min-width: 1024px) {
-        width: 890px;
-        max-height: auto;
-        gap: 33px;
+    @media screen and (min-width: 1280px) {
+        width: 660px;
+        gap: 25px;
         height: auto;
-        padding-top: 50px;
+        padding-top: 40px;
 
-        overflow: auto;
+        overflow:unset;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 890px;
+        gap: 33px;
+        padding-top: 50px;
     }
     
 }
@@ -44,6 +49,7 @@ section{
         width: 20px;
         height: 20px;
     }
+
     width: 20px;
     height: 20px;
     position: absolute;
@@ -61,7 +67,17 @@ section{
         transform: scale(1.05);
     }
 
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 1280px){
+        width: 32px;
+        height: 32px;
+
+        img{
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    @media screen and (min-width: 1600px){
         width: 36px;
         height: 36px;
 
@@ -88,8 +104,12 @@ section{
 
     @media screen and (min-width: 678px) {}
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
         justify-content: flex-start;
+        margin-bottom: 6px;
+    }
+
+    @media screen and (min-width: 1600px) {
         margin-bottom: 9px;
     }
 }
@@ -107,7 +127,12 @@ section{
 
     @media screen and (min-width: 678px) {}
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
+        width: 40px;
+        height: 40px;
+    }
+
+    @media screen and (min-width: 1600px) {
         width: 60px;
         height: 60px;
     }
@@ -132,7 +157,11 @@ section{
 
     @media screen and (min-width: 678px) {}
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
+        font-size: 34px;
+    }
+
+    @media screen and (min-width: 1600px) {
         font-size: 44px;
     }
 }
@@ -154,8 +183,12 @@ section{
     font-family: Poppins;
     font-size: 12px;  
     text-align: center;
+
+    @media screen and (min-width: 1280px) {
+        font-size: 15px;
+    }
     
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1600px) {
         font-size: 20px;
     }
 }
@@ -171,7 +204,7 @@ section{
     justify-content: center;
     width: 100%;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
         flex-direction: row;
     }
 }
@@ -183,8 +216,15 @@ section{
     gap: 15px;
     padding: 20px;
     width: auto;
+    margin: 0;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
+        padding: 13px 45px 25px;
+        width: 330px;
+        gap: 16px;
+    }
+
+    @media screen and (min-width: 1600px) {
         padding: 18px 65px 30px;
         width: 445px;
         gap: 22px;
@@ -195,10 +235,13 @@ section{
     max-width: 316px;
     margin: 0 auto;
 
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 1280px){
         margin: 0;
-        max-width: 445px;
         border-right: 1px solid rgba(102, 102, 102, 0.25);
+    }
+
+    @media screen and (min-width: 1600px){
+        max-width: 445px;
     }
 }
 
@@ -208,6 +251,14 @@ section{
     font-family: Poppins;
     font-size: 30px;
     font-weight: 500;
+
+    @media screen and (min-width: 1280px) {
+        font-size: 22px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 30px;
+    }
 }
 
 .authorization__sign-up-btn{
@@ -227,11 +278,20 @@ section{
 
     width: 100%;
 
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 1280px){
+        width: 245px;
+        border-radius: 27px;
+        font-size: 15px;
+        gap: 11px;
+        height: 44px;
+    }
+
+    @media screen and (min-width: 1600px){
         width: 324.565px;
         border-radius: 36.674px;
         font-size: 20px;
         gap: 14px;
+        height: 60px;
     }
 }
 
@@ -239,11 +299,21 @@ section{
     color: #666;
     text-align: center;
     font-family: Poppins;
-    font-size: 12.836px;
+    font-size: 13px;
     text-align: left;
 
     a{
         text-decoration: underline;
+    }
+
+    @media screen and (min-width: 1280px) {
+        font-size: 10px;
+        width: 243px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 13px;
+        width: 320px;
     }
 }
 
@@ -253,7 +323,7 @@ section{
     align-items: center;
     gap: 15px;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1600px) {
         gap: 22px;
     }
 }
@@ -264,31 +334,59 @@ section{
     flex-direction: column;
     width: 100%;
     position: relative;
+
+    @media screen and (min-width: 1280px) {
+        gap: 2px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        gap: 4px;
+    }
 }
 
 label{
     color: #666;
     font-family: Poppins;
     font-size: 16px;
+
+    @media screen and (min-width: 1280px) {
+        font-size: 12px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 16px;
+    }
 }
 
 input{
     padding: 0 10px;
-    height: 51.344px;
+    height: 52px;
     width: 100%;
-    border-radius: 11.002px;
-    border: 0.917px solid rgba(102, 102, 102, 0.35);
+    border-radius: 11px;
+    border: 1px solid rgba(102, 102, 102, 0.35);
     color: #333;
     font-family: Poppins;
     font-size: 20px;
+
+    @media screen and (min-width: 1280px) {
+        height: 38px;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        height: 52px;
+        border-radius: 11px;
+        font-size: 20px;
+    }
 }
 
 .authorization__form-btn{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 165.033px;
-    height: 58.678px;
+    width: 165px;
+    height: 60px;
     border-radius: 11px;
     color: #FFF;
     font-family: Poppins;
@@ -298,8 +396,21 @@ input{
     padding: 0;
     margin: 0;
     cursor: pointer;
-}
 
+    @media screen and (min-width: 1280px) {
+        width: 125px;
+        height: 44px;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 165px;
+        height: 60px;
+        border-radius: 11px;
+        font-size: 20px;
+    }
+}
 
 .authorization__lang-cont{
     width: 100%;
@@ -316,13 +427,11 @@ input{
     }
 }
     
-
 .authorization__lang-text {
     color: #0F2650;
     font-family: Inter;
     font-size: 18px;
     font-weight: 500;
-    // width: 50px;
 }
 
 .select {
@@ -356,11 +465,7 @@ input{
     color: #0F2650;
     font-family: Inter;
     font-size: 18px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
-    // z-index: 101;
-    // width: 80px;
 
     p {
         cursor: pointer;
@@ -405,11 +510,23 @@ input{
         font-size: 13px;
     }
 
-    @media screen and (min-width: 1024px) {
-        height: 52px;
+    @media screen and (min-width: 1280px) {
+        height: 40px;
         nav{
             flex-wrap: nowrap;
             padding: 0;
+        }
+
+        a, p{
+            font-size: 10px;
+        }
+    }
+
+    @media screen and (min-width: 1600px) {
+        height: 52px;
+
+        a, p{
+            font-size: 13px;
         }
     }
 }
@@ -420,6 +537,14 @@ input{
     font-family: Poppins;
     font-size: 15px;
     text-decoration-line: underline;
+
+    @media screen and (min-width: 1280px) {
+        font-size: 11px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 15px;
+    }
 }
 
 .hide-btn {
@@ -439,4 +564,12 @@ input{
     font-size: 16px;
     font-weight: 400;
     text-transform: capitalize;
+
+    @media screen and (min-width: 1280px) {
+        font-size: 12px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 16px;
+    }
 }
