@@ -10,22 +10,22 @@
     </div>
 </div>
 
-<section>
+<section id="products-hero">
     <div class="hero__text-cont">
-        <p class="hero__text">Receive orders quickly</p>
-        <h1 class="hero__title">FREE delivery</h1>
-        <p class="hero__text">for every order</p>
+        <p class="hero__text" [@text]="isOpen ? 'open' : 'closed'">Receive orders quickly</p>
+        <h1 class="hero__title" [@text]="isOpen ? 'open' : 'closed'">FREE delivery</h1>
+        <p class="hero__text" [@text]="isOpen ? 'open' : 'closed'">for every order</p>
     </div>
 
-    <div class="hero__back-circle">
+    <div class="hero__back-circle" [@circles]="isOpen ? 'open' : 'closed'">
         <div class="hero__back-filled-circle"></div>
     </div>
 
-    <div class="hero__small-back-circle">
+    <div class="hero__small-back-circle" [@circles]="isOpen ? 'open' : 'closed'">
         <div class="hero__small-back-filled-circle"></div>
     </div>
 
-    <img src="assets\img\mobile\hero-2-min.png">
+    <img src="assets\img\mobile\hero-2-min.png"  [@circles]="isOpen ? 'open' : 'closed'">
 
     <svg class="hero__pagination-cont" xmlns="http://www.w3.org/2000/svg" width="145" height="11" viewBox="0 0 145 11"
         fill="none">
