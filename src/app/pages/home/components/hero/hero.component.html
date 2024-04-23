@@ -1,5 +1,5 @@
 <section>
-    <div class="hero__spec-cont">
+    <div class="hero__spec-cont" id="hero-component">
         <div>
             <h1>
                 <span class="large">Special Price</span>
@@ -12,32 +12,33 @@
             <button class="button">buy now</button>
 
             <div class="hero__dec-cont">
-                <div class="large-circle">
+                <div class="large-circle" [@circles]="isOpen ? 'open' : 'closed'">
                     <div class="filled-circle"></div>
                 </div>
 
-                <div class="img1-cont">
+                <div class="img1-cont" [@images]="isOpen ? 'open' : 'closed'">
                     <img src="assets\img\laptop\img1-min.png">
                 </div>
 
-                <div class="img2-cont">
+                <div class="img2-cont" [@images]="isOpen ? 'open' : 'closed'">
                     <div>
                         <img src="assets\img\mobile\shielddone-min.png">
                     </div>
                 </div>
 
-                <div class="dot blue fifth"></div>
-                <div class="dot dark first"></div>
-                <div class="dot dark second"></div>
+                <div class="dot blue fifth" [@circles]="isOpen ? 'open' : 'closed'"></div>
+                <div class="dot dark first" [@circles]="isOpen ? 'open' : 'closed'"></div>
+                <div class="dot dark second" [@circles]="isOpen ? 'open' : 'closed'"></div>
 
-                <div class="dot blue third"></div>
-                <div class="dot blue forth"></div>
+                <div class="dot blue third" [@circles]="isOpen ? 'open' : 'closed'"></div>
+                <div class="dot blue forth" [@circles]="isOpen ? 'open' : 'closed'"></div>
 
-                <div class="small-circle"></div>
+                <div class="small-circle" [@circles]="isOpen ? 'open' : 'closed'"></div>
 
-                <div class="medic"></div>
+                <div class="medic" [@hero]="isOpen ? 'open' : 'closed'"></div>
             </div>
         </div>
+        <!-- <button type="button" (click)="toggle()">Toggle Open/Close</button> -->
     </div>
 
     <div class="hero__info-cont">
