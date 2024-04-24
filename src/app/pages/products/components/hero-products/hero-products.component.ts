@@ -8,6 +8,17 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   templateUrl: './hero-products.component.html',
   styleUrl: './hero-products.component.scss',
   animations: [
+    trigger('hero', [
+      state('open', style({
+        opacity: 1
+      })),
+      state('closed', style({
+        opacity: 0
+      })),
+      transition('open <=> closed', [
+        animate('2s ease')
+      ])
+    ]),
     trigger('circles', [
       state('open', style({
         opacity: 1
@@ -16,7 +27,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
         opacity: 0
       })),
       transition('open <=> closed', [
-        animate('1s ease')
+        animate('2s 1.5s ease')
       ])
     ]),
     trigger('text', [
@@ -27,7 +38,29 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
         opacity: 0
       })),
       transition('open <=> closed', [
-        animate('1.5s ease-in')
+        animate('1s ease-in')
+      ])
+    ]),
+    trigger('text2', [
+      state('open', style({
+        opacity: 1
+      })),
+      state('closed', style({
+        opacity: 0
+      })),
+      transition('open <=> closed', [
+        animate('1s 1s ease-in')
+      ])
+    ]),
+    trigger('text3', [
+      state('open', style({
+        opacity: 1
+      })),
+      state('closed', style({
+        opacity: 0
+      })),
+      transition('open <=> closed', [
+        animate('1s 2s ease-in')
       ])
     ]),
   ]
