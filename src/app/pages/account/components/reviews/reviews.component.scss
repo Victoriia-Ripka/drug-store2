@@ -1,5 +1,9 @@
 .reviews__cont{
 
+    @media screen and (min-width: 1280px) {
+        width: 1000px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 1300px;
     }
@@ -13,8 +17,13 @@
     text-align: center;
     margin-bottom: 20px;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         text-align: left;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1600px) {
         font-size: 40px;
         margin-bottom: 40px;
     }
@@ -23,31 +32,46 @@
 .reviews__user-cont{
     display: none;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         display: block;
-        margin-bottom: 35px;
+        margin-bottom: 25px;
         display: flex;
         align-items: center;
+        gap: 17px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        margin-bottom: 35px;
         gap: 25px;
     }
 }
 
 .reviews__user-avatar{
-    width: 114.35px;
-    height: 114.35px;
+    width: 85px;
+    height: 85px;
+
+    @media screen and (min-width: 1600px) {
+        width: 115px;
+        height: 115px;
+    }
 }
 
 .reviews__user-name{
     color: #333;
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 1600px) {
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
 }
 
 .reviews__user-act-cont{
     display: flex;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
 
     div{
@@ -62,6 +86,10 @@
         font-weight: 500;
         line-height: 1.1;
     }
+
+    @media screen and (min-width: 1600px) {
+        gap: 20px;
+    }
 }
 
 .reviews__main-cont {
@@ -72,6 +100,10 @@
     align-items: center;
     border-radius: 10px;
     border: 1px solid #005ADE;
+
+    @media screen and (min-width: 1280px) {
+        gap: 2px;
+    }
 
     @media screen and (min-width: 1600px) {
         height: 486.949px;
@@ -106,10 +138,17 @@
     font-family: Poppins;
     font-size: 16px;
 
+    @media screen and (min-width: 1280px) {
+        width: 400px;
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 528.416px;
         font-size: 20px;
         margin-bottom: 45px;
+        font-size: 16px;
     }
 }
 
@@ -120,13 +159,13 @@
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    gap: 8.061px;
+    gap: 8px;
     border: none;
-    border-radius: 16.122px;
+    border-radius: 16px;
     background: linear-gradient(90deg, #0F2650 4.29%, rgba(15, 38, 80, 0.81) 92.86%);
     color: #EEFBFA;
     font-family: Inter;
-    font-size: 16.122px;
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
@@ -136,6 +175,20 @@
     &:hover,
     &:focus{
         transform: scale(1.06);
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 145px;
+        height: 45px;
+        font-size: 12px;
+        border-radius: 12px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 16px;
+        width: 191px;
+        height: 60px;
+        border-radius: 16px;
     }
 }
 

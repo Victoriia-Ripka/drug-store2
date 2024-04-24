@@ -11,8 +11,14 @@
         width: 460px;
     }
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         display: flex;
+        gap: 32px;
+        width: 1200px;
+        margin: 25px auto 75px;
+    }
+
+    @media screen and (min-width: 1600px) {
         gap: 45px;
         width: 1600px;
     }
@@ -36,10 +42,15 @@
         width: 460px;
     }
 
-    @media screen and (min-width: 1600px){
-        width: 190px;
+    @media screen and (min-width: 1280px){
+        width: 145px;
         margin: 0;
         justify-content: flex-start;
+        gap: 15px;
+    }
+
+    @media screen and (min-width: 1600px){
+        width: 190px;
         gap: 19px;
     }
 
@@ -55,8 +66,15 @@
     padding-bottom: 17px;
     border-bottom: 1px solid #CCC;
 
-    @media screen and (min-width: 1600px){
+    @media screen and (min-width: 1280px){
         text-align: left;
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+
+    @media screen and (min-width: 1600px){
+        font-size: 25px;
+        padding-bottom: 17px;
     }
 }
 
@@ -66,9 +84,14 @@
     gap: 9px;
     align-items: center;
 
+    @media screen and (min-width: 1280px){
+        gap: 20px;
+        align-items: flex-start;
+        margin-bottom: 45px;
+    }
+
     @media screen and (min-width: 1600px){
         gap: 27px;
-        align-items: flex-start;
         margin-bottom: 60px;
     }
 }
@@ -86,6 +109,14 @@
         background-color: transparent;
         padding: 0;
         margin: 0;
+    }
+
+    @media screen and (min-width: 1280px) {
+        font-size: 14px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
     }
 }
 
@@ -108,9 +139,13 @@
     align-items: center;
     gap: 10px;
 
-    @media screen and (min-width: 1600px) {
-        padding-top: 19px;
+    @media screen and (min-width: 1280px) {
+        padding-top: 15px;
         text-align: left;
         justify-content: flex-start;
+    }
+
+    @media screen and (min-width: 1600px) {
+        padding-top: 19px;
     }
 }

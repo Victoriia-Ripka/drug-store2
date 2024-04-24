@@ -4,13 +4,18 @@
         <ul class="account__nav-list">
             <!-- a or button -->
             <!-- <li class="account__nav"><button (click)="selectSection('dashboard')">Dashboard</button></li>-->
-            <li class="account__nav"><a href="account/dashboard" [ngClass]="{'selected': 'dashboard' === selectedSection}">Dashboard</a></li>
-            <li class="account__nav"><a href="account/orders" [ngClass]="{'selected': 'orders' === selectedSection}">Orders</a></li>
-            <li class="account__nav"><a href="account/info" [ngClass]="{'selected': 'info' === selectedSection}"> Pesonal info</a></li>
-            <li class="account__nav"><a href="account/reviews" [ngClass]="{'selected': 'reviews' === selectedSection}">My Reviews</a></li>
-            <li class="account__nav"><a href="account/methods" [ngClass]="{'selected': 'methods' === selectedSection}">Payment Methods</a></li>
+            <li class="account__nav"><a href="account/dashboard"
+                    [ngClass]="{'selected': 'dashboard' === selectedSection}">Dashboard</a></li>
+            <li class="account__nav"><a href="account/orders"
+                    [ngClass]="{'selected': 'orders' === selectedSection}">Orders</a></li>
+            <li class="account__nav"><a href="account/info" [ngClass]="{'selected': 'info' === selectedSection}">
+                    Pesonal info</a></li>
+            <li class="account__nav"><a href="account/reviews"
+                    [ngClass]="{'selected': 'reviews' === selectedSection}">My Reviews</a></li>
+            <li class="account__nav"><a href="account/methods"
+                    [ngClass]="{'selected': 'methods' === selectedSection}">Payment Methods</a></li>
         </ul>
-        
+
         <button class="account__nav-btn"><img src="assets/img/mobile/logout-min.png">LOG OUT</button>
     </div>
 

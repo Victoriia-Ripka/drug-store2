@@ -1,4 +1,9 @@
 section{
+
+    @media screen and (min-width: 1280px) {
+        width: 1000px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 1300px;
     }
@@ -19,6 +24,15 @@ section{
     @media screen and (min-width: 375px) {}
 
     @media screen and (min-width: 480px) {}
+
+    @media screen and (min-width: 1280px) {
+        gap: 17px;
+
+        img{
+            width: 85.762px;
+            height: 85.762px;
+        }
+    }
 
     @media screen and (min-width: 1600px) {
         gap: 23px;
@@ -74,9 +88,14 @@ section{
 
     @media screen and (min-width: 480px) {}
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1600px) {
         gap: 14px;
         margin-bottom: 80px;
     }
@@ -95,8 +114,18 @@ section{
 
     @media screen and (min-width: 480px) {}
 
+    @media screen and (min-width: 1280px) {
+        width: 324.75px;
+        border-radius: 17px;
+        padding: 22px 15px;
+        gap: 14px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 424px;
+        border-radius: 23px;
+        padding: 16px 20px;
+        gap: 19px;
     }
 }
 
@@ -115,6 +144,10 @@ section{
 
     @media screen and (min-width: 480px) {}
 
+    @media screen and (min-width: 1280px) {
+        width: 245px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 320px;
     }
@@ -131,7 +164,13 @@ section{
 
     @media screen and (min-width: 480px) {}
 
-    @media screen and (min-width: 1600px) {}
+    @media screen and (min-width: 1280px) {
+        font-size: 15px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 20px;
+    }
 }
 
 .account__order-text {
@@ -144,7 +183,13 @@ section{
 
     @media screen and (min-width: 480px) {}
 
-    @media screen and (min-width: 1600px) {}
+    @media screen and (min-width: 1280px) {
+        font-size: 12px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 16px;
+    }
 }
 
 .account__recommended-cont {
@@ -159,9 +204,13 @@ section{
         width: 460px;
     }
 
+    @media screen and (min-width: 1280px) {
+        width: 860px;
+        position: relative;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 1040px;
-        position: relative;
     }
 
 }
@@ -181,8 +230,15 @@ section{
 
     @media screen and (min-width: 480px) {}
 
+    @media screen and (min-width: 1280px) {
+        font-size: 15px;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
     @media screen and (min-width: 1600px) {
         margin-bottom: 26px;
+        font-size: 20px;
     }
 }
 
@@ -211,6 +267,11 @@ section{
 
     @media screen and (min-width: 480px) {}
 
+    @media screen and (min-width: 1280px) {
+        width: 132px !important;
+        height: 90px !important;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 160px !important;
         height: 100px !important;
@@ -222,13 +283,19 @@ section{
     gap: 42px;
     justify-content: center;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         position: absolute;
-        width: 1140px;
+        width: 1000px;
+        height: 90px;
         justify-content: space-between;
         left: 50%;
-        transform: translateX(-50%);
-        top: 70px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 1140px;
+        height: 100px;
     }
 }
 
@@ -240,7 +307,7 @@ section{
     margin-top: 24px;
 
     @media screen and (min-width: 1600px){
-        margin-top: 0;
+        margin-top: 33px;
     }
 }
 

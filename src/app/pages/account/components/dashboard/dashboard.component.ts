@@ -17,6 +17,10 @@ const swiperParams: SwiperOptions = {
       slidesPerView: 3,
       spaceBetween: 50,
     },
+    1280: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+    },
     1600: {
       slidesPerView: 5,
       spaceBetween: 60,
@@ -36,7 +40,7 @@ export class DashboardComponent {
   slidesQuantity: number = 8;
 
   @Input()
-  userEmail: string = '';
+  userEmail: string = 'usermail@gmail.com';
 
   ngAfterViewInit() {
     this.mySwiper = new Swiper('#recomendationSwiper', swiperParams);
