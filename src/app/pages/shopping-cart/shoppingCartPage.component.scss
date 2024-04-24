@@ -11,17 +11,28 @@ section {
         width: 460px;
     }
 
-    @media screen and (min-width: 1600px) {
-        width: 1600px;
-        margin: 20px auto 100px;
+    @media screen and (min-width: 128px) {
+        width: 1200px;
+        margin: 20px auto 75px;
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
+        gap: 60px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 1600px;
+        margin: 20px auto 100px;
         gap: 80px;
     }
 }
 
 .cart__aside {
+
+    @media screen and (min-width: 1280px) {
+        width: 350px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 460px;
     }
@@ -29,6 +40,11 @@ section {
 }
 
 .cart__main {
+
+    @media screen and (min-width: 1280px) {
+        width: 800px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 1060px;
     }
@@ -43,16 +59,21 @@ h1 {
     text-align: center;
     margin-bottom: 30px;
 
-    @media screen and (min-width: 1600px) {
-        font-size: 40px;
+    @media screen and (min-width: 1280px) {
+        font-size: 30px;
         text-align: left;
         text-transform: capitalize;
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 40px;
         margin-bottom: 12px;
     }
 }
 
 .mobile-title {
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         display: none;
     }
 }
@@ -60,7 +81,7 @@ h1 {
 .laptop-title {
     display: none;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         display: block;
     }
 }
@@ -81,7 +102,6 @@ h1 {
     font-size: 16px;
     font-weight: 600;
     line-height: 110%;
-    /* 17.6px */
 
     @media screen and (min-width: 1600px) {
         font-size: 20px;
@@ -89,14 +109,23 @@ h1 {
 }
 
 .cart__cont {
-    padding: 16.157px 22.313px;
-    border-radius: 7.694px;
+    padding: 16px 22px;
+    border-radius: 7px;
     border: 1px solid #CCC;
 
     form {
         display: flex;
         gap: 10px;
         margin-bottom: 4px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding: 16px 21px;
+
+        form {
+            gap: 13px;
+            margin-bottom: 6px;
+        }
     }
 
     @media screen and (min-width: 1600px) {
@@ -113,7 +142,7 @@ h1 {
 .cart__sub-title {
     margin-bottom: 10px;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         margin-bottom: 13px;
     }
 }
@@ -123,7 +152,7 @@ h1 {
     flex-direction: column;
     gap: 10px;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         gap: 13px;
     }
 }
@@ -204,38 +233,56 @@ h1 {
     align-items: center;
     justify-content: center;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         display: flex;
-        width: 1060px;
     }
 }
 
 .purchase-progres-bar-titles-cont{
     display: flex;
     justify-content: center;
-    width: 1060px;
-    gap: 181px;
+    width: 800px;
+    gap: 155px;
     margin-bottom: 15px;
 
     p{
         color: #D0D5DD;
         text-align: left;
         font-family: Inter;
-        font-size: 18px;
+        font-size: 13px;
         font-weight: 500;
         line-height: 1.55;
         position: relative;
 
         &::after{
             content: '';
-            width: 22px;
-            height: 22px;
+            width: 16px;
+            height: 16px;
             background-color: #D0D5DD;
             border-radius: 50%;
             position: absolute;
-            bottom: -28px;
+            bottom: -26px;
             left: 50%;
             transform: translateX(-50%);
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 800px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 1060px;
+        gap: 181px;
+        p{
+            font-size: 18px;
+
+            &::after {
+                content: '';
+                width: 22px;
+                height: 22px;
+                bottom: -28px;
+            }
         }
     }
 }
@@ -252,8 +299,12 @@ h1 {
 .purchase-progres-bar-line{
     border-radius: 2px;
     background: #D0D5DD;
-    width: 903px;
+    width: 726px;
     height: 4px;
+
+    @media screen and (min-width: 1600px) {
+        width: 903px;
+    }
 }
 
 .purchase-progres-bar-line-second-phase,
@@ -265,10 +316,18 @@ h1 {
 
 .purchase-progres-bar-line-second-phase{
     width: 310px;
+
+    @media screen and (min-width: 1600px) {
+        width: 310px;
+    }
 }
 
 .purchase-progres-bar-line-third-phase{
-    width: 620px;
+    
+
+    @media screen and (min-width: 1600px) {
+        width: 620px;
+    }
 }
 
 .cart__btn {
@@ -298,9 +357,17 @@ h1 {
         padding: 0 50px;
     }
 
+    @media screen and (min-width: 1280px) {
+        width: 300px;
+        height: 40px;
+        font-size: 14px;
+        margin: 0;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 400px;
         height: 55px;
+        font-size: 18px;
         margin: 0;
     }
 }
