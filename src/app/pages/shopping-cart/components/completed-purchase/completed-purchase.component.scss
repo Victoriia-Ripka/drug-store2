@@ -11,6 +11,10 @@ section {
         width: 460px;
     }
 
+    @media screen and (min-width: 1280px) {
+        margin: 50px auto 75px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 580px;
         margin: 100px auto 100px;
@@ -44,6 +48,11 @@ h1{
     height: 158px;
     width: 100%;
 
+    @media screen and (min-width: 1280px){
+        margin: 24px 0;
+        height: 195px;
+    }
+
     @media screen and (min-width: 1600px){
         margin: 33px 0;
         height: 258px;
@@ -61,6 +70,12 @@ h1{
 
     @media screen and (min-width: 480px){
         left: 60px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 70px;
+        height: 70px;
+        left: 41px;
     }
 
     @media screen and (min-width: 1600px) {
@@ -82,6 +97,12 @@ h1{
         right: 75px;
     }
 
+    @media screen and (min-width: 1280px) {
+        width: 41px;
+        height: 41px;
+        right: 70px;
+    }
+
     @media screen and (min-width: 1600px) {
         width: 54.852px;
         height: 54.852px;
@@ -96,6 +117,11 @@ h1{
     justify-content: center;
     border-radius: 50%;
     border: 1px dashed #0D6EFD66;
+
+    @media screen and (min-width: 1280px) {
+        width: 195px;
+        height: 195px;
+    }
 
     @media screen and (min-width: 1600px) {
         width: 261.098px;
@@ -115,6 +141,16 @@ h1{
     svg{
         width: 62.682px;
         height: 53.954px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 166px;
+        height: 166px;
+
+        svg{
+            width: 77px;
+            height: 66px;
+        }
     }
 
     @media screen and (min-width: 1600px) {

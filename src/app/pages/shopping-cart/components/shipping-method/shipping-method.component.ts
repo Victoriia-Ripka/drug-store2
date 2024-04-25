@@ -35,6 +35,9 @@ export class ShippingMethodComponent {
     date: new FormControl('', Validators.required),
     code: new FormControl('', Validators.required),
     name: new FormControl('', Validators.required),
+    futurePurchases: new FormControl(false),
+    paymentMethod: new FormControl(false),
+    billingShipping: new FormControl(false)
   });
 
   get numberControl() {
@@ -51,6 +54,18 @@ export class ShippingMethodComponent {
 
   get codeControl() {
     return this.paymentForm.get('code') as FormControl;
+  }
+
+  get futurePurchasesControl() {
+    return this.paymentForm.get('futurePurchases') as FormControl;
+  }
+
+  get paymentMethodControl() {
+    return this.paymentForm.get('paymentMethod') as FormControl;
+  }
+
+  get billingShippingControl() {
+    return this.paymentForm.get('billingShipping') as FormControl;
   }
 
   toCartPhase() {

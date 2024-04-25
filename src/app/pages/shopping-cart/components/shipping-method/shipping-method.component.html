@@ -117,18 +117,18 @@
 
                     <div class="payment-checkboxes-cont">
                         <div>
-                            <input type="checkbox" id="future-purchases" required>
+                            <input type="checkbox" id="future-purchases" [formControl]="futurePurchasesControl">
                             <label for="future-purchases">Save credit card for future purchases</label>
                         </div>
 
                         <div>
-                            <input type="checkbox" id="future-purchases" required>
-                            <label for="future-purchases">Set as my default payment method</label>
+                            <input type="checkbox" id="payment-method" [formControl]="paymentMethodControl">
+                            <label for="payment-method">Set as my default payment method</label>
                         </div>
 
                         <div>
-                            <input type="checkbox" id="future-purchases">
-                            <label for="future-purchases">Billing Address is the same as Shipping Address</label>
+                            <input type="checkbox" id="billing-shipping" [formControl]="billingShippingControl">
+                            <label for="billing-shipping">Billing Address is the same as Shipping Address</label>
                         </div>
 
                     </div>
@@ -178,18 +178,18 @@
 
                     <div class="payment-checkboxes-cont">
                         <div>
-                            <input type="checkbox" id="future-purchases" required>
+                            <input type="checkbox" id="future-purchases" [formControl]="futurePurchasesControl">
                             <label for="future-purchases">Save credit card for future purchases</label>
                         </div>
-
+                        
                         <div>
-                            <input type="checkbox" id="future-purchases" required>
-                            <label for="future-purchases">Set as my default payment method</label>
+                            <input type="checkbox" id="payment-method" [formControl]="paymentMethodControl">
+                            <label for="payment-method">Set as my default payment method</label>
                         </div>
-
+                        
                         <div>
-                            <input type="checkbox" id="future-purchases">
-                            <label for="future-purchases">Billing Address is the same as Shipping Address</label>
+                            <input type="checkbox" id="billing-shipping" [formControl]="billingShippingControl">
+                            <label for="billing-shipping">Billing Address is the same as Shipping Address</label>
                         </div>
 
                     </div>
@@ -239,18 +239,18 @@
 
                     <div class="payment-checkboxes-cont">
                         <div>
-                            <input type="checkbox" id="future-purchases" required>
+                            <input type="checkbox" id="future-purchases" [formControl]="futurePurchasesControl">
                             <label for="future-purchases">Save credit card for future purchases</label>
                         </div>
-
+                        
                         <div>
-                            <input type="checkbox" id="future-purchases" required>
-                            <label for="future-purchases">Set as my default payment method</label>
+                            <input type="checkbox" id="payment-method" [formControl]="paymentMethodControl">
+                            <label for="payment-method">Set as my default payment method</label>
                         </div>
-
+                        
                         <div>
-                            <input type="checkbox" id="future-purchases">
-                            <label for="future-purchases">Billing Address is the same as Shipping Address</label>
+                            <input type="checkbox" id="billing-shipping" [formControl]="billingShippingControl">
+                            <label for="billing-shipping">Billing Address is the same as Shipping Address</label>
                         </div>
 
                     </div>

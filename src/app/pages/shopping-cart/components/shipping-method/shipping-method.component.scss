@@ -9,6 +9,14 @@
         color: #0D6EFD;
         cursor: pointer;
     }
+
+    @media screen and (min-width: 1280px) {
+        font-size: 12px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 15px;
+    }
 }
 
 .shipp-info__cont{
@@ -29,17 +37,37 @@
         align-items: flex-start;
     }
 
-    @media screen and (min-width: 1600px) {
-        margin-bottom: 18px;
+    @media screen and (min-width: 1280px) {
+        margin-bottom: 14px;
+        gap: 14px;
 
         div{
+            border-radius: 15px;
+            padding: 16px 21px;
             gap: 8px;
             position: relative;
+        }
+    }
+
+    @media screen and (min-width: 1600px) {
+        margin-bottom: 18px;
+        gap: 18px;
+
+        div{
+            border-radius: 20px;
+            padding: 22px 29px;
         }
     }
 }
 
 .shipp-info__btn{
+
+    @media screen and (min-width: 1280px){
+        position: absolute;
+        top: 16px;
+        right: 21px;
+    }
+
     @media screen and (min-width: 1600px){
         position: absolute;
         top: 22px;
@@ -53,6 +81,11 @@
     font-size: 18px;
     font-weight: 700;
     line-height: 1;
+
+    @media screen and (min-width: 1280px) {
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
 
     @media screen and (min-width: 1600px) {
         font-size: 20px;
@@ -80,6 +113,10 @@
     font-weight: 700;
     line-height: 1.2;
 
+    @media screen and (min-width: 1280px) {
+        font-size: 12px;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 16px;
     }
@@ -92,6 +129,10 @@
     font-weight: 500;
     line-height: 1.2;
 
+    @media screen and (min-width: 1280px) {
+        font-size: 12px;
+    }
+
     @media screen and (min-width: 1600px) {
         font-size: 16px;
     }
@@ -100,7 +141,11 @@
 .payments-cont{
     display: flex;
     flex-direction: column;
-    gap: 10px;   
+    gap: 10px;  
+    
+    @media screen and (min-width: 1280px) {
+        gap: 14px;
+    }
 
     @media screen and (min-width: 1600px) {
         gap: 18px;
@@ -113,8 +158,14 @@
     border: 1px solid #0D6EFD;
     background: rgba(219, 239, 250, 0.10);
 
+    @media screen and (min-width: 1280px) {
+        padding: 21px;
+        border-radius: 15px;
+    }
+
     @media screen and (min-width: 1600px) {
         padding: 29px;
+        border-radius: 20px;
     }
 }
 
@@ -123,8 +174,13 @@
     align-items: center;
     gap: 8px;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         align-items: flex-start;
+        gap: 5px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        gap: 8px;
     }
 }
 
@@ -149,6 +205,22 @@
         line-height: 110%;
     }
 
+    @media screen and (min-width: 1280px) {
+        label{
+            font-size: 15px;
+        }
+
+        p{
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        img{
+            width: 249.311px;
+            height: auto;
+        }
+    }
+
     @media screen and (min-width: 1600px) {
         gap: 10px;
 
@@ -163,7 +235,6 @@
 
         img{
             width: 332.414px;
-            height: auto;
         }
     }
 }
@@ -172,6 +243,10 @@
     flex-direction: row;
     gap: 20px;
     align-items: center;
+
+    @media screen and (min-width: 1280px) {
+        gap: 16px;
+    }
 
     @media screen and (min-width: 1600px) {
         gap: 22px;
@@ -188,7 +263,13 @@
     gap: 17px;
     margin-top: 20px;
 
+    @media screen and (min-width: 1280px) {
+        margin-top: 15px;
+        gap: 15px;
+    }
+
     @media screen and (min-width: 1600px) {
+        margin-top: 20px;
         gap: 20px;
     }
 }
@@ -218,6 +299,20 @@
         background-color: transparent;
     }
 
+    @media screen and (min-width: 1280px) {
+        gap: 9px;
+
+        label{
+            font-size: 14px;
+        }
+
+        input{
+            height: 40px;
+            border-radius: 7px;
+            font-size: 12px;
+        }
+    }
+
     @media screen and (min-width: 1600px) {
         gap: 12px;
 
@@ -238,8 +333,17 @@
     flex-direction: column;
     gap: 11px;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1280px) {
         flex-direction: row;
+        gap: 14px;
+
+        input{
+            width: 370px;
+        }
+    }
+
+    @media screen and (min-width: 1600px) {
+        gap: 11px;
 
         input{
             width: 493px;
@@ -263,6 +367,19 @@
         font-family: Poppins;
         font-size: 12px;
         line-height: 1;
+    }
+
+    @media screen and (min-width: 1280px) {
+        gap: 11px;
+
+        div{
+            gap: 9px;
+        }
+
+        label{
+            font-size: 12px;
+        }
+
     }
 
     @media screen and (min-width: 1600px) {
@@ -292,8 +409,34 @@
         width: 54.935px;
         height: auto;
     }
+
+    @media screen and (min-width: 1280px) {
+        width: 59.017px;
+        height: 23.469px;
+
+        img{
+            width: 42.514px;
+        }
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 78px;
+        height: 31px;
+
+        img{
+            width: 54.935px;
+        }
+    }
 }
 
 .lower{
     margin: 5px 15px 0 0;
+
+    @media screen and (min-width: 1280px) {
+        margin: 5px 5px 0 0;
+    }
+
+    @media screen and (min-width: 1600px) {
+        margin: 5px 15px 0 0;
+    }
 }
