@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './shoppingCartPage.component.scss'
 })
 export class ShoppingCartPageComponent {
-  purchasePhase: 'cart' | 'shipping-info' | 'shipping-method' | 'completed' = 'cart';
+  purchasePhase: 'cart' | 'shipping-info' | 'shipping-method' | 'completed' = 'shipping-info';
 
   togglePhase(phase: 'cart' | 'shipping-info' | 'shipping-method' | 'completed'): void {
     this.purchasePhase = phase;
