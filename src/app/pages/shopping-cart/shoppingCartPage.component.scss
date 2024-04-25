@@ -11,7 +11,7 @@ section {
         width: 460px;
     }
 
-    @media screen and (min-width: 128px) {
+    @media screen and (min-width: 1280px) {
         width: 1200px;
         margin: 20px auto 75px;
         display: flex;
@@ -315,7 +315,7 @@ h1 {
 }
 
 .purchase-progres-bar-line-second-phase{
-    width: 310px;
+    width: 250px;
 
     @media screen and (min-width: 1600px) {
         width: 310px;
@@ -323,7 +323,7 @@ h1 {
 }
 
 .purchase-progres-bar-line-third-phase{
-    
+    width: 500px;
 
     @media screen and (min-width: 1600px) {
         width: 620px;

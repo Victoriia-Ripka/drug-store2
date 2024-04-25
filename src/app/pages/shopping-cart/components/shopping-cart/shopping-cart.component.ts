@@ -21,6 +21,12 @@ const swiperParams: SwiperOptions = {
     nextEl: '.swiper-button-next'
   },
   breakpoints: {
+    1280: {
+      spaceBetween: 12,
+      enabled: true,
+      loop: true,
+      direction: 'horizontal',
+    },
     1600: {
       spaceBetween: 16,
       enabled: true,
