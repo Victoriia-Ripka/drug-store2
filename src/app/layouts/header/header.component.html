@@ -148,8 +148,7 @@
             </nav>
         </div>
 
-        <cart-modal *ngIf="isCartModalOpened" [itemsInCart]="itemsInCart"
-            (toggleCartModal)="toggleCartModal()"></cart-modal>
+        
     </div>
 </header>
 <header *ngIf="isShoppingCartPages" class="shopping-cart__header">
@@ -186,3 +185,5 @@
     </div>
 </header>
 <div class="extra"></div>
+
+<cart-modal *ngIf="isCartModalOpened" [itemsInCart]="itemsInCart" (toggleCartModal)="toggleCartModal()"></cart-modal>
