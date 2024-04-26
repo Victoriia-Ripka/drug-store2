@@ -1,6 +1,6 @@
 <div class="backdrop" (click)="closeModal()">
 
-    <div class="cart-modal__cont"  (click)="$event.stopPropagation()">
+    <div class="cart-modal__cont" (click)="$event.stopPropagation()">
         <div class="cart-modal__main-cont">
             <div class="cart-modal__title-cont">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
@@ -21,78 +21,80 @@
 
             <p *ngIf="!itemsInCart" class="cart-modal__empty">Nothing here</p>
 
-            <ul class="cart-modal__list" *ngIf="itemsInCart">
-                <li class="cart-modal__item" *ngFor="let item of itemsInCart">
-                    <img src={{item.src}}>
+            <div class="cart-modal__scroll-cont">
+                <ul class="cart-modal__list" *ngIf="itemsInCart">
+                    <li class="cart-modal__item" *ngFor="let item of itemsInCart">
+                        <img src={{item.src}}>
+                        <div>
+                            <p class="cart-modal__item-title">{{item.title}}</p>
+                            <p class="cart-modal__item-price">from <span>€{{item.price}}</span></p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div *ngIf="itemsInCart" class="cart-modal__total-cont">
                     <div>
-                        <p class="cart-modal__item-title">{{item.title}}</p>
-                        <p class="cart-modal__item-price">from <span>€{{item.price}}</span></p>
+                        <p class="cart-modal__total-text">
+                            Subtotal
+                            <span *ngIf="itemsInCart.length > 1">({{itemsInCart.length}} items)</span>
+                            <span *ngIf="itemsInCart.length == 1">({{itemsInCart.length}} item)</span>
+                        </p>
+                        <p class="cart-modal__discount-text">Includes all discounts</p>
                     </div>
-                </li>
-            </ul>
-
-            <div *ngIf="itemsInCart" class="cart-modal__total-cont">
-                <div>
-                    <p class="cart-modal__total-text">
-                        Subtotal
-                        <span *ngIf="itemsInCart.length > 1">({{itemsInCart.length}} items)</span>
-                        <span *ngIf="itemsInCart.length == 1">({{itemsInCart.length}} item)</span>
-                    </p>
-                    <p class="cart-modal__discount-text">Includes all discounts</p>
-                </div>
-                <p>${{totalPrice}}</p>
-            </div>
-
-            <div class="cart-modal__recomendations-cont">
-                <div class="cart-modal__recomendations-extra-cont">
-                    <p class="cart-modal__recomendations-title">Frequently purchased together</p>
-                    <ul>
-                        <li>
-                            <a href="/product/1">
-                                <img src="assets/img/mobile/provigil-min.png">
-                                <p class="cart-modal__item-title">Provigil</p>
-                                <p class="cart-modal__item-price">from <span>€0.91</span></p>
-                                <p class="cart-modal__discount-text">Provigil</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/product/1">
-                                <img src="assets/img/mobile/provigil-min.png">
-                                <p class="cart-modal__item-title">Provigil</p>
-                                <p class="cart-modal__item-price">from <span>€0.91</span></p>
-                                <p class="cart-modal__discount-text">Provigil</p>
-                            </a>
-                        </li>
-                    </ul>
+                    <p>${{totalPrice}}</p>
                 </div>
 
-            </div>
+                <div class="cart-modal__recomendations-cont">
+                    <div class="cart-modal__recomendations-extra-cont">
+                        <p class="cart-modal__recomendations-title">Frequently purchased together</p>
+                        <ul>
+                            <li>
+                                <a href="/product/1">
+                                    <img src="assets/img/mobile/provigil-min.png">
+                                    <p class="cart-modal__item-title">Provigil</p>
+                                    <p class="cart-modal__item-price">from <span>€0.91</span></p>
+                                    <p class="cart-modal__discount-text">Provigil</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/product/1">
+                                    <img src="assets/img/mobile/provigil-min.png">
+                                    <p class="cart-modal__item-title">Provigil</p>
+                                    <p class="cart-modal__item-price">from <span>€0.91</span></p>
+                                    <p class="cart-modal__discount-text">Provigil</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-            <div class="line"></div>
-
-            <div class="cart-modal__recomendations-cont">
-                <div class="cart-modal__recomendations-extra-cont">
-                    <p class="cart-modal__recomendations-title">Customer also viewed</p>
-                    <ul>
-                        <li>
-                            <a href="/product/1">
-                                <img src="assets/img/mobile/provigil-min.png">
-                                <p class="cart-modal__item-title">Provigil</p>
-                                <p class="cart-modal__item-price">from <span>€0.91</span></p>
-                                <p class="cart-modal__discount-text">Provigil</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/product/1">
-                                <img src="assets/img/mobile/provigil-min.png">
-                                <p class="cart-modal__item-title">Provigil</p>
-                                <p class="cart-modal__item-price">from <span>€0.91</span></p>
-                                <p class="cart-modal__discount-text">Provigil</p>
-                            </a>
-                        </li>
-                    </ul>
                 </div>
 
+                <div class="line"></div>
+
+                <div class="cart-modal__recomendations-cont">
+                    <div class="cart-modal__recomendations-extra-cont">
+                        <p class="cart-modal__recomendations-title">Customer also viewed</p>
+                        <ul>
+                            <li>
+                                <a href="/product/1">
+                                    <img src="assets/img/mobile/provigil-min.png">
+                                    <p class="cart-modal__item-title">Provigil</p>
+                                    <p class="cart-modal__item-price">from <span>€0.91</span></p>
+                                    <p class="cart-modal__discount-text">Provigil</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/product/1">
+                                    <img src="assets/img/mobile/provigil-min.png">
+                                    <p class="cart-modal__item-title">Provigil</p>
+                                    <p class="cart-modal__item-price">from <span>€0.91</span></p>
+                                    <p class="cart-modal__discount-text">Provigil</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
             </div>
         </div>
 
