@@ -14,6 +14,13 @@ const swiperParams: SwiperOptions = {
     prevEl: '.swiper-button-prev'
   },
   breakpoints: {
+    1280: {
+      spaceBetween: 31,
+      enabled: true,
+      centeredSlides: true,
+      loop: true,
+      direction: 'horizontal',
+    },
     1600: {
       spaceBetween: 42,
       enabled: true,
