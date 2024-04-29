@@ -3,3 +3,11 @@
     display: flex;
     flex-direction: column;
 }
+
+::ng-deep {
+    .white-background {
+        width: 100vw;
+        height: auto;
+        background-color: white;
+    }
+}

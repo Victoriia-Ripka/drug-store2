@@ -1,23 +1,22 @@
-<div class="account__section">
-    <div class="account__nav-cont">
-        <h1 class="account__nav-title">My Account</h1>
-        <ul class="account__nav-list">
-            <!-- a or button -->
-            <!-- <li class="account__nav"><button (click)="selectSection('dashboard')">Dashboard</button></li>-->
-            <li class="account__nav"><a href="account/dashboard"
-                    [ngClass]="{'selected': 'dashboard' === selectedSection}">Dashboard</a></li>
-            <li class="account__nav"><a href="account/orders"
-                    [ngClass]="{'selected': 'orders' === selectedSection}">Orders</a></li>
-            <li class="account__nav"><a href="account/info" [ngClass]="{'selected': 'info' === selectedSection}">
-                    Pesonal info</a></li>
-            <li class="account__nav"><a href="account/reviews"
-                    [ngClass]="{'selected': 'reviews' === selectedSection}">My Reviews</a></li>
-            <li class="account__nav"><a href="account/methods"
-                    [ngClass]="{'selected': 'methods' === selectedSection}">Payment Methods</a></li>
-        </ul>
+<div class="account__section white-background">
+        <div class="account__nav-cont">
+                <h1 class="account__nav-title">My Account</h1>
+                <ul class="account__nav-list">
+                        <li class="account__nav"><a routerLink="/account/dashboard"
+                                        routerLinkActive="selected">Dashboard</a></li>
+                        <li class="account__nav"><a routerLink="/account/orders" routerLinkActive="selected">Orders</a>
+                        </li>
+                        <li class="account__nav"><a routerLink="/account/info" routerLinkActive="selected">Personal
+                                        info</a></li>
+                        <li class="account__nav"><a routerLink="/account/reviews" routerLinkActive="selected">My
+                                        Reviews</a></li>
+                        <li class="account__nav"><a routerLink="/account/methods" routerLinkActive="selected">Payment
+                                        Methods</a></li>
+                </ul>
+                <button class="account__nav-btn"><img src="assets/img/mobile/logout-min.png">LOG OUT</button>
+        </div>
 
-        <button class="account__nav-btn"><img src="assets/img/mobile/logout-min.png">LOG OUT</button>
-    </div>
-
-    <router-outlet></router-outlet>
+        <div [@fadeIn]>
+                <router-outlet></router-outlet>
+        </div>
 </div>

@@ -1,6 +1,8 @@
-<shopping-cart *ngIf="purchasePhase=='cart'" (nextPhase)="togglePhase('shipping-info')"></shopping-cart>
-<shipping-info *ngIf="purchasePhase=='shipping-info'" (nextPhase)="togglePhase('shipping-method')"></shipping-info>
-<shipping-method *ngIf="purchasePhase=='shipping-method'" (nextPhase)="togglePhase('completed')"
-    (shippingInfoPhase)="togglePhase('shipping-info')" (cartPhase)="togglePhase('cart')">
-</shipping-method>
-<completed-purchase *ngIf="purchasePhase=='completed'"></completed-purchase>
+<div class="white-background">
+    <shopping-cart *ngIf="purchasePhase=='cart'" (nextPhase)="togglePhase('shipping-info')"></shopping-cart>
+    <shipping-info *ngIf="purchasePhase=='shipping-info'" (nextPhase)="togglePhase('shipping-method')"></shipping-info>
+    <shipping-method *ngIf="purchasePhase=='shipping-method'" (nextPhase)="togglePhase('completed')"
+        (shippingInfoPhase)="togglePhase('shipping-info')" (cartPhase)="togglePhase('cart')">
+    </shipping-method>
+    <completed-purchase *ngIf="purchasePhase=='completed'"></completed-purchase>
+</div>

@@ -7,12 +7,34 @@ const routes: Routes = [
     {
         path: 'account',
         component: AccountPageComponent,
+        title: 'My Account - Canadian Drug Store',
+
         children: [
-            { path: 'dashboard', component: DashboardComponent },
-            { path: 'orders', component: OrdersComponent },
-            { path: 'info', component: PersonalInfoComponent },
-            { path: 'reviews', component: ReviewsComponent },
-            { path: 'methods', component: PaymentMethodsComponent }
+            {
+                path: 'dashboard',
+                component: DashboardComponent,
+                data: { animation: 'accountDashboardPage' },
+            },
+            {
+                path: 'orders',
+                component: OrdersComponent,
+                data: { animation: 'accountOrdersPage' },
+            },
+            {
+                path: 'info',
+                component: PersonalInfoComponent,
+                data: { animation: 'accountPersonalInfoPage' },
+            },
+            {
+                path: 'reviews',
+                component: ReviewsComponent,
+                data: { animation: 'accountReviewsPage' },
+            },
+            {
+                path: 'methods',
+                component: PaymentMethodsComponent,
+                data: { animation: 'accountPaymentPage' },
+            }
         ]
     }
 ];

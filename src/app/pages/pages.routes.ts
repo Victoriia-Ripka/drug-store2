@@ -17,52 +17,62 @@ import {
 export const routes: Routes = [
     {
         path: '',
-        component: HomePageComponent
+        component: HomePageComponent,
+        data: { animation: 'homePage' }
     },
     {
         path: 'about-us',
         title: 'About us - Canadian Drug Store',
-        component: AboutUsPageComponent
+        component: AboutUsPageComponent,
+        data: { animation: 'aboutUsPage' }
     },
     {
         path: 'policies',
         title: 'Policies - Canadian Drug Store',
-        component: PoliciesPageComponent
+        component: PoliciesPageComponent,
+        data: { animation: 'policiesPage' }
     },
     {
         path: 'shipping',
         title: 'Shipping - Canadian Drug Store',
-        component: ShippingPageComponent
+        component: ShippingPageComponent,
+        data: { animation: 'shippingPage' }
     },
     {
         path: 'faq',
         title: 'FAQ - Canadian Drug Store',
-        component: FaqPageComponent
+        component: FaqPageComponent,
+        data: { animation: 'faqPage' }
     },
     {
         path: 'contact-us',
         title: 'Contact us - Canadian Drug Store',
-        component: ContactUsPageComponent
+        component: ContactUsPageComponent,
+        data: { animation: 'contactUsPage' }
     },
     {
         path: 'products',
         title: 'All Products - Canadian Drug Store',
-        component: ProductsPageComponent
+        component: ProductsPageComponent,
+        data: { animation: 'productsPage' }
     },
     {
         path: 'product/:id',
         title: 'Product - Canadian Drug Store',
-        component: ProductPageComponent
+        component: ProductPageComponent,
+        data: { animation: 'productPage' }
     },
     {
         path: 'account',
         title: 'My Account - Canadian Drug Store',
-        component: AccountPageComponent
+        component: AccountPageComponent,
+        data: { animation: 'accountPage' }
     },
     {
         path: 'shopping-cart',
         title: 'Shopping Cart - Canadian Drug Store',
-        component: ShoppingCartPageComponent
+        component: ShoppingCartPageComponent,
+        data: { animation: 'shoppingCartPage' }
     },
     {
         path: 'authorization',
@@ -71,6 +81,7 @@ export const routes: Routes = [
     },
     {
         path: '**',
-        component: NotFoundPageComponent
+        component: NotFoundPageComponent,
+        data: { animation: 'notFoundPage' }
     }
 ];
